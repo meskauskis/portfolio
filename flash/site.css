@@ -1,0 +1,41 @@
+body {
+	font-family: arial, helvetica, san-serif;
+	font-size: 11px;
+	margin: 0 auto;
+}
+.top-bar {
+	background: #111;
+	margin-bottom: 10px;
+	padding: 8px 12px;
+	color: #888;
+}
+a:link, a:active, a:visited {
+	color: #ccc;
+	text-decoration: underline;
+}
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.top-bar-right {
+	float: right;
+}
+.swatch {
+	float: right;
+	width: 12px;
+	height: 12px;
+	margin-left: 8px;
+	cursor: pointer;
+}
+.swatch-blue {
+	background-color: #0e3055;
+}
+.swatch-green {
+	background-color: #094e32;
+}
+.swatch-yellow {
+	background-color: #8f6010;
+}
+.swatch-pink {
+	background-color: #720f2e;
+}
