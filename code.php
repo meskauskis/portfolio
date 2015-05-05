@@ -16,7 +16,7 @@ if (!empty($selected)) {
 include("includes/head.php");
 ?>
 
-<h2 id="section-title"><? echo $page_name; ?></h2>
+<h2 id="section-title" class="section-title"><? echo $page_name; ?></h2>
 
 <section class="site-content clear-fix">
 	<div class="code-list">

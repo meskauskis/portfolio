@@ -33,10 +33,10 @@ $page_class = $selected;
 include("includes/head.php");
 ?>
 
-<h2 id="section-title"><? echo $page_name; ?></h2>
+<h2 id="section-title" class="section-title"><? echo $page_name; ?></h2>
 
-<section class="site-content thumbnails-holder thumbnails-holder-<?php print $selected; ?> clear-fix">
-	<div style="text-align:center;"><img src="/images/loading.gif"/></div>
-</section>
+<div class="site-content thumbnails-holder thumbnails-holder-<?php print $selected; ?> clear-fix">
+	<div style="text-align:center;"><img src="/images/loading.gif" alt="loader"/></div>
+</div>
 
-<? include("includes/footer.php"); ?>
+<? include("includes/footer.php"); ?>

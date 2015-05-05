@@ -34,7 +34,7 @@ $large_image = TRUE;
 include("includes/head.php");
 ?>
 
-<h2 id="section-title">&nbsp;</h2>
+<h2 id="section-title" class="section-title">&nbsp;</h2>
 
 <a href="/section.php?selected=<? echo $selected; ?>" class="button" id="btn-back">&laquo; Back</a>
 

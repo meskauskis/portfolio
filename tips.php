@@ -4,7 +4,7 @@ $page_class = 'tips';
 include("includes/head.php");
 ?>
 
-<h2 id="section-title"><? echo $page_name; ?></h2>
+<h2 id="section-title" class="section-title"><? echo $page_name; ?></h2>
 
 <div class="site-content">
 	<section class="mod-wrap clear-fix">

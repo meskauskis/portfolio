@@ -22,11 +22,11 @@ include("includes/head.php");
 	
 	<div class="hr space-below"></div>
 
-	<section class="site-blurb">
+	<p class="site-blurb">
     Welcome to my digital portfolio. My digital work over the years in presented here. I have worked in a variety of areas in the digital industy. I started my career in print design, doing page layout. Then from there I went into gaming and animation. That lead me into the advertising industry creating interactive animations. Currently I am working in web design/development, using everything I have learned along the way. I usually code and layout everything myself, because it offers me the customization that optimization that plugins don't allow. At Martha Stewart we use Drupal and Git for version control.
-	</section>
+	</p>
 
-	<section class="mod-wrap clear-fix">
+	<div class="mod-wrap clear-fix">
 		<article class="mod-half">
 			<div class="mod-inner">
 				<h3 class="mod-title2">My Info</h3>
@@ -67,16 +67,16 @@ include("includes/head.php");
 				<a href="http://w3schools.com/" target="_blank" rel="nofollow">W3 Schools</a><br />
 			</div>
 		</article>
-	</section>
+	</div>
 	
-	<section class="mod-wrap clear-fix">
+	<div class="mod-wrap clear-fix">
 		<div class="mod-padding">
 			<div class="mod-inner">
 		    <h3 class="mod-title2">Recognition</h3>
 				
 				<div class="clear-fix">
 					<article class="mod-list-item">
-			      <a href="http://winners.webbyawards.com/2013/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow"><img src="/images/webby.png" class="mod-thumb"/></a>
+			      <a href="http://winners.webbyawards.com/2013/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow"><img src="/images/webby.png" class="mod-thumb" alt="webby"/></a>
 			      <h4 class="mod-list-item-title">Webby Award</h4>
 			      <p class="mod-text">
 			        While working at Martha Stewart, we won a Webby Award for best Lifestyle website of <a href="http://winners.webbyawards.com/2013/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow">2013</a> and <a href="http://winners.webbyawards.com/2014/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow">2014</a>!
@@ -84,7 +84,7 @@ include("includes/head.php");
 				  </article>
 			
 				  <article class="mod-list-item">
-				    <a href="http://www.iacquire.com/blog/video-seo-winners-losers/" target="_blank" rel="nofollow"><img src="/images/iacquire.png" class="mod-thumb"/></a>
+				    <a href="http://www.iacquire.com/blog/video-seo-winners-losers/" target="_blank" rel="nofollow"><img src="/images/iacquire.png" class="mod-thumb" alt="iacquire"/></a>
 				    <h4 class="mod-list-item-title">Video SEO</h4>
 				    <p class="mod-text">
 				      Recognized my contributions at Martha Stewart as a best-of sites in utilizing <a href="http://www.iacquire.com/blog/video-seo-winners-losers/" target="_blank" rel="nofollow">video SEO</a> best practice.
@@ -93,16 +93,16 @@ include("includes/head.php");
 			  </div>
 			</div>
 		</div>
-  </section>
+  </div>
 
-	<section class="mod-wrap clear-fix">
+	<div class="mod-wrap clear-fix">
 		<div class="mod-padding">
 			<div class="mod-inner">
 		    <h3 class="mod-title2">Games I've Worked On</h3>
 				
 				<div class="clear-fix">
 					<article class="mod-list-item">
-			      <img src="/images/splash_abracadaball.png" class="mod-thumb game-thumb"/>
+			      <img src="/images/splash_abracadaball.png" class="mod-thumb game-thumb" alt="abracadaball"/>
 			      <h4 class="mod-list-item-title">Abracadaball</h4>
 			      <p class="mod-text">
 			        Put your wand skills to the test as you blast magic balls to make chains of 3 or more of the same color. I worked on UI and level design/graphics.
@@ -110,7 +110,7 @@ include("includes/head.php");
 				  </article>
 			
 				  <article class="mod-list-item">
-				    <img src="/images/splash_reggie.png" class="mod-thumb game-thumb"/>
+				    <img src="/images/splash_reggie.png" class="mod-thumb game-thumb" alt="reggie bush"/>
 				    <h4 class="mod-list-item-title">Reggie Bush Pro Football</h4>
 				    <p class="mod-text">
 				      This is Gameloft's second installment in the Reggie Bush franchise. I worked on UI and character model/animation.
@@ -118,7 +118,7 @@ include("includes/head.php");
 				  </article>
 			
 				  <article class="mod-list-item">
-				    <img src="/images/splash_jw.png" class="mod-thumb game-thumb"/>
+				    <img src="/images/splash_jw.png" class="mod-thumb game-thumb" alt="johnny whatever"/>
 				    <h4 class="mod-list-item-title">Johnny Whatever</h4>
 				    <p class="mod-text">
 				      Johnny sets out to save his friends, and free the citizens, all in the name of Rock-N-Roll! I worked on UI and character model/animation.
@@ -126,7 +126,7 @@ include("includes/head.php");
 				  </article>
 			
 				  <article class="mod-list-item">
-				    <img src="/images/splash_hm.png" class="mod-thumb game-thumb"/>
+				    <img src="/images/splash_hm.png" class="mod-thumb game-thumb" alt="hit and myth"/>
 				    <h4 class="mod-list-item-title">Hit And Myth</h4>
 				    <p class="mod-text">
 				      Relive the days of SmashTV by taking out hordes of crazy enemies from elvis to orcs in a variety of wacky levels. I worked on UI and character model/animation.
@@ -134,7 +134,7 @@ include("includes/head.php");
 				  </article>
 			
 				  <article class="mod-list-item">
-				    <img src="/images/splash_echoes.png" class="mod-thumb game-thumb"/>
+				    <img src="/images/splash_echoes.png" class="mod-thumb game-thumb" alt="echoes of glory"/>
 				    <h4 class="mod-list-item-title">Echoes of Glory</h4>
 				    <p class="mod-text">
 				      Tired of playing WW2 shooters? Echoes brings you back to the Civil Wars days. I worked on models for environments/weapons.
@@ -143,7 +143,7 @@ include("includes/head.php");
 			 </div>
 			</div>
 		</div>
-  </section>
+  </div>
 </div>
 
-<? include("includes/footer.php"); ?>
+<? include("includes/footer.php"); ?>

@@ -6,7 +6,7 @@ $nav_selected = 'nav-item-animation';
 include("includes/head.php");
 ?>
 
-<h2 id="section-title"><? echo $page_name; ?></h2>
+<h2 id="section-title" class="section-title"><? echo $page_name; ?></h2>
 
 <section class="site-content">
 	<h3 class="mod-title">Hit And Myth</h3>

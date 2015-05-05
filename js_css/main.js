@@ -1,9 +1,21 @@
 $(function() {
-  var $pageNav = $('.page-nav'),
-    $pageSide = $('.page-side'),
-    $thumbHolder = $('.thumbnails-holder'),
-    $menuToggle = $('#menu-toggle'),
-    $carouselMain = $('.main-carousel');
+  var $body = $('body'),
+			$pageNav = $('.page-nav'),
+		  $pageSide = $('.page-side'),
+		  $thumbHolder = $('.thumbnails-holder'),
+		  $menuToggle = $('#nav-toggle'),
+		  $menuToggleMobile = $('#nav-toggle-mobile'),
+		  $carouselMain = $('.main-carousel');
+
+	// toggle menu based off of cookie settings
+	if (getCookie('navStatus') === 'open') {
+		$body.removeClass('nav-closed');
+	}
+
+	// set selected nav item (variable set in head)
+	if (navSelected != '') {
+		$('.' + navSelected).addClass('selected');
+	}
 
 	// get the cookie setting
 	function getCookie(cookieName) {
@@ -30,22 +42,10 @@ $(function() {
 		document.cookie = cookieName + "=" + cookieValue;
 	}
 
-	(function() {
-		// toggle menu based off of cookie settings
-		if (getCookie('navStatus') === 'open') {
-			$pageSide.removeClass('closed');
-		}
-
-		// set selected nav item (variable set in head)
-		if (navSelected != '') {
-			$('.' + navSelected).addClass('selected');
-		}
-	})();
-
 	// click event for toggling menu
-	$menuToggle.click(function() {
-		var isClosed = $(this).closest('.page-side').hasClass('closed');
-		$pageSide.toggleClass('closed');
+	$menuToggle.add($menuToggleMobile).click(function() {
+		var isClosed = $body.hasClass('nav-closed');
+		$body.toggleClass('nav-closed');
 
 		if (isClosed === true) {
 			setCookie('navStatus', 'open', 30);
