@@ -1,16 +1,18 @@
-<aside class="page-side closed clear-fix">
+<aside class="page-side clear-fix">
+	<?php /*
 	<a href="/" title="Home">
-		<img src="/images/logo_face.svg" class="logo-face">
+		<img src="/images/logo_face.svg" class="logo-face" alt="neil logo">
 	</a>
+	*/ ?>
 
-	<button type="button" id="menu-toggle" class="menu-toggle">
+	<div id="nav-toggle" class="nav-toggle">
 		<span class="icon"></span>
-	</button>
+	</div>
 
 	<nav class="page-nav">
 		<ul>
 			<li class="nav-item nav-item-web clear-fix" onclick="void(0);">
-				<span class="icon-screen"></span>
+				<span class="icon icon-web"></span>
 				<h4 class="nav-item-text">Web</h4>
 				<div class="sub-nav">
 					<a href="/section.php?selected=web">Websites</a>
@@ -21,7 +23,7 @@
 			</li>
 	
 			<li class="nav-item nav-item-2d clear-fix" onclick="void(0);">
-				<span class="icon-pen"></span>
+				<span class="icon icon-2d"></span>
 				<h4 class="nav-item-text">2D</h4>
 				<div class="sub-nav">
 					<a href="/section.php?selected=ui2d">UI / UX</a>
@@ -32,7 +34,7 @@
 			</li>
 
 			<li class="nav-item nav-item-3d clear-fix" onclick="void(0);">
-				<span class="icon-image"></span>
+				<span class="icon icon-3d"></span>
 				<h4 class="nav-item-text">3D</h4>
 				<div class="sub-nav">
 					<a href="/section.php?selected=char3d">Characters</a>
@@ -43,7 +45,7 @@
 			</li>
 
 			<li class="nav-item nav-item-animation clear-fix" onclick="void(0);">
-				<span class="icon-cogs"></span>
+				<span class="icon icon-animation"></span>
 				<h4 class="nav-item-text">Animation</h4>
 				<div class="sub-nav">
 					<a href="/sprites.php">2D / Pixel</a>
@@ -53,14 +55,14 @@
 			</li>
 
 			<li class="nav-item nav-item-code clear-fix" onclick="void(0);">
-				<span class="icon-quotes-left"></span>
+				<span class="icon icon-code"></span>
 				<h4 class="nav-item-text">Code</h4>
 				<div class="sub-nav">
 					<a href="/code.php">Sample Code</a>
 					<a href="/tips.php">Coding Tips</a>
 				</div>
 				<? echo displayArrow(); ?>
-			</li></a>
+			</li>
 		</ul>
 	</nav>
 </aside>

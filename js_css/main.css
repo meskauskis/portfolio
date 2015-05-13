@@ -1,6 +1,5 @@
 article,
 aside,
-eventsource,
 figure,
 figcaption,
 footer,
@@ -47,6 +46,9 @@ h5 {
 	line-height: 1;
 	vertical-align: bottom;
 
+}
+ul {
+	list-style: none;
 }
 a:link,
 a:active,
@@ -113,15 +115,15 @@ a:hover.button {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 .section-title {
-	padding: .2em .2em .2em 12px;
-	margin: 0 0 1.5em 0;
+	padding: .4em;
+	margin: 0 0 2.5em 0;
 	background-color: rgba(0, 0, 0, .5);
 	color: #fff;
 	letter-spacing: 1px;
 	font-size: 1.2em;
 	line-height: 1.2;
 	text-transform: uppercase;
-	font-family: 'Poiret One', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 .not-found {
 	text-align: center;
@@ -129,12 +131,12 @@ a:hover.button {
 	color: #777;
 	font-style: italic;
 	margin: 1em 0;
-	font-family: 'Poiret One', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 .mod-title {
 	font-size: 2.5em;
-	font-family: 'Poiret One', sans-serif;
-	color: #444;
+	font-family: 'Montserrat', sans-serif;
+	color: #333;
 	margin-top: 1.5em;
 	margin-bottom: .5em;
 }
@@ -143,7 +145,7 @@ a:hover.button {
 }
 .mod-title2 {
 	font-size: 1.6em;
-	font-family: 'Poiret One', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0 0 1em 0;
 	/*
 	padding: .4em .6em;
@@ -160,19 +162,37 @@ a:hover.button {
 .social-icons {
 	margin-bottom: 10px;
 }
+.social-icons li {
+	display: inline-block;
+	margin: 0 .4em;
+}
+.social-icons .icon {
+	color: #888;
+	font-size: 2.2em;
+}
+.social-icons .icon:hover {
+	color: #555;
+}
 .social-icons a {
 	text-decoration: none;
 }
-.social-icons .the-icon {
-	color: #888;
-	font-size: 2.5em;
-	margin-right: .2em;
+.icon-github:before {
+	content: "\eab2";	
 }
-.social-icons .the-icon:hover {
-	color: #555;
+.icon-facebook:before {
+	content: "\ea8d";	
+}
+.icon-linkedin:before {
+	content: "\eac8";	
+}
+.icon-google-plus:before {
+	content: "\ea89";	
+}
+.icon-tumblr:before {
+	content: "\eabc";	
 }
 .icon-myeyes:before {
-	content: "\e603";
+	content: "\ea54";
 }
 
 /* homepage
@@ -289,10 +309,11 @@ a:hover.button {
 	opacity: 0;
 	margin-top: 35%;
 	color: #fff;
-	font-size: 1.2em;
+	font-size: 1.5em;
+	font-weight: bold;
 	line-height: 1.2em;
 	text-align: center;
-	text-shadow: 0px 1px 2px #222;
+	text-shadow: 0px 1px 2px #333;
 	padding: 0 8px;
 
 	transition: all .4s;
@@ -411,7 +432,7 @@ a:hover.button {
 .code {
 	display: block;
 	padding: .5em;
-	background-color: #222;
+	background-color: #333;
 	color: #fff;
 	margin: 0 0 1em 0;
 	overflow: auto;
@@ -561,5 +582,12 @@ a:hover.button {
 	}
 	.video-item {
 		width: 33%;
+	}
+}
+
+/* Home */
+@media screen and (min-width: 485px) {
+	.page-home .page-logo {
+		width: 150px;
 	}
 }
