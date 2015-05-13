@@ -3,7 +3,7 @@
 .arrow-line {
 	float: left;
 	display: block;
-	background-color: #0091c5;
+	background-color: #01b5ae;
 	width: 1px;
 }
 .arrow-line1 {
@@ -232,7 +232,7 @@
 		margin-left: .5em;
 	}
 	.page-nav .nav-item.selected {
-		background-color: #0091c5;
+		background-color: #01b5ae;
 		color: #fff;
 	}
 	.page-nav .nav-item.selected .arrow {
