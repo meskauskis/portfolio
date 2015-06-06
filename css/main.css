@@ -592,8 +592,8 @@ a:hover.button {
 /* Home */
 .page-logo {
   display: inline-block;
-  width: 110px;
-  height: 45px;
+  width: 100px;
+  height: 40px;
   background: transparent url('../images/logo_nm.svg') center center no-repeat;
   background-size: contain;
 }
