@@ -3,6 +3,18 @@
 </h1>
 
 <div data-code-block 
+  data-title="iOS hover"
+  data-code="
+    < li class='item' onclick='//' >Text< /li >
+    <br><br>
+    .item:hover { color: red; }
+  "
+  data-text="
+    iOS does not support :hover on anything other than A tags. If you want it to recognize it on other elements, add an empty onclick event to it. This is so much easier than creating touch vs non-touch events.
+  "
+></div>
+
+<div data-code-block 
   data-title="Query Selectors"
   data-code="
     document.querySelectorAll('.example')<br/>
