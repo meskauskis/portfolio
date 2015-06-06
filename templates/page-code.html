@@ -1,0 +1,84 @@
+<h1 id="section-title" class="section-title">
+  {{sectionTitle}}
+</h1>
+
+<div data-code-block 
+  data-title="Query Selectors"
+  data-code="
+    document.querySelectorAll('.example')<br/>
+    document.querySelector('#blah');
+  "
+  data-text="
+    If you want to select DOM elements without using jQuery, you can use the easier to remember/type query selectors, instead of <i>document.getElementById(\'blah\')</i> or <i>document.getElementsByClassName(\'example\')</i>.
+  "
+></div>
+
+<div data-code-block 
+  data-title="Content Space"
+  data-code="
+    p:before { content: '\00a0'; }
+  "
+  data-text="
+    If you need to add a white space via css, this is your method. Empty quotes will not do the trick.
+  "
+></div>
+
+<div data-code-block 
+  data-title="Click Events On New DOM Elements"
+  data-code="
+    $('parent-div').on('click', '.class-name', function() {<br/>
+      &nbsp;&nbsp;<i>do something...</i><br/>
+    });
+  "
+  data-text="
+    If you're using jQuery to create new page elements after the page has loaded, you will notice a problem with binding events to them. Since this element does not exist at page load time, then it does not know how to bind events to it correctly. The way around this is to use <i>on</i>.<br/>
+    In the example above, it will listen for any new element that has the class name <i>class-name</i> within the <i>parent</i>. This <i>parent</i> should be a DOM element that exists and remains unchanged during the duration of the user experience.
+  "
+></div>
+
+<div data-code-block 
+  data-title="Easy Clear Fix"
+  data-code="
+    .clear-fix:after {<br/>
+      &nbsp;&nbsp;display: block;<br/>
+      &nbsp;&nbsp;height: 0;<br/>
+      &nbsp;&nbsp;visibility: hidden;<br/>
+      &nbsp;&nbsp;line-height: 0;<br/>
+      &nbsp;&nbsp;clear: both;<br/>
+      &nbsp;&nbsp;content: '';<br/>
+    }
+  "
+  data-text="
+    <i>:before</i> and <i>:after</i> allow you to put content into your DOM through CSS. You can put icons or even divs anywhere on the page with this method. The best part is that it also has great browser support for as far back as I would even worry about.<br/>
+    This is an elegant solution without adding extra page markup.<br/><br/>
+    <b>NOTE:</b> you can also do only, 'width:100%; overflow:hidden;', but sometimes setting an overflow will have undesired effects.
+  "
+></div>
+
+<div data-code-block 
+  data-title="Self Executing Functions"
+  data-code="
+    (function() {<br/>
+      &nbsp;&nbsp;var blah = true;<br/><br/>
+      &nbsp;&nbsp;<i>do something...</i><br/><br/>
+      &nbsp;&nbsp;function sampleName() {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;<i>do something...</i><br/>
+      &nbsp;&nbsp;}<br/>
+    })();<br/>
+  "
+  data-text="
+    I think it's good practice to use self executing functions whenever possible. They're nice because it will automatically execute upon page load and all the variables and functions can only be used within that function. Why is that good? You don't have to worry about naming conflicts or variables overriding each other. You can have a function or variable with the same name elsewhere on your site or file and there won't be any problems.
+  "
+></div>
+
+<div data-code-block 
+  data-title="Attr vs Prop"
+  data-code="
+    < div class='item' data-section='intro' >< /div ><br/>
+    $('.item').data('section');<br/>
+    $('.item').attr('data-section');
+  "
+  data-text="
+    Before jQuery 1.6, the .attr() method sometimes took property values into account when retrieving some attributes, which could cause inconsistent behavior. As of jQuery 1.6, the .prop() method provides a way to explicitly retrieve property values, while .attr() retrieves attributes.
+  "
+></div>

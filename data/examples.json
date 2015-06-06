@@ -1,0 +1,270 @@
+[
+	{
+		"version": "1",
+		"renderings": [
+		  {
+		  	"name": "3D Animation",
+		  	"groups": [
+					{
+						"header": "My Renderings",
+						"dek": "Various models I animated and rendered from 3dsmax and Maya.",
+				  	"items": [
+							{
+								"title": "Talking Turtle",
+								"image": "vid3.jpg",
+								"webm": "videos/turtle.webm",
+								"ogg": "videos/turtle.ogg",
+								"mp4": "videos/turtle.mp4"
+							},
+							{
+								"title": "Running Raccoon",
+								"image": "vid4.jpg",
+								"webm": "videos/raccoon.webm",
+								"ogg": "videos/raccoon.ogg",
+								"mp4": "videos/raccoon.mp4"
+							},
+							{
+								"title": "Damsel Punch",
+								"image": "vid5.jpg",
+								"webm": "videos/damsel.webm",
+								"ogg": "videos/damsel.ogg",
+								"mp4": "videos/damsel.mp4"
+							},
+							{
+								"title": "Tennis Serve",
+								"image": "vid6.jpg",
+								"webm": "videos/nadal.webm",
+								"ogg": "videos/nadal.ogg",
+								"mp4": "videos/nadal.mp4"
+							},
+							{
+								"title": "Cobra Bite",
+								"image": "vid1.jpg",
+								"webm": "videos/cobra.webm",
+								"ogg": "videos/cobra.ogg",
+								"mp4": "videos/cobra.mp4"
+							},
+							{
+								"title": "SWAT Shooting",
+								"image": "vid2.jpg",
+								"webm": "videos/swat.webm",
+								"ogg": "videos/swat.ogg",
+								"mp4": "videos/swat.mp4"
+							}
+						]
+					}
+				]
+			}
+		],
+		"sprites": [
+		  {
+		  	"name": "Sprites",
+		  	"groups": [
+					{
+						"header": "Hit and Myth",
+						"dek": "3D models rendered directly into 2D sprites, used for the Gizmodo videogame.",
+						"items": [
+						  {
+								"image": "images/sprites/hm1.gif"
+							},
+							{
+								"image": "images/sprites/hm2.gif"
+							},
+							{
+								"image": "images/sprites/hm3.gif"
+							},
+							{
+								"image": "images/sprites/hm4.gif"
+							},
+							{
+								"image": "images/sprites/hm5.gif"
+							}
+						]
+					},
+					{
+						"header": "Hulk Hogan Wrestling",
+						"dek": "3D models rendered and then chopped into 2D sprites, used for the Gizmodo videogame.",
+						"items": [
+						  {
+								"image": "images/sprites/wrestling1.gif"
+							},
+							{
+								"image": "images/sprites/wrestling2.gif"
+							},
+							{
+								"image": "images/sprites/wrestling3.gif"
+							},
+							{
+								"image": "images/sprites/wrestling4.gif"
+							},
+							{
+								"image": "images/sprites/wrestling5.gif"
+							},
+							{
+								"image": "images/sprites/wrestling6.gif"
+							}
+						]
+					},
+					{
+						"header": "Reggie Bush Football",
+						"dek": "Hand drawn animations for the Gizmodo videogame.",
+						"items": [
+						  {
+								"image": "images/sprites/reggie1.gif"
+							},
+							{
+								"image": "images/sprites/reggie2.gif"
+							},
+							{
+								"image": "images/sprites/reggie3.gif"
+							},
+							{
+								"image": "images/sprites/reggie4.gif"
+							},
+							{
+								"image": "images/sprites/reggie5.gif"
+							},
+							{
+								"image": "images/sprites/reggie6.gif"
+							},
+							{
+								"image": "images/sprites/reggie7.gif"
+							},
+							{
+								"image": "images/sprites/reggie8.gif"
+							},
+							{
+								"image": "images/sprites/reggie9.gif"
+							}
+						]
+					}
+				]
+			}
+		],
+		"flash": [
+		  {
+		  	"name": "Flash",
+		  	"groups": [
+					{
+						"header": "Room Decorator 2.0",
+						"dek": "An example of bringing a 3D model I created into Flash. You can rotate Rafael Nadal left and right, by mousing left and right over the stage. I used Papervision to import the model.",
+						"items": [
+						  {
+								"file": "swfs/wallpapering.swf",
+								"width": "700",
+								"height": "400"
+							}
+						]
+					},
+					{
+						"header": "Clear Skies",
+						"dek": "A mini-game I designed/developed that requires the user to switch between day and night to pop balloons and stars. The objects are randomly scattered in the sky, so each time you play it will be different. This is just a proof of concept and could be developed further to make it more challenging and fun. Scripted in AS3.",
+						"items": [
+						  {
+								"file": "swfs/clear_skies.swf",
+								"width": "500",
+								"height": "350"
+							}
+						]
+					},
+					{
+						"header": "Ghost Recon",
+						"dek": "A set of 3 IAB standard banners for website advertising. GRAW is a successful series of console games, published by Ubisoft. Screenshots were taken from IGN.com.",
+						"items": [
+						  {
+								"file": "swfs/banner_recon_160.swf",
+								"width": "160",
+								"height": "600"
+							},
+						  {
+								"file": "swfs/banner_recon_300.swf",
+								"width": "300",
+								"height": "250"
+							},
+						  {
+								"file": "swfs/banner_recon_720.swf",
+								"width": "720",
+								"height": "90"
+							}
+						]
+					},
+					{
+						"header": "Transformers",
+						"dek": "A set of 3 IAB standard banners for website advertising. Transformers was a huge blockbuster success and heavily promoted before it's release with teasers of the robots transforming and fighting. The banner incorporate video footage from the trailer.",
+						"items": [
+						  {
+								"file": "swfs/banner_trans_160.swf",
+								"width": "160",
+								"height": "600"
+							},
+						  {
+								"file": "swfs/banner_trans_300.swf",
+								"width": "300",
+								"height": "250"
+							},
+						  {
+								"file": "swfs/banner_trans_720.swf",
+								"width": "720",
+								"height": "90"
+							}
+						]
+					},
+					{
+						"header": "Interactive Game Banners",
+						"dek": "A variety of engaging banners that are a bit tacky and annoying, as to encourage interaction. They're designed so that the player wins on nearly every attempt. If it were too difficult, then the click through rate would be low. Scripted in AS3.",
+						"items": [
+						  {
+								"file": "swfs/game_scratch.swf",
+								"width": "728",
+								"height": "90"
+							},
+						  {
+								"file": "swfs/game_shell.swf",
+								"width": "728",
+								"height": "90"
+							},
+						  {
+								"file": "swfs/game_slots.swf",
+								"width": "300",
+								"height": "250"
+							}
+						]
+					},
+					{
+						"header": "Jeep",
+						"dek": "Jeep is known for it's ruggedness and ability to drive it anywhere. To represent this, the Jeep will continously drive up the rocky mountain and never stop. Breaking up the vehicle into individual part and animating them in loops is a great way to give the illusion of a long animation.",
+						"items": [
+						  {
+								"file": "swfs/jeep.swf",
+								"width": "336",
+								"height": "280"
+							}
+						]
+					},
+					{
+						"header": "Tabbed Featured Products",
+						"dek": "A tabbed interface that teases featured products. You can easily swap out the featured products with images of movies, games, gadgets, or anything else. Arrows extends and change colors on rollovers, and then click to redirect you to the product landing page. Scripted in AS3.",
+						"items": [
+						  {
+								"file": "swfs/featured_games.swf",
+								"width": "480",
+								"height": "240"
+							}
+						]
+					},
+					{
+						"header": "3D Model Rotation",
+						"dek": "An example of bringing a 3D model I created into Flash. You can rotate Rafael Nadal left and right, by mousing left and right over the stage. I used Papervision to import the model.",
+						"items": [
+						  {
+								"file": "swfs/nadal.swf",
+								"width": "250",
+								"height": "250"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

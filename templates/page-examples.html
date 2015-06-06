@@ -1,0 +1,40 @@
+<h1 id="section-title" class="section-title">
+	{{examplesTitle}}
+</h1>
+
+<section class="examples-section" data-ng-repeat="(key, group) in examplesGroups">
+	<h2 class="section-title2" data-ng-if="group.header !== ''">
+		{{group.header}}
+	</h2>
+
+	<p class="examples-dek" data-ng-if="group.dek !== ''">
+		{{group.dek}}
+	</p>
+
+	<ul class="clear-fix">
+		<li class="examples-item-video" data-ng-if="renderings !== undefined" data-ng-repeat="(key2, item) in group.items">
+			<video width="100%" controls>
+				<source data-ng-src="{{item.webm}}" type="video/webm">
+				<source data-ng-src="{{item.ogg}}" type="video/ogg">
+				<source data-ng-src="{{item.mp4}}" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+      <h3 class="examples-item-title" data-ng-if="item.title !== ''">
+			 {{item.title}}
+			</h3>
+		</li>
+			
+		<li class="examples-item-sprite" data-ng-if="sprites !== undefined" data-ng-repeat="(key2, item) in group.items">
+			<img data-ng-src="{{item.image}}" alt="{{item.image}}"/>
+		</li>
+
+		<li class="examples-item-flash" data-ng-if="flash !== undefined" data-ng-repeat="(key2, item) in group.items">
+			<object id="papervision model" type="application/x-shockwave-flash" data="{{item.file}}" width="{{item.width}}" height="{{item.height}}">
+				<param name="allowScriptAccess" value="sameDomain" />
+				<param name="movie" value="{{item.file}}"/>
+				<param name="wmode" value="opaque">
+				<param name="quality" value="high"/>
+			</object>
+		</li>
+	</ul>
+</section>

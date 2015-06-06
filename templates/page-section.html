@@ -1,0 +1,25 @@
+<h1 id="section-title" class="section-title">
+	{{sectionTitle}}
+</h1>
+
+<ul class="clear-fix">
+	<li class="thumbnail-item" data-ng-repeat="(key, item) in sectionItems">
+		<a href="{{item.fullsize}}">
+			<div class="thumbnail-wrap">
+				<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}"/>
+				<div class="thumbnail-overlay">
+					<h3 class="thumbnail-title" data-ng-if="item.title !== ''">
+						{{item.title}}
+					</h3>
+					<div class="magnify icon-zoom-in"></div>
+					<p class="thumbnail-specs" data-ng-if="item.specs !== undefined">
+					  {{item.specs}}
+					</p>
+				</div>
+			</div>
+		</a>
+		<p class="thumbnail-details" data-ng-if="item.link !== undefined">
+		  <a data-ng-href="{{item.link}}" title="View site" rel="nofollow" target="_blank">View Site</a>
+		</p>
+	</li>
+</ul>

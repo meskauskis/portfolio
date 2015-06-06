@@ -1,0 +1,554 @@
+[
+	{
+		"version": "1",
+		"character-3d": [
+		  {
+		  	"name": "3D Characters",
+		  	"items": [
+					{
+						"title": "Boxer",
+						"thumbnail": "images/thumbs/char1.jpg",
+						"fullsize": "images/fullsize/char1.jpg",
+						"specs": "6,000 polys"
+					},
+					{
+						"title": "Boxer (Wireframe)",
+						"thumbnail": "images/thumbs/char2.jpg",
+						"fullsize": "images/fullsize/char2.jpg",
+						"specs": "6,000 polys"
+					},
+					{
+						"title": "Swamp Creature",
+						"thumbnail": "images/thumbs/char3.jpg",
+						"fullsize": "images/fullsize/char3.jpg",
+						"specs": "15,000 polys"
+					},
+					{
+						"title": "Swamp Creature (Wireframe)",
+						"thumbnail": "images/thumbs/char4.jpg",
+						"fullsize": "images/fullsize/char4.jpg",
+						"specs": "15,000 polys"
+					},
+					{
+						"title": "Soldier",
+						"thumbnail": "images/thumbs/char5.jpg",
+						"fullsize": "images/fullsize/char5.jpg",
+						"specs": "3,500 polys"
+					},
+					{
+						"title": "Soldier (Wireframe)",
+						"thumbnail": "images/thumbs/char6.jpg",
+						"fullsize": "images/fullsize/char6.jpg",
+						"specs": "3,500 polys"
+					},
+					{
+						"title": "Armored Damsel",
+						"thumbnail": "images/thumbs/char7.jpg",
+						"fullsize": "images/fullsize/char7.jpg",
+						"specs": "2,500 polys"
+					},
+					{
+						"title": "Armored Damsel (Wireframe)",
+						"thumbnail": "images/thumbs/char8.jpg",
+						"fullsize": "images/fullsize/char8.jpg",
+						"specs": "2,500 polys"
+					},
+					{
+						"title": "Ichi The Killer",
+						"thumbnail": "images/thumbs/char9.jpg",
+						"fullsize": "images/fullsize/char9.jpg",
+						"specs": "2,000 polys"
+					},
+					{
+						"title": "Ichi The Killer (Wireframe)",
+						"thumbnail": "images/thumbs/char10.jpg",
+						"fullsize": "images/fullsize/char10.jpg",
+						"specs": "2,000 polys"
+					},
+					{
+						"title": "Cartoon Turtle",
+						"thumbnail": "images/thumbs/char11.jpg",
+						"fullsize": "images/fullsize/char11.jpg",
+						"specs": "4,300 polys"
+					},
+					{
+						"title": "Cartoon Turtle (Wireframe)",
+						"thumbnail": "images/thumbs/char12.jpg",
+						"fullsize": "images/fullsize/char12.jpg",
+						"specs": "4,300 polys"
+					},
+					{
+						"title": "Raccoon Soldier",
+						"thumbnail": "images/thumbs/char13.jpg",
+						"fullsize": "images/fullsize/char13.jpg",
+						"specs": "2,300 polys"
+					},
+					{
+						"title": "Raccoon Soldier (Wireframe)",
+						"thumbnail": "images/thumbs/char14.jpg",
+						"fullsize": "images/fullsize/char14.jpg",
+						"specs": "2,300 polys"
+					},
+					{
+						"title": "Low Poly Adventurers",
+						"thumbnail": "images/thumbs/char15.jpg",
+						"fullsize": "images/fullsize/char15.jpg",
+						"specs": "1,000 polys"
+					},
+					{
+						"title": "Low Poly Punk Rockers",
+						"thumbnail": "images/thumbs/char16.jpg",
+						"fullsize": "images/fullsize/char16.jpg",
+						"specs": "250 triangles"
+					}
+				]
+			}
+		],
+		"environment-3d": [
+		  {
+		  	"name": "3D Environments",
+		  	"items": [
+					{
+						"title": "Study Room",
+						"thumbnail": "images/thumbs/env1.jpg",
+						"fullsize": "images/fullsize/env1.jpg",
+						"specs": "PS2 specs"
+					},
+					{
+						"title": "Study Room (Wireframe)",
+						"thumbnail": "images/thumbs/env2.jpg",
+						"fullsize": "images/fullsize/env2.jpg",
+						"specs": "PS2 specs"
+					},
+					{
+						"title": "Factory",
+						"thumbnail": "images/thumbs/env3.jpg",
+						"fullsize": "images/fullsize/env3.jpg",
+						"specs": "360 specs"
+					},
+					{
+						"title": "Factory (Wireframe)",
+						"thumbnail": "images/thumbs/env4.jpg",
+						"fullsize": "images/fullsize/env4.jpg",
+						"specs": "360 specs"
+					},
+					{
+						"title": "NYC Storefront",
+						"thumbnail": "images/thumbs/env5.jpg",
+						"fullsize": "images/fullsize/env5.jpg",
+						"specs": "360 specs"
+					},
+					{
+						"title": "NYC Storefront (Wireframe)",
+						"thumbnail": "images/thumbs/env6.jpg",
+						"fullsize": "images/fullsize/env6.jpg",
+						"specs": "360 specs"
+					},
+					{
+						"title": "Kitchen",
+						"thumbnail": "images/thumbs/env7.jpg",
+						"fullsize": "images/fullsize/env7.jpg",
+						"specs": "PS3 specs"
+					},
+					{
+						"title": "Kitchen (Wireframe)",
+						"thumbnail": "images/thumbs/env8.jpg",
+						"fullsize": "images/fullsize/env8.jpg",
+						"specs": "PS3 specs"
+					},
+					{
+						"title": "San Francisco House",
+						"thumbnail": "images/thumbs/env9.jpg",
+						"fullsize": "images/fullsize/env9.jpg",
+						"specs": "Xbox specs"
+					},
+					{
+						"title": "San Francisco House (Wireframe)",
+						"thumbnail": "images/thumbs/env10.jpg",
+						"fullsize": "images/fullsize/env10.jpg",
+						"specs": "Xbox specs"
+					},
+					{
+						"title": "Tropical Resort",
+						"thumbnail": "images/thumbs/env11.jpg",
+						"fullsize": "images/fullsize/env11.jpg",
+						"specs": "DS specs"
+					},
+					{
+						"title": "Tropical Resort (Wireframe)",
+						"thumbnail": "images/thumbs/env12.jpg",
+						"fullsize": "images/fullsize/env12.jpg",
+						"specs": "DS specs"
+					},
+					{
+						"title": "RPG Village",
+						"thumbnail": "images/thumbs/env13.jpg",
+						"fullsize": "images/fullsize/env13.jpg",
+						"specs": "PC specs"
+					},
+					{
+						"title": "RPG Village (Wireframe)",
+						"thumbnail": "images/thumbs/env14.jpg",
+						"fullsize": "images/fullsize/env14.jpg",
+						"specs": "PC specs"
+					}
+				]
+			}
+		],
+		"misc-3d": [
+		  {
+		  	"name": "3D Misc",
+		  	"items": [
+					{
+						"title": "Mechanical Bug",
+						"thumbnail": "images/thumbs/misc1.jpg",
+						"fullsize": "images/fullsize/misc1.jpg",
+						"specs": "820 polys"
+					},
+					{
+						"title": "Mechanical Bug (Wireframe)",
+						"thumbnail": "images/thumbs/misc2.jpg",
+						"fullsize": "images/fullsize/misc2.jpg",
+						"specs": "820 polys"
+					},
+					{
+						"title": "Cobra",
+						"thumbnail": "images/thumbs/misc3.jpg",
+						"fullsize": "images/fullsize/misc3.jpg",
+						"specs": "2,200 polys"
+					},
+					{
+						"title": "Cobra (Wireframe)",
+						"thumbnail": "images/thumbs/misc4.jpg",
+						"fullsize": "images/fullsize/misc4.jpg",
+						"specs": "2,200 polys"
+					},
+					{
+						"title": "Hummer",
+						"thumbnail": "images/thumbs/misc5.jpg",
+						"fullsize": "images/fullsize/misc5.jpg",
+						"specs": "1,100 polys"
+					},
+					{
+						"title": "Hummer (Wireframe)",
+						"thumbnail": "images/thumbs/misc6.jpg",
+						"fullsize": "images/fullsize/misc6.jpg",
+						"specs": "1,100 polys"
+					},
+					{
+						"title": "M1 Tank",
+						"thumbnail": "images/thumbs/misc7.jpg",
+						"fullsize": "images/fullsize/misc7.jpg",
+						"specs": "6,800 polys"
+					},
+					{
+						"title": "M1 Tank (Wireframe)",
+						"thumbnail": "images/thumbs/misc8.jpg",
+						"fullsize": "images/fullsize/misc8.jpg",
+						"specs": "6,800 polys"
+					},
+					{
+						"title": "Vray Materials",
+						"thumbnail": "images/thumbs/misc9.jpg",
+						"fullsize": "images/fullsize/misc9.jpg",
+						"specs": "21,000 polys"
+					}
+				]
+			}
+		],
+		"print": [
+		  {
+		  	"name": "Print",
+		  	"items": [
+					{
+						"title": "JC Online Promo",
+						"thumbnail": "images/thumbs/print1.jpg",
+						"fullsize": "images/fullsize/print1.jpg"
+					},
+					{
+						"title": "Non Profit Ads",
+						"thumbnail": "images/thumbs/print2.jpg",
+						"fullsize": "images/fullsize/print2.jpg"
+					},
+					{
+						"title": "Non Profit Ads",
+						"thumbnail": "images/thumbs/print3.jpg",
+						"fullsize": "images/fullsize/print3.jpg"
+					},
+					{
+						"title": "Sales Flyers",
+						"thumbnail": "images/thumbs/print4.jpg",
+						"fullsize": "images/fullsize/print4.jpg"
+					},
+					{
+						"title": "Advertising Rates",
+						"thumbnail": "images/thumbs/print5.jpg",
+						"fullsize": "images/fullsize/print5.jpg"
+					},
+					{
+						"title": "JC Readership",
+						"thumbnail": "images/thumbs/print6.jpg",
+						"fullsize": "images/fullsize/print6.jpg"
+					}
+				]
+			}
+		],
+		"ui-ux": [
+		  {
+		  	"name": "UI / UX",
+		  	"items": [
+					{
+						"title": "Hit And Myth",
+						"thumbnail": "images/thumbs/ui1.jpg",
+						"fullsize": "images/fullsize/ui1.jpg"
+					},
+					{
+						"title": "Hit And Myth",
+						"thumbnail": "images/thumbs/ui2.jpg",
+						"fullsize": "images/fullsize/ui2.jpg"
+					},
+					{
+						"title": "Johnny Whatever",
+						"thumbnail": "images/thumbs/ui3.jpg",
+						"fullsize": "images/fullsize/ui3.jpg"
+					},
+					{
+						"title": "Johnny Whatever",
+						"thumbnail": "images/thumbs/ui4.jpg",
+						"fullsize": "images/fullsize/ui4.jpg"
+					},
+					{
+						"title": "Reggie Bush",
+						"thumbnail": "images/thumbs/ui5.jpg",
+						"fullsize": "images/fullsize/ui5.jpg"
+					},
+					{
+						"title": "Abracadaball",
+						"thumbnail": "images/thumbs/ui6.jpg",
+						"fullsize": "images/fullsize/ui6.jpg"
+					},
+					{
+						"title": "Gameloft POP",
+						"thumbnail": "images/thumbs/ui7.jpg",
+						"fullsize": "images/fullsize/ui7.jpg"
+					},
+					{
+						"title": "Fantasy Football",
+						"thumbnail": "images/thumbs/ui8.jpg",
+						"fullsize": "images/fullsize/ui8.jpg"
+					},
+					{
+						"title": "Sociagami",
+						"thumbnail": "images/thumbs/ui9.jpg",
+						"fullsize": "images/fullsize/ui9.jpg"
+					},
+					{
+						"title": "Oddcast Photoface",
+						"thumbnail": "images/thumbs/ui11.jpg",
+						"fullsize": "images/fullsize/ui11.jpg"
+					},
+					{
+						"title": "Pear Tree and Man vs Wild",
+						"thumbnail": "images/thumbs/ui12.jpg",
+						"fullsize": "images/fullsize/ui12.jpg"
+					},
+					{
+						"title": "Purina Critter Carols",
+						"thumbnail": "images/thumbs/ui13.jpg",
+						"fullsize": "images/fullsize/ui13.jpg"
+					}
+				]
+			}
+		],
+		"vector": [
+		  {
+		  	"name": "Vector",
+		  	"items": [
+					{
+						"title": "Rally Cars",
+						"thumbnail": "images/thumbs/vector1.jpg",
+						"fullsize": "images/fullsize/vector1.jpg"
+					},
+					{
+						"title": "Rifle Assembly",
+						"thumbnail": "images/thumbs/vector2.jpg",
+						"fullsize": "images/fullsize/vector2.jpg"
+					},
+					{
+						"title": "Headphones",
+						"thumbnail": "images/thumbs/vector3.jpg",
+						"fullsize": "images/fullsize/vector3.jpg"
+					},
+					{
+						"title": "Skyline",
+						"thumbnail": "images/thumbs/vector4.jpg",
+						"fullsize": "images/fullsize/vector4.jpg"
+					},
+					{
+						"title": "Beach",
+						"thumbnail": "images/thumbs/vector5.jpg",
+						"fullsize": "images/fullsize/vector5.jpg"
+					},
+					{
+						"title": "Drive In Collage",
+						"thumbnail": "images/thumbs/vector6.jpg",
+						"fullsize": "images/fullsize/vector6.jpg"
+					},
+					{
+						"title": "Handbags",
+						"thumbnail": "images/thumbs/vector7.jpg",
+						"fullsize": "images/fullsize/vector7.jpg"
+					},
+					{
+						"title": "Color Table Girl",
+						"thumbnail": "images/thumbs/vector8.jpg",
+						"fullsize": "images/fullsize/vector8.jpg"
+					},
+					{
+						"title": "Cloud",
+						"thumbnail": "images/thumbs/vector9.jpg",
+						"fullsize": "images/fullsize/vector9.jpg"
+					},
+					{
+						"title": "Rule of Rose Girls",
+						"thumbnail": "images/thumbs/vector10.jpg",
+						"fullsize": "images/fullsize/vector10.jpg"
+					}
+				]
+			}
+		],
+		"web-design": [
+		  {
+		  	"name": "Web Design / Development",
+		  	"items": [
+				  {
+			      "title": "Trendalytics",
+			      "link": "http://www.trendalytics.co",
+			      "thumbnail": "images/thumbs/web25.jpg",
+			      "fullsize": "images/fullsize/web25.jpg"
+				  },
+				  {
+			      "title": "My Eyes Are Hungry",
+			      "link": "http://www.myeyesarehungry.com",
+			      "thumbnail": "images/thumbs/web23.jpg",
+			      "fullsize": "images/fullsize/web23.jpg"
+				  },
+				  {
+			      "title": "My Eyes Are Hungry (Mobile)",
+			      "link": "http://www.myeyesarehungry.com",
+			      "thumbnail": "images/thumbs/web24.jpg",
+			      "fullsize": "images/fullsize/web24.jpg"
+				  },
+					{
+						"title": "Martha Stewart",
+						"link": "http://www.marthastewart.com",
+						"thumbnail": "images/thumbs/web19.jpg",
+						"fullsize": "images/fullsize/web19.jpg"
+					},
+					{
+						"title": "Martha Stewart (Mobile)",
+						"link": "http://www.marthastewart.com",
+						"thumbnail": "images/thumbs/web20.jpg",
+						"fullsize": "images/fullsize/web20.jpg"
+					},
+					{
+						"title": "Footprints Around the World",
+						"link": "http://footprintsaroundtheworld.org/maps/",
+						"thumbnail": "images/thumbs/web21.jpg",
+						"fullsize": "images/fullsize/web21.jpg"
+					},
+					{
+						"title": "Footprints Around the World (Mobile)",
+						"link": "http://footprintsaroundtheworld.org/maps/",
+						"thumbnail": "images/thumbs/web22.jpg",
+						"fullsize": "images/fullsize/web22.jpg"
+					},
+					{
+						"title": "Jingle Ball 2011",
+						"link": "http://www.z100.com/pages/events/jingleball11/",
+						"thumbnail": "images/thumbs/web18.jpg",
+						"fullsize": "images/fullsize/web18.jpg"
+					},
+					{
+						"title": "Jingle Ball 2010",
+						"link": "http://www.z100.com/pages/events/jingle-ball/2010.html",
+						"thumbnail": "images/thumbs/web16.jpg",
+						"fullsize": "images/fullsize/web16.jpg"
+					},
+					{
+						"title": "Safe Text",
+						"link": "http://www.safetextapp.com",
+						"thumbnail": "images/thumbs/web15.jpg",
+						"fullsize": "images/fullsize/web15.jpg"
+					},
+					{
+						"title": "Z100",
+						"link": "http://www.z100.com",
+						"thumbnail": "images/thumbs/web1.jpg",
+						"fullsize": "images/fullsize/web1.jpg"
+					},
+					{
+						"title": "Beatstock",
+						"link": "http://www.ktu.com",
+						"thumbnail": "images/thumbs/web13.jpg",
+						"fullsize": "images/fullsize/web13.jpg"
+					},
+					{
+						"title": "Power 1051",
+						"link": "http://www.power1051fm.com",
+						"thumbnail": "images/thumbs/web14.jpg",
+						"fullsize": "images/fullsize/web14.jpg"
+					},
+					{
+						"title": "Schumacher Blog",
+						"link": "http://whatsnew.fschumacher.com",
+						"thumbnail": "images/thumbs/web11.jpg",
+						"fullsize": "images/fullsize/web11.jpg"
+					},
+					{
+						"title": "Schumacher Floorcovering",
+						"link": "http://www.schumacherfloorcovering.com",
+						"thumbnail": "images/thumbs/web2.jpg",
+						"fullsize": "images/fullsize/web2.jpg"
+					},
+					{
+						"title": "Patterson, Flynn and Martin",
+						"link": "http://www.pattersonflynnmartin.com",
+						"thumbnail": "images/thumbs/web3.jpg",
+						"fullsize": "images/fullsize/web3.jpg"
+					},
+					{
+						"title": "Sociagami",
+						"link": "http://www.sociagami.com",
+						"thumbnail": "images/thumbs/web4.jpg",
+						"fullsize": "images/fullsize/web4.jpg"
+					},
+					{
+						"title": "Sign God",
+						"link": "http://www.signgod.com",
+						"thumbnail": "images/thumbs/web5.jpg",
+						"fullsize": "images/fullsize/web5.jpg"
+					},
+					{
+						"title": "Light God",
+						"link": "http://www.lightgod.com",
+						"thumbnail": "images/thumbs/web6.jpg",
+						"fullsize": "images/fullsize/web6.jpg"
+					},
+					{
+						"title": "Tusker Group",
+						"link": "http://www.tuskergroup.com",
+						"thumbnail": "images/thumbs/web7.jpg",
+						"fullsize": "images/fullsize/web7.jpg"
+					},
+					{
+						"title": "Sign Satisfaction",
+						"link": "http://www.sign-satisfaction.com",
+						"thumbnail": "images/thumbs/web8.jpg",
+						"fullsize": "images/fullsize/web8.jpg"
+					}
+				]
+			}
+		]
+	}
+]
