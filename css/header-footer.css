@@ -64,21 +64,21 @@
   text-decoration: none;
 }
 .icon-github:before {
-  content: "\eab2"; 
+  content: "\e1ad"; 
 }
 .icon-facebook:before {
-  content: "\ea8d"; 
+  content: "\e1a0"; 
 }
 .icon-linkedin:before {
-  content: "\eac8"; 
+  content: "\e1b2"; 
 }
 .icon-google-plus:before {
-  content: "\ea89"; 
+  content: "\e19e"; 
 }
 .icon-tumblr:before {
-  content: "\eabc"; 
+  content: "\e1b1"; 
 }
 .icon-myeyes:before {
-  content: "\ea54";
+  content: "\e19b";
 }
 
