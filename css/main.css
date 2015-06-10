@@ -42,7 +42,7 @@ a:active,
 a:visited {
 	color: #0091c5;
 	text-decoration: none;
-	transition: color 1s;
+	transition: color .5s;
 }
 a:hover {
 	color: #004e65;
@@ -156,48 +156,24 @@ a:hover.button {
   border-bottom: 1px solid #999;
 }
 
-
-/* social icons
-/* ---------------------------------------------- */
-.social-icons {
-	margin-bottom: 10px;
-}
-.social-icons li {
-	display: inline-block;
-	margin: 0 .4em;
-}
-.social-icons .icon {
-	color: #666;
-	font-size: 2.2em;
-}
-.social-icons .icon:hover {
-	color: #333;
-}
-.social-icons a {
-	text-decoration: none;
-}
-.icon-github:before {
-	content: "\eab2";	
-}
-.icon-facebook:before {
-	content: "\ea8d";	
-}
-.icon-linkedin:before {
-	content: "\eac8";	
-}
-.icon-google-plus:before {
-	content: "\ea89";	
-}
-.icon-tumblr:before {
-	content: "\eabc";	
-}
-.icon-myeyes:before {
-	content: "\ea54";
+/* General */
+.page-content {
+  margin: 1em;
 }
 
-/* homepage
-/* ----------------------------------------------
- */
+@media screen and (min-width: 485px) {
+  .page-content {
+    margin: 2em 3em;
+  }
+  .page-main {
+    padding-left: 10em;
+  }
+  .nav-closed .page-main {
+    padding-left: 3em;
+  }
+}
+
+/* Homepage */
 .site-blurb {
 	margin-bottom: 3em;
 	text-align: center;
@@ -245,20 +221,8 @@ a:hover.button {
 .sub-title:first-child {
 	margin-top: 0;
 }
-.page-footer {
-  background-color: rgba(0,0,0,.2);
-	text-align: center;
-	margin-top: 1em;
-	padding: 40px 0 25px 0;
-	border-top: 1px solid #aaa;
-	color: #666;
-	font-size: .85em;
-	line-height: 1.5em;
-}
 
-/* thumbnails
-/* ---------------------------------------------- 
- */
+/* Thumbnails */
 .thumbnail-item {
 	float: left;
 	width: 50%;
@@ -355,44 +319,8 @@ a:hover.button {
 	text-align: center;
 }
 
-/* large image
-/* ---------------------------------------------- */
-.page-large-image .page-logo {
-	margin-top: 0;
-	width: 80px;
-}
-.page-large-image .page-head {
-	margin-top: 15px;
-}
-.page-large-image #btn-back {
-	position: absolute;
-	top: 18px;
-	left: 50%;
-	margin-left: -15px;
-}
-.large-image-wrap {
-	position: relative;
-	text-align: center;
-}
-.large-image-wrap .large-image {
-	position: relative;
-	border: 4px solid #eee;
-	background-color: #666;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
 
-/* general
- * --------------------------------------
- */
-.page-head,
-.page-content {
-	margin: 1em .9em;
-}
-.page-head {
-	position: relative;
-}
+/* General */
 .mod-half {
 	padding: 1em;
 	box-sizing: border-box;
@@ -470,35 +398,14 @@ a:hover.button {
 	margin: 4px 0 12px 0;
 }
 
-
 @media screen and (min-width: 485px) {
 	.section-title {
 		font-size: 1.5em;
 		padding-left: 25px;
 		padding-right: 25px;
 	}
-	.page-shell {
-		display: table;
-		table-layout: fixed;
-		width: 100%;
-		height: 100%;
-	}
-	.page-main {
-		display: table-cell;
-		width: 100%;
-		vertical-align: top;
-	}
-	.page-head {
-		margin: 12px 25px 15px 25px;
-	}
-  .page-home .page-head {
-    margin-bottom: 40px;
-    text-align: center;
-  }
 	.page-content {
-		margin: 1em 4em 1em 4em;
-	}
-	.code-list {
+		padding: 0;
 	}
 	.code-list .item-list {
 		padding-right: 20px;
@@ -513,15 +420,6 @@ a:hover.button {
 	.code-display-inside {
 		border-left: 1px solid #999;
 		padding-left: 20px;
-	}
-	.page-large-image .page-logo {
-		width: 100px;
-	}
-	.page-large-image #btn-back {
-		top: 22px;
-	}
-	.page-large-image .carousel-arrow {
-		font-size: 3.2em;
 	}
 }
 
@@ -549,16 +447,12 @@ a:hover.button {
 		margin-right: 1em;
 		margin-bottom: 0;
 	}
-	.page-large-image .carousel-arrow {
-		font-size: 3.8em;
-	}
 	.thumbnail-item {
 		width: 33%;
 	}
 	.video-item {
 		width: 50%;
 	}
-
 	.site-intro {
 		margin: 0 auto 2em auto;
 		width: 80%;
@@ -590,24 +484,6 @@ a:hover.button {
 }
 
 /* Home */
-.page-logo {
-  display: inline-block;
-  width: 100px;
-  height: 40px;
-  background: transparent url('../images/logo_nm.svg') center center no-repeat;
-  background-size: contain;
-}
-@media screen and (min-width: 485px) {
-	.site-home .page-logo {
-    height: 60px;
-		width: 165px;
-	}
-	.site-home .page-head {
-	  text-align: center;
-	  margin-bottom: 3.5em;
-	}
-}
-
 .examples-section {
 	margin-bottom: 4em;
 }
@@ -632,7 +508,6 @@ a:hover.button {
 .examples-item-title {
   margin-top: .5em;
 }
-
 .code-block-wrap {
   margin-bottom: 4em;
 }

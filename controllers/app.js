@@ -33,6 +33,10 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
     	bodyClass = 'home';
     }
     $rootScope.bodyClass = 'site-' + bodyClass;
+    
+    // Collapse nav between changes, if it's mobile.
+    console.log(window.innerWidth);
+    //$('body').addClass('nav-closed');
   });
 })
 .config(function($routeProvider, $locationProvider) {
