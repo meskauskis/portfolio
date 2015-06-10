@@ -13,7 +13,8 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
     var path = $location.path().substring(1),
         cat = $route.current.cat !== undefined ? $route.current.cat : $routeParams.cat,
         section = $routeParams.section,
-    		bodyClass = '';
+    		bodyClass = ''
+    		breakpointMobile = 490;
 
     // Set selected nav item.
     $('.nav-item').removeClass('selected');
@@ -35,8 +36,9 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
     $rootScope.bodyClass = 'site-' + bodyClass;
     
     // Collapse nav between changes, if it's mobile.
-    console.log(window.innerWidth);
-    //$('body').addClass('nav-closed');
+    if (window.innerWidth <= breakpointMobile) {
+      $('body').addClass('nav-closed');
+    };
   });
 })
 .config(function($routeProvider, $locationProvider) {
