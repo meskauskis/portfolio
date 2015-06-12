@@ -9,6 +9,7 @@ a.out
 *.a26
 
 .sass-cache
+sass/.sass-cache
 
 # Add in special Atari 7800-based binaries for good measure
 *.a78

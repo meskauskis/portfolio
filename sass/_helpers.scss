@@ -1,0 +1,15 @@
+$mono0: #111;
+$mono1: #333;
+$mono2: #666;
+$mono3: #999;
+$mono4: #aaa;
+$mono5: #ccc;
+$mono6: #eee;
+
+$bp-mobile: 500;
+
+@mixin media-query($width) {
+  @media only screen and (min-width: $width + 0px) {
+    @content;
+  }
+}

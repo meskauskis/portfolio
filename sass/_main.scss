@@ -471,6 +471,7 @@ a:hover.button {
 }
 
 
+
 @media screen and (min-width: 900px) {
 	.mod-list-item {
 		width: 50%;
@@ -519,3 +520,21 @@ a:hover.button {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+
+/* Page - Home */
+.site-home {
+  .page-head {
+    @include media-query($bp-mobile) {
+      margin-bottom: 3em;
+      text-align: center;
+    }
+  }
+  .page-logo {
+    @include media-query($bp-mobile) {
+      height: 60px;
+      width: 165px;
+    }
+  }
+}
+
