@@ -8,17 +8,9 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
-	font-family: arial, helvetica, sans-serif;
-	color: #111;
-	background-color: #eee;
-	/*
-	background-repeat: no-repeat;
-	background-image: linear-gradient(top, #ccc 2%, #eee 20%);
-	background-image: -o-linear-gradient(top, #ccc 2%, #eee 20%);
-	background-image: -moz-linear-gradient(center top , #ccc 2%, #eee 20%);
-	background-image: -webkit-linear-gradient(top, #ccc 2%, #eee 20%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.02, #ccc), color-stop(0.20, #eee));
-	*/
+	font-family: $font1;
+	color: $mono0;
+	background-color: $mono6;
 }
 ul,
 ol,
@@ -37,16 +29,10 @@ h5 {
 ul {
 	list-style: none;
 }
-a:link,
-a:active,
-a:visited {
-	color: #0091c5;
-	text-decoration: none;
-	transition: color .5s;
-}
-a:hover {
-	color: #004e65;
-	text-decoration: underline;
+ul,
+li {
+  padding: 0;
+  margin: 0;
 }
 p {
 	padding: 0;
@@ -56,6 +42,19 @@ img {
 	border: none;
 	vertical-align: top;
 	max-width: 100%;
+}
+a {
+  &:link,
+  &:active,
+  &:visited {
+    color: $color1;
+    text-decoration: none;
+    transition: color .5s;
+  }
+  &:hover {
+    color: darken($color1, 40);
+    text-decoration: underline;
+  }
 }
 .icon {
 	font-family: 'icons';
@@ -68,20 +67,20 @@ img {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-.clear-fix:after {
-	display: block;
-	content: "\00a0";
-	height: 0;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
+.clear-fix {
+  @include clear-fix;
 }
 .hr {
 	height: 1px;
 	width: 50%;
 	margin: 10px auto;
-	background-color: #aaa;
+	background-color: $mono4;
 }
+
+
+
+
+
 .hr.space-below {
 	margin-bottom: 2em;
 }

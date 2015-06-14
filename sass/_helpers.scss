@@ -1,3 +1,5 @@
+$color1: #0091c5;
+
 $mono0: #111;
 $mono1: #333;
 $mono2: #666;
@@ -8,8 +10,21 @@ $mono6: #eee;
 
 $bp-mobile: 500;
 
+$font1: arial, helvetica, sans-serif;
+
 @mixin media-query($width) {
   @media only screen and (min-width: $width + 0px) {
     @content;
+  }
+}
+
+@mixin clear-fix() {
+  &:after {
+    display: block;
+    content: "\00a0";
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
   }
 }
