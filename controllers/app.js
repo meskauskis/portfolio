@@ -14,7 +14,7 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
         cat = $route.current.cat !== undefined ? $route.current.cat : $routeParams.cat,
         section = $routeParams.section,
     		bodyClass = ''
-    		breakpointMobile = 490;
+    		breakpointMobile = 500;
 
     // Set selected nav item.
     $('.nav-item').removeClass('selected');

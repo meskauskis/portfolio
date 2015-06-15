@@ -1,5 +1,7 @@
 /* Page Head */
 .page-head {
+  @include clear-fix;
+
   @include media-query($bp-mobile) {
     text-align: center;
   }
@@ -27,7 +29,7 @@
   text-align: center;
   margin-top: 1em;
   padding: 3em 0 2em 0;
-  border-top: 1px solid $mono4;
+  border-top: 1px solid rgba(0,0,0,.2);
   color: $mono2;
   font-size: .8em;
   line-height: 1.5em;
@@ -70,6 +72,3 @@
     content: "\e19b";
   }
 }
-
-
-
