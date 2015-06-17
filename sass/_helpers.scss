@@ -1,7 +1,12 @@
 @import "compass/css3/transform";
 @import "compass/css3/border-radius";
+@import "compass/css3/box-sizing";
+@import "compass/css3/transition";
 
+$max-width: 1100;
 $bp-mobile: 500;
+$bp-tablet: 750;
+$bp-desktop: 950;
 
 $font1: arial, helvetica, sans-serif;
 $font2: 'times new roman', georgia, serif;
@@ -15,9 +20,10 @@ $mono0: #111;
 $mono1: #333;
 $mono2: #666;
 $mono3: #999;
-$mono4: #aaa;
+$mono4: #a6a6a6;
 $mono5: #ccc;
 $mono6: #eee;
+$mono10: #fff;
 
 @mixin media-query($width) {
   @media only screen and (min-width: $width + 0px) {
@@ -45,5 +51,49 @@ $mono6: #eee;
     text-decoration: none;
     color: #fff;
     background-color: darken($mono3, 30);
+  }
+}
+@mixin title1() {
+  font-family: $font3;
+  font-size: 1.2em;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  padding: .4em;
+  margin-bottom: 2.5em;
+  background-color: rgba(0, 0, 0, .5);
+
+  @include media-query($bp-mobile) {
+    font-size: 1.5em;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@mixin title2() {
+  font-family: $font4;
+  font-size: 1.5em;
+  color: $mono1;
+  margin-bottom: 1em;
+  padding: 0 .2em .4em .2em;
+  border-bottom: 1px solid $mono3;
+}
+@mixin title3() {
+  font-family: $font4;
+  font-size: 1.6em;
+  color: $mono1;
+  margin-bottom: .8em;
+  padding-bottom: .4em;
+  border-bottom: 1px solid $mono3;
+}
+@mixin title4() {
+  font-size: 1.1em;
+  color: $mono2;
+  font-style: italic;
+  margin-top: 1.4em;
+  margin-bottom: .3em;
+  
+  &:first-child {
+    margin-top: 0;
   }
 }
