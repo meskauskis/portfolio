@@ -95,14 +95,8 @@ a {
 .section-title {
   @include title1;
 }
-.mod-title {
-  @include title2;
-}
 .section-title2 {
   @include title3;
-}
-.details-title {
-  @include title4;
 }
 
 /* Thumbnails */
@@ -131,7 +125,6 @@ a {
   }
   .thumbnail-wrap {
     position: relative;
-    border: 1px solid $mono3;
     margin: 0 .6em;
     box-shadow: 0px 8px 2px -4px rgba(50,50,50,.5);
 

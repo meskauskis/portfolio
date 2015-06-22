@@ -31,7 +31,6 @@
   padding: 3em 0 1em 0;
   border-top: 1px solid $mono4;
   color: $mono2;
-  font-size: .9em;
   line-height: 1.5em;
   @include clear-fix;
 
@@ -83,9 +82,7 @@
     .social-icons {
       text-align: center;
       margin-left: 3.5em;
-      //margin-left: 50%;
-      //@include transform(translateX(-50%));
-      //@include clear-fix;
+
       @include media-query($bp-minimum) {
         margin-left: 0;
       }
@@ -102,11 +99,7 @@
       }
     }
     li {
-      margin-bottom: 1.6em;
-  
-      @include media-query($bp-minimum) {
-        margin-bottom: 1.4em;
-      }
+      margin-bottom: 1.35em;
     }
     a {
       color: $mono2;
@@ -119,7 +112,7 @@
     .social-title {
       display: inline-block;
       padding-bottom: .2em;
-      font-size: 1.2em;
+      font-size: 1.15em;
       vertical-align: bottom;
   
       @include media-query($bp-minimum) {
@@ -127,7 +120,7 @@
       }
     }
     .icon {
-      font-size: 1.8em;
+      font-size: 1.7em;
       margin-right: .1em;
     }
   }
