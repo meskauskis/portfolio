@@ -50,12 +50,13 @@ img {
 	max-width: 100%;
 }
 a {
+  color: $color1;
+  @include transition(color,.3s);
+
   &:link,
   &:active,
   &:visited {
-    color: $color1;
     text-decoration: none;
-    transition: color .5s;
   }
   &:hover {
     color: darken($color1, 40);

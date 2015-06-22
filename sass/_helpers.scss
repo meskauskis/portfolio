@@ -4,6 +4,7 @@
 @import "compass/css3/transition";
 
 $max-width: 1100;
+$bp-minimum: 400;
 $bp-mobile: 500;
 $bp-tablet: 750;
 $bp-desktop: 950;
@@ -41,11 +42,14 @@ $mono10: #fff;
   }
 }
 @mixin button() {
-  padding: .3em .6em;
-  color: $mono6;
+  display: inline-block;
+  padding: .7em 1.2em;
+  font-size: 15px;
+  color: $mono10;
   border: none;
-  background-color: $mono3;
+  background-color: $color1;
   @include border-radius(4px);
+  @include transition(background-color, .3s);
 
   &:hover {
     text-decoration: none;
@@ -66,8 +70,8 @@ $mono10: #fff;
 
   @include media-query($bp-mobile) {
     font-size: 1.5em;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 @mixin title2() {
@@ -96,4 +100,10 @@ $mono10: #fff;
   &:first-child {
     margin-top: 0;
   }
+}
+@mixin title5() {
+  font-size: 1.4em;
+  color: $mono1;
+  font-family: $font4;
+  margin-bottom: .5em;
 }

@@ -25,34 +25,16 @@
 
 /* Page Footer */
 .page-footer {
-  background-color: rgba(0,0,0,.2);
+  background-color: $mono5;
   text-align: center;
   margin-top: 1em;
-  padding: 3em 0 2em 0;
-  border-top: 1px solid rgba(0,0,0,.2);
+  padding: 3em 0 1em 0;
+  border-top: 1px solid $mono4;
   color: $mono2;
-  font-size: .8em;
+  font-size: .9em;
   line-height: 1.5em;
+  @include clear-fix;
 
-  .social-icons {
-    margin-bottom: .8em;
-    
-    li {
-      display: inline-block;
-      margin: 0 .4em;
-    }
-    a {
-      text-decoration: none;
-    }
-    .icon {
-      color: $mono2;
-      font-size: 2.2em;
-      
-      &:hover {
-        color: darken($mono2, 30);
-      }
-    }
-  }
   .icon-github:before {
     content: "\e1ad"; 
   }
@@ -70,5 +52,87 @@
   }
   .icon-myeyes:before {
     content: "\e19b";
+  }
+
+  .button {
+    margin-bottom: 1.5em;
+  }
+  .col1,
+  .col2 {
+    @include media-query($bp-tablet) {
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+    }
+  }
+  .col1 {
+    @include media-query($bp-tablet) {
+      margin-right: 4em;
+    }
+  }
+  .footer-title {
+    @include title5;
+    color: $mono2;
+  }
+  .social-icons-wrap {
+    margin-bottom: 1.5em;
+    
+    @include media-query($bp-tablet) {
+      display: inline-block;
+    }
+    .social-icons {
+      text-align: center;
+      margin-left: 3.5em;
+      //margin-left: 50%;
+      //@include transform(translateX(-50%));
+      //@include clear-fix;
+      @include media-query($bp-minimum) {
+        margin-left: 0;
+      }
+    }
+    ul {
+      text-align: left;
+  
+      @include media-query($bp-minimum) {
+        display: inline-block;
+        margin-right: 3em;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    li {
+      margin-bottom: 1.6em;
+  
+      @include media-query($bp-minimum) {
+        margin-bottom: 1.4em;
+      }
+    }
+    a {
+      color: $mono2;
+      
+      &:hover {
+        text-decoration: none;
+        color: darken($mono2, 30);
+      }
+    }
+    .social-title {
+      display: inline-block;
+      padding-bottom: .2em;
+      font-size: 1.2em;
+      vertical-align: bottom;
+  
+      @include media-query($bp-minimum) {
+        padding-bottom: .2em;
+      }
+    }
+    .icon {
+      font-size: 1.8em;
+      margin-right: .1em;
+    }
+  }
+  .copyright {
+    margin-top: 1.5em;
+    color: $mono3;
   }
 }
