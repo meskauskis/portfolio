@@ -98,6 +98,11 @@ a {
 .section-title2 {
   @include title3;
 }
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 3em;
+  border-bottom: 1px solid $color2;
+}
 
 /* Thumbnails */
 .thumbnails-container {

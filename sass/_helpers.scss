@@ -61,20 +61,20 @@ $trans-speed2: .3s;
   }
 }
 @mixin title1() {
+  display: inline-block;
   font-family: $font3;
   font-size: 1.2em;
-  color: #fff;
+  color: $color2;
   letter-spacing: 1px;
   line-height: 1.2;
   text-transform: uppercase;
-  padding: .4em;
-  margin-bottom: 2.5em;
-  background-color: $color2;
+  padding: .4em 0;
+  border-bottom: 8px solid $color2;
 
-  @include media-query($bp-mobile) {
-    font-size: 1.5em;
-    padding-left: 2em;
-    padding-right: 2em;
+  @include media-query($bp-tablet) {
+    font-size: 1.6em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
   }
 }
 @mixin title2() {
@@ -90,8 +90,8 @@ $trans-speed2: .3s;
   font-size: 1.6em;
   color: $mono1;
   margin-bottom: .8em;
-  padding-bottom: .4em;
-  border-bottom: 1px solid $mono3;
+  padding-bottom: .3em;
+  border-bottom: 1px dotted $mono3;
 }
 @mixin title4() {
   font-size: 1.1em;

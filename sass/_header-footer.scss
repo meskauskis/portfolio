@@ -69,6 +69,13 @@
       margin-right: 4em;
     }
   }
+  .col2 {
+    margin-top: 2.5em;
+
+    @include media-query($bp-minimum) {
+      margin-top: 0;
+    }
+  }
   .footer-title {
     @include title5;
     color: $mono2;
