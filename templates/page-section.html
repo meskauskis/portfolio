@@ -5,20 +5,23 @@
 <ul class="thumbnails-container">
 	<li class="thumbnail-item" data-ng-repeat="(key, item) in sectionItems">
 		<a href="{{item.fullsize}}">
-			<div class="thumbnail-wrap">
-				<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}"/>
+			<div class="thumbnail-inner" style="background-image: url('{{item.thumbnail}}');">
+				<!--<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}"/>-->
 				<div class="thumbnail-overlay">
-					<h3 class="thumbnail-title" data-ng-if="item.title !== ''">
-						{{item.title}}
-					</h3>
-					<div class="magnify icon-zoom-in"></div>
-					<p class="thumbnail-specs" data-ng-if="item.specs !== undefined">
-					  {{item.specs}}
-					</p>
+				  <div class="thumbnail-table">
+          <div class="thumbnail-cell">
+  					<h3 class="thumbnail-title" data-ng-if="item.title !== ''">
+  						{{item.title}}
+  					</h3>
+  					<p class="thumbnail-specs" data-ng-if="item.specs !== undefined">
+  					  {{item.specs}}
+  					</p>
+          </div>
+					</div>
 				</div>
 			</div>
 		</a>
-		<p class="thumbnail-details" data-ng-if="item.link !== undefined">
+		<p class="thumbnail-footer" data-ng-if="item.link !== undefined">
 		  <a data-ng-href="{{item.link}}" title="View site" rel="nofollow" target="_blank">View Site</a>
 		</p>
 	</li>
