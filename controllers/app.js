@@ -86,7 +86,7 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
       }
       scope.text = $sce.trustAsHtml(attributes.text);
     },
-    templateUrl: 'templates/code-block.html'
+    templateUrl: 'templates/directive-code.html'
   };
 })
 /*

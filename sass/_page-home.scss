@@ -2,7 +2,7 @@
 .site-home {
   .page-head {
     @include media-query($bp-mobile) {
-      margin-bottom: 3em;
+      margin-bottom: 2em;
       text-align: center;
     }
   }

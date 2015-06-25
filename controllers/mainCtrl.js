@@ -53,8 +53,8 @@ app
   		exampleTitle = $scope.jsonExamplesItems[section][0].name;
 
   $scope.section = $routeParams.section;
-  $scope.examplesTitle = exampleTitle;
-  $scope.examplesGroups = $scope.jsonExamplesItems[section][0].groups;
+  $scope.sectionTitle = exampleTitle;
+  $scope.sectionItems = $scope.jsonExamplesItems[section][0].groups;
 	$rootScope.browserTitle = $scope.setBrowserTitle(exampleTitle);
 
   // Flag which type of content to show on the template.

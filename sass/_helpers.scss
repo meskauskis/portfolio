@@ -68,11 +68,10 @@ $trans-speed2: .3s;
   letter-spacing: 1px;
   line-height: 1.2;
   text-transform: uppercase;
-  padding: .4em 0;
   border-bottom: 8px solid $color2;
 
   @include media-query($bp-tablet) {
-    font-size: 1.6em;
+    font-size: 1.8em;
     padding-left: 1.2em;
     padding-right: 1.2em;
   }
@@ -83,15 +82,16 @@ $trans-speed2: .3s;
   color: $mono1;
   margin-bottom: 1em;
   padding: 0 .2em .4em .2em;
-  border-bottom: 1px solid $mono3;
+  border-bottom: 1px dotted $mono3;
 }
 @mixin title3() {
+  display: inline-block;
   font-family: $font4;
-  font-size: 1.6em;
+  font-size: 1.5em;
   color: $mono1;
-  margin-bottom: .8em;
-  padding-bottom: .3em;
-  border-bottom: 1px dotted $mono3;
+  margin-bottom: .4em;
+  padding: .3em;
+  border: 1px dotted $mono4;
 }
 @mixin title4() {
   font-size: 1.1em;
@@ -109,4 +109,10 @@ $trans-speed2: .3s;
   color: $mono0;
   font-family: $font4;
   margin-bottom: .5em;
+}
+@mixin title6() {
+  font-size: .9em;
+  font-family: $font4;
+  text-transform: uppercase;
+  text-align: center;
 }
