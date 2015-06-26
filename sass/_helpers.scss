@@ -80,9 +80,7 @@ $trans-speed2: .3s;
   font-family: $font4;
   font-size: 1.5em;
   color: $mono1;
-  margin-bottom: 1em;
-  padding: 0 .2em .4em .2em;
-  border-bottom: 1px dotted $mono3;
+  padding: 0 .2em;
 }
 @mixin title3() {
   display: inline-block;

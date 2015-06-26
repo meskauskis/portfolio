@@ -99,7 +99,11 @@ a {
   margin: .8em;
 
   @include media-query($bp-mobile) {
-    margin: 2em 3em;
+    margin: 2em 1.2em;
+  }
+  @include media-query($bp-tablet) {
+    margin-left: 3em;
+    margin-right: 3em;
   }
 }
 .page-main {

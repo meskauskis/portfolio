@@ -27,6 +27,11 @@ app
 	$scope.navToggle = function() {
 		$body.toggleClass('nav-closed');
 	}
+	
+  // Show bio on homepage.
+	$scope.bioShow = function() {
+    $('.page-intro').addClass('show-bio');
+	}
 
 	// Set the page title.
 	$scope.setBrowserTitle = function(section) {
