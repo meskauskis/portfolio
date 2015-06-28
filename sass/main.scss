@@ -258,11 +258,10 @@ a {
   @include clear-fix;
   
   .code-block {
-    background-color: #333;
-    color: #fff;
+    background-color: $mono1;
+    color: $mono10;
     padding: 1em;
     margin-bottom: 1em;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    @include box-sizing(border-box);
   }
 }
