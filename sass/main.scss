@@ -262,6 +262,10 @@ a {
     color: $mono10;
     padding: 1em;
     margin-bottom: 1em;
+    overflow-x: auto;
     @include box-sizing(border-box);
+  }
+  .code-block-text {
+    word-wrap: break-word;
   }
 }
