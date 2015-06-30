@@ -6,7 +6,7 @@
 
 <ul class="thumbnails-container">
 	<li class="thumbnail-item" data-ng-repeat="(key, item) in sectionItems">
-		<a href="{{item.fullsize}}">
+		<a href="{{item.fullsize}}" data-lightbox="image-{{key}}" data-title="{{item.title}}">
 			<div class="thumbnail-inner" style="background-image: url('{{item.thumbnail}}');">
 				<!--<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}"/>-->
 				<div class="thumbnail-overlay">
