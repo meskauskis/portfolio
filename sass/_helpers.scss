@@ -63,7 +63,7 @@ $trans-speed2: .3s;
 @mixin title1() {
   display: inline-block;
   font-family: $font3;
-  font-size: 1.3em;
+  font-size: 1.6em;
   color: $color2;
   padding-bottom: .2em;
   letter-spacing: 1px;
@@ -72,15 +72,14 @@ $trans-speed2: .3s;
   border-bottom: 8px solid $color2;
 
   @include media-query($bp-mobile) {
-    font-size: 1.8em;
+    font-size: 2em;
     padding: 0 1.2em .1em 1.2em;
   }
 }
 @mixin title2() {
   font-family: $font3;
-  font-size: 1.6em;
+  font-size: 1.5em;
   color: $mono1;
-  padding: 0 .2em;
 }
 @mixin title3() {
   display: inline-block;
@@ -110,7 +109,6 @@ $trans-speed2: .3s;
   font-size: 1.2em;
   color: $mono0;
   font-family: $font4;
-  margin-bottom: .5em;
 }
 @mixin title6() {
   font-size: .9em;
