@@ -44,6 +44,17 @@ $trans-speed2: .3s;
     line-height: 0;
   }
 }
+@mixin icon() {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 @mixin button() {
   display: inline-block;
   padding: .7em 1.2em;

@@ -6,23 +6,28 @@
 
 <ul class="thumbnails-container">
 	<li class="thumbnail-item" data-ng-repeat="(key, item) in sectionItems">
-		<a href="{{item.fullsize}}" data-lightbox="image-{{key}}" data-title="{{item.title}}">
-			<div class="thumbnail-inner" style="background-image: url('{{item.thumbnail}}');">
-				<!--<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}"/>-->
-				<div class="thumbnail-overlay">
-				  <div class="thumbnail-table">
-          <div class="thumbnail-cell">
-  					<h3 class="thumbnail-title" data-ng-if="item.title !== ''">
-  						{{item.title}}
-  					</h3>
-  					<p class="thumbnail-specs" data-ng-if="item.specs !== undefined">
-  					  {{item.specs}}
-  					</p>
-          </div>
-					</div>
-				</div>
-			</div>
-		</a>
+	  <div class="thumbnail-pos">
+  		<a href="{{item.fullsize}}" data-lightbox="thumbnail" data-title="{{item.title}}">
+  			<div class="thumbnail-inner" style="background-image: url('{{item.thumbnail}}');">
+  				<!--<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}"/>-->
+  				<div class="thumbnail-overlay">
+  				  <div class="thumbnail-table">
+            <div class="thumbnail-cell">
+    					<h3 class="thumbnail-title" data-ng-if="item.title !== ''">
+    						{{item.title}}
+    					</h3>
+    					<p class="thumbnail-specs" data-ng-if="item.specs !== undefined">
+    					  {{item.specs}}
+    					</p>
+            </div>
+  					</div>
+  				</div>
+  			</div>
+  		</a>
+  		<a href="{{item.fullsize}}">
+  		  <span class="icon expand-button"></span>
+  		</a>
+		</div>
 		<p class="thumbnail-footer" data-ng-if="item.link !== undefined">
 		  <a data-ng-href="{{item.link}}" title="View site" rel="nofollow" target="_blank">View Site</a>
 		</p>

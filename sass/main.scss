@@ -138,7 +138,7 @@ a {
   .thumbnail-item {
     float: left;
     width: 50%;
-    margin-bottom: 2.2em;
+    margin-bottom: 2.5em;
     padding: 0 1.2em;
     @include box-sizing(border-box);
   
@@ -148,6 +148,13 @@ a {
     @include media-query($bp-tablet) {
       max-width: 175px;
       width: 25%;
+    }
+    &:hover {
+      .expand-button {
+        @include media-query($bp-mobile) {
+          display: block;
+        }
+      }
     }
     .thumbnail-inner {
       position: relative;
@@ -214,7 +221,25 @@ a {
     .thumbnail-footer {
       font-size: .8em;
       text-align: center;
-      margin-top: 1em;
+      margin-top: 1.5em;
+    }
+    .thumbnail-pos {
+      position: relative;
+    }
+    .expand-button {
+      display: none;
+      position: absolute;
+      bottom: -.2em;
+      right: -.2em;
+      color: $mono4;
+
+      &:before {
+        //content: "\e14d";
+        content: "\e037";
+      }
+      &:hover {
+        color: $mono2;
+      }
     }
   }
 }

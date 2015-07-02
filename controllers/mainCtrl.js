@@ -3,6 +3,11 @@ app
 	var $body = $('body');
 	//angular.element("#id").val()
 
+  // Change thumbnail shapes.
+  $scope.changeThumbsShape = function() {
+    
+  };
+
 	// Json section data.
 	$scope.jsonSectionItems = [];
 	$http.get('data/sections.json')
@@ -26,12 +31,12 @@ app
 	// Toggle the nav expansion.
 	$scope.navToggle = function() {
 		$body.toggleClass('nav-closed');
-	}
+	};
 	
   // Show bio on homepage.
 	$scope.bioShow = function() {
     $('.page-intro').addClass('show-bio');
-	}
+	};
 
 	// Set the page title.
 	$scope.setBrowserTitle = function(section) {
@@ -39,7 +44,7 @@ app
 				updatedTitle = section ? title + ' | ' + section : title;
 
 		return updatedTitle;
-	}
+	};
 })
 .controller('pageSection', function($rootScope, $scope, $routeParams) {
   if (!$routeParams.hasOwnProperty('section')) {
