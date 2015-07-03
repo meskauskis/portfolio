@@ -1,0 +1,18 @@
+{
+  "article": [
+    {
+      "title": "Article 1",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "date": "Mon, 01 January 2015 00:00:00 +0000",
+      "image": "headline_image.jpg",
+      "tags": [ "news", "breaking-news", "NYC" ]
+    },
+    {
+      "title": "Article 2",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "date": "Mon, 01 January 2015 00:00:00 +0000",
+      "image": "headline_image.jpg",
+      "tags": [ "news", "breaking-news", "NYC" ]
+    }
+  ]
+}
