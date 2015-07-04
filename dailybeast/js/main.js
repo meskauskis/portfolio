@@ -1,33 +1,1 @@
-$(function() {
-  var articlesUrl = 'data/articles.json';
-  console.log(articlesUrl);
-
-  var source = document.querySelector('#articleTemplate').innerHTML,
-      template = Handlebars.compile(source),
-      target = document.querySelector('#articlePlaceholder');
-
-  var data = {
-    names: [
-      { "name": "foo" },
-      { "name": "bar" },
-      { "name": "chew" }
-    ],
-    candy: [
-      { brand: "M&M" },
-      { brand: "Snickers" }
-    ]
-  };
-
-
-  $.ajax({
-    url: articlesUrl,
-    dataType: 'json',
-  })
-  .done(function(data) {
-    console.log(data);
-  target.innerHTML = template(data);
-  });
-
-
-
-});
+$(function() {  var articlesUrl = 'data/articles.json',      $source = document.querySelector('#articleTemplate').innerHTML,      template = Handlebars.compile($source),      $target = document.querySelector('#articlePlaceholder');  // Fetch JSON data.  $.ajax({    url: articlesUrl,    dataType: 'json',  })  .done(function(data) {    console.log(data);    // Interate over each JSON article.    $.each(data.article, function(i, v) {      console.log(this.tags);      var newDate = new Date(this.date)          newTags = '';      // Convert date.      this.date = newDate.getMonth() + '/' + newDate.getDate() + '/' + newDate.getFullYear();      // Set tags to destinations.      $.each(this.tags, function(tagI, tagV) {        var comma = tagI !== 0 ? ',' : '';        newTags += comma + '<a href="/tags/' + tagV.toLowerCase() + '.html">' + tagV + '</a>';      });      this.tags = newTags;    });    // Print the handelbars to page.    $target.innerHTML = template(data);  });});
