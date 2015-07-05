@@ -1,0 +1,48 @@
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-sizing";
+@import "compass/css3/transition";
+
+$bp-mobile: 500;
+$bp-tablet: 750;
+$bp-desktop: 950;
+
+$font1: arial, helvetica, sans-serif;
+$font2: 'times new roman', georgia, serif;
+$font3: 'Oswald', sans-serif;
+
+$color1: #e50914;
+$color2: darken($color1, 40);
+
+$mono0: #111;
+$mono1: #333;
+$mono2: #666;
+$mono3: #999;
+$mono4: #a6a6a6;
+$mono5: #ccc;
+$mono6: #eee;
+$mono10: #fff;
+
+$trans-speed1: .2s;
+
+@mixin media-query($width) {
+  @media only screen and (min-width: $width + 0px) {
+    @content;
+  }
+}
+@mixin clear-fix() {
+  &:after {
+    display: block;
+    content: "\00a0";
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+  }
+}
+@mixin title1() {
+  font-size: 1.6em;
+  font-family: $font3;
+  letter-spacing: .02em;
+}
+
