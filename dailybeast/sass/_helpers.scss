@@ -3,12 +3,12 @@
 @import "compass/css3/box-sizing";
 @import "compass/css3/transition";
 
-$bp-mobile: 500;
+$bp-mobile: 450;
 $bp-tablet: 750;
 $bp-desktop: 950;
 
 $font1: arial, helvetica, sans-serif;
-$font2: 'times new roman', georgia, serif;
+$font2: 'Times New Roman', georgia, serif;
 $font3: 'Oswald', sans-serif;
 
 $color1: #e50914;
@@ -41,8 +41,12 @@ $trans-speed1: .2s;
   }
 }
 @mixin title1() {
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-family: $font3;
-  letter-spacing: .02em;
+
+  @include media-query($bp-mobile) {
+    font-size: 1.6em;
+    letter-spacing: .02em;
+  }
 }
 

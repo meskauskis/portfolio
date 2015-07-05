@@ -7,11 +7,15 @@ html {
 }
 body {
   height: 100%;
-  padding: 2em;
+  padding: 1em;
   font-size: 14px;
   font-family: $font1;
   color: $mono0;
   background-color: $mono6;
+
+  @include media-query($bp-mobile) {
+    padding: 2em;
+  }
 }
 ul {
   list-style: none;
@@ -37,9 +41,13 @@ a {
 }
 .page-title {
   font-family: $font3;
-  font-size: 2.5em;
+  font-size: 1.8em;
   margin-bottom: 1em;
   text-align: center;
+
+  @include media-query($bp-mobile) {
+    font-size: 2.5em;
+  }
 }
 .article-item {
   max-width: 900px;
