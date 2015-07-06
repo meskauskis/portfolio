@@ -34,24 +34,17 @@ var myapi = {
 };
 
 
-describe('MyAPI', function() {
-    beforeEach(function() {
-        this.xhr = sinon.useFakeXMLHttpRequest();
+it('should parse fetched data as JSON', function(done) {
+    var data = { foo: 'bar' };
+    var dataJson = JSON.stringify(data);
 
-        this.requests = [];
-        this.xhr.onCreate = function(xhr) {
-            this.requests.push(xhr);
-        }.bind(this);
+    myapi.get(function(err, result) {
+        result.should.deep.equal(data);
+        done();
     });
 
-    afterEach(function() {
-        this.xhr.restore();
-    });
-
-
-    //Tests etc. go here
+    this.requests[0].respond(200, { 'Content-Type': 'text/json' }, dataJson);
 });
-
 
 
 
