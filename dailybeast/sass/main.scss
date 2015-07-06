@@ -6,7 +6,6 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  height: 100%;
   padding: 1em;
   font-size: 14px;
   font-family: $font1;
@@ -14,7 +13,7 @@ body {
   background-color: $mono6;
 
   @include media-query($bp-mobile) {
-    padding: 2em;
+    padding: 2em 2em 3em 2em;
   }
 }
 ul {
@@ -61,6 +60,18 @@ a {
   @include media-query($bp-mobile) {
     display: block;
   }
+  @include media-query($bp-tablet) {
+    margin-right: .5em;
+  }
+}
+.slides {
+  @include clear-fix;
+}
+.article-slide {
+  @include media-query($bp-tablet) {
+    float: left;
+    width: 50%;
+  }
 }
 .article-item {
   background-color: $mono10;
@@ -68,6 +79,9 @@ a {
   padding: .8em;
   margin-bottom: 1em;
 
+  @include media-query($bp-tablet) {
+    margin: .5em;
+  }
   &.is-full {
     .article-body {
       white-space: normal;
