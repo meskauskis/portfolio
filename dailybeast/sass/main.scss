@@ -49,12 +49,19 @@ a {
     font-size: 2.5em;
   }
 }
-.article-item {
+.page-body {
   max-width: 900px;
+  margin: 0 auto;
+}
+.article-filter {
+  text-align: right;
+  margin-bottom: .6em;
+}
+.article-item {
   background-color: $mono10;
   border: 1px solid $mono5;
   padding: .8em;
-  margin: 0 auto 1em auto;
+  margin-bottom: 1em;
 
   &.is-full {
     .article-body {
@@ -95,12 +102,15 @@ a {
         font-size: .8em;
         font-weight: bold;
         text-transform: uppercase;
-        background-color: $mono3;
-        color: $mono10;
+        background-color: lighten($mono4, 30);
+        border: 1px solid $mono4;
+        color: $mono2;
         padding: .1em .4em;
+        @include border-radius(2px);
         
         &:hover {
-          background-color: $mono2;
+          background-color: $mono3;
+          color: $mono10;
         }
       }
     }

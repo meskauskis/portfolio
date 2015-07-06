@@ -4,25 +4,81 @@
       "title": "Sample Article Title 1",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
       "url": "sample-url-title.html",
-      "date": "Sun May 03 2015 10:00:00 +0000",
+      "date": "Fri May 15 2015 10:00:00 +0000",
       "image": "img/article01.jpg",
-      "tags": ["food", "breaking-news", "NYC"]
+      "tags": ["breaking-news", "nyc"]
     },
     {
       "title": "Sample Article Title 2",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
       "url": "sample-url-title.html",
-      "date": "Mon May 04 2015 10:00:00 +0000",
+      "date": "Thu May 14 2015 10:00:00 +0000",
       "image": "img/article02.jpg",
-      "tags": ["news", "USA", "NYC"]
+      "tags": ["news", "health", "nyc"]
     },
     {
       "title": "Sample Article Title 3",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
       "url": "sample-url-title.html",
-      "date": "Tue May 05 2015 10:00:00 +0000",
+      "date": "Wed May 13 2015 10:00:00 +0000",
       "image": "img/article03.jpg",
-      "tags": ["news", "breaking-news", "NYC"]
+      "tags": ["news", "breaking-news", "nyc"]
+    },
+    {
+      "title": "Sample Article Title 4",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "url": "sample-url-title.html",
+      "date": "Tue May 12 2015 10:00:00 +0000",
+      "image": "img/article04.jpg",
+      "tags": ["health", "food", "nyc"]
+    },
+    {
+      "title": "Sample Article Title 5",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "url": "sample-url-title.html",
+      "date": "Tue May 12 2015 10:00:00 +0000",
+      "image": "img/article05.jpg",
+      "tags": ["news", "breaking-news"]
+    },
+    {
+      "title": "Sample Article Title 6",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "url": "sample-url-title.html",
+      "date": "Mon May 11 2015 10:00:00 +0000",
+      "image": "img/article06.jpg",
+      "tags": ["health", "breaking-news", "nyc"]
+    },
+    {
+      "title": "Sample Article Title 7",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "url": "sample-url-title.html",
+      "date": "Mon May 11 2015 10:00:00 +0000",
+      "image": "img/article07.jpg",
+      "tags": ["breaking-news", "food"]
+    },
+    {
+      "title": "Sample Article Title 8",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "url": "sample-url-title.html",
+      "date": "Mon May 11 2015 10:00:00 +0000",
+      "image": "img/article08.jpg",
+      "tags": ["health", "breaking-news", "nyc"]
+    },
+    {
+      "title": "Sample Article Title 9",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "url": "sample-url-title.html",
+      "date": "Mon May 11 2015 10:00:00 +0000",
+      "image": "img/article09.jpg",
+      "tags": ["food", "nyc"]
+    },
+    {
+      "title": "Sample Article Title 10",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet consectetur massa, dapibus ullamcorper orci efficitur porta. Vestibulum in nunc ut nisl condimentum bibendum. Fusce fermentum mauris magna, at volutpat ante pretium in. Nam posuere purus vitae purus ornare, ac efficitur mi mollis. Praesent tincidunt dapibus semper. Sed fringilla venenatis sem non rhoncus. Aliquam in luctus massa. Pellentesque facilisis, lacus quis efficitur rutrum, libero urna hendrerit lorem, at porta eros lorem ac urna. Phasellus ex quam, molestie in sodales nec, viverra et sapien. Nunc mauris libero, euismod in magna non, mattis pharetra odio. Nulla tincidunt, urna non finibus elementum, nisl justo vestibulum purus, at ultrices sapien purus sed quam.",
+      "url": "sample-url-title.html",
+      "date": "Sun May 10 2015 10:00:00 +0000",
+      "image": "img/article10.jpg",
+      "tags": ["news", "breaking-news", "nyc"]
     }
   ]
 }
