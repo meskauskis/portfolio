@@ -41,6 +41,7 @@ $trans-speed1: .2s;
   }
 }
 @mixin title1() {
+  display: inline-block;
   font-size: 1.2em;
   font-family: $font3;
 
