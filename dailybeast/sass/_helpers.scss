@@ -44,10 +44,14 @@ $trans-speed1: .2s;
   display: inline-block;
   font-size: 1.2em;
   font-family: $font3;
+  color: $mono1;
 
   @include media-query($bp-mobile) {
     font-size: 1.4em;
     letter-spacing: .02em;
+  }
+  &:hover {
+    color: $color1;
   }
 }
 
