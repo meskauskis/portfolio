@@ -20,7 +20,7 @@ $color2: #01b5ae;
 $mono0: #111;
 $mono1: #333;
 $mono2: #666;
-$mono3: #999;
+$mono3: #939393;
 $mono4: #a6a6a6;
 $mono5: #ccc;
 $mono6: #eee;
@@ -120,6 +120,7 @@ $trans-speed2: .3s;
   font-size: 1.2em;
   color: $mono0;
   font-family: $font4;
+  margin-bottom: .4em;
 }
 @mixin title6() {
   font-size: .9em;
