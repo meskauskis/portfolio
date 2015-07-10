@@ -4,9 +4,9 @@
   </h1>
 </div>
 <div class="section-thumb-icons">
-  <span data-ng-class="{'is-active':thumbShape == 'circle'}" class="shape-circle" data-ng-click="thumbShape='circle'"></span>
-  <span data-ng-class="{'is-active':thumbShape == 'rounded'}" class="shape-rounded" data-ng-click="thumbShape='rounded'"></span>
-  <span data-ng-class="{'is-active':thumbShape == 'square'}" class="shape-square" data-ng-click="thumbShape='square'"></span>
+  <span data-ng-class="{'is-active':thumbShape == 'circle'}" class="shape-circle" data-ng-click="changeThumbsShape('circle');"></span>
+  <span data-ng-class="{'is-active':thumbShape == 'rounded'}" class="shape-rounded" data-ng-click="changeThumbsShape('rounded');"></span>
+  <span data-ng-class="{'is-active':thumbShape == 'square'}" class="shape-square" data-ng-click="changeThumbsShape('square');"></span>
 </div>
 
 <ul class="thumbnails-container shape-{{thumbShape}}">

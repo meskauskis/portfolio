@@ -149,6 +149,15 @@ a {
       @include transform(scale(.1));
       @include border-radius(50%);
     }
+    .thumbnail-item {
+      &:hover {
+        .expand-button {
+          @include media-query($bp-mobile) {
+            display: block;
+          }
+        }
+      }
+    }
   }
   &.shape-rounded {
     .thumbnail-inner {
@@ -184,13 +193,6 @@ a {
     @include media-query($bp-tablet) {
       max-width: 175px;
       width: 25%;
-    }
-    &:hover {
-      .expand-button {
-        @include media-query($bp-mobile) {
-          display: block;
-        }
-      }
     }
     .thumbnail-inner {
       position: relative;
