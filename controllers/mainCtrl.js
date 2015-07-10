@@ -3,10 +3,8 @@ app
 	var $body = $('body');
 	//angular.element("#id").val()
 
-  // Change thumbnail shapes.
-  $scope.changeThumbsShape = function() {
-    
-  };
+  // Set default thumbnail.
+  $scope.thumbShape = 'circle';
 
 	// Json section data.
 	$scope.jsonSectionItems = [];

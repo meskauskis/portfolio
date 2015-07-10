@@ -129,12 +129,48 @@ a {
   text-align: center;
   margin-bottom: 3em;
   border-bottom: 1px solid $color2;
+  
+  &.icons-below {
+    margin-bottom: 1.2em;
+  }
 }
 
 /* Thumbnails */
 .thumbnails-container {
   @include clear-fix;
   
+  &.shape-circle {
+    .thumbnail-inner {
+      @include border-radius(50%);
+      box-shadow: 0px 0px 0px 8px rgba($color2, .3);
+      border: 2px solid $color2;
+    }
+    .thumbnail-overlay {
+      @include transform(scale(.1));
+      @include border-radius(50%);
+    }
+  }
+  &.shape-rounded {
+    .thumbnail-inner {
+      @include border-radius(8px);
+      box-shadow: 0px 0px 0px 8px rgba($color2, .3);
+      border: 2px solid $color2;
+    }
+    .thumbnail-overlay {
+      @include transform(scale(1.25));
+      @include border-radius(7px);
+    }
+  }
+  &.shape-square {
+    .thumbnail-inner {
+      @include border-radius(0);
+      box-shadow: none;
+      border: 2px solid $mono3;
+    }
+    .thumbnail-overlay {
+      @include border-radius(0);
+    }
+  }
   .thumbnail-item {
     float: left;
     width: 50%;
@@ -163,9 +199,6 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      border: 1px solid $color2;
-      @include border-radius(50%);
-      box-shadow: 0px 0px 0px 8px rgba($color2, .3);
       @include transition(box-shadow, $trans-speed2);
 
       &:hover {
@@ -190,8 +223,6 @@ a {
       text-align: center;
       padding: 0 .6em;
       text-shadow: 0px 1px 2px rgba(0,0,0,.6);
-      @include border-radius(50%);
-      @include transform(scale(.2));
       @include transition(scale, $trans-speed2);
       @include transition(opacity, $trans-speed2);
     }
@@ -311,5 +342,33 @@ a {
 
   .code-page-title {
     @include title5;
+  }
+}
+.section-thumb-icons {
+  text-align: center;
+  margin-bottom: 3.5em;
+  
+  span {
+    display: inline-block;
+    border: 1px solid $mono3;
+    padding: .6em;
+    margin: 0 .5em;
+    cursor: pointer;
+
+    &:hover:not(.is-active) {
+      border-color: $mono0;
+    }
+    &.is-active {
+      border-color: rgba($mono4, .6);
+      cursor: default;
+    }
+    &.shape-circle {
+      @include border-radius(50%);
+    }
+    &.shape-rounded {
+      @include border-radius(5px);
+    }
+    &.shape-square {
+    }
   }
 }
