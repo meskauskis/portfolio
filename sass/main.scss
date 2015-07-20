@@ -318,6 +318,7 @@ a {
   @include clear-fix;
   
   .code-block {
+    font-family: monospace;
     background-color: $mono1;
     color: $mono10;
     padding: 1em;
