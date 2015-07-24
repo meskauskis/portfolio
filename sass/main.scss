@@ -338,12 +338,13 @@ a {
     word-wrap: break-word;
   }
 }
-.code-page-intro {
-  margin-bottom: 3em;
-
-  .code-page-title {
-    @include title5;
-  }
+.page-section-intro {
+  text-align: center;
+  margin-bottom: 2em;
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+  padding: 0 1.5em;
+  line-height: 1.4;
 }
 .section-thumb-icons {
   text-align: center;
