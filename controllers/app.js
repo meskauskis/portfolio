@@ -57,16 +57,16 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
       templateUrl: 'templates/page-examples.html',
       controller: 'pageExamples',
     })
-    .when('/code/learnings', {
-      templateUrl: 'templates/page-code.html',
-      controller: 'pageCode',
-      sectionTitle: 'Code Learnings',
-      cat: 'code',
-    })
     .when('/code/tips', {
       templateUrl: 'templates/page-tips.html',
       controller: 'pageCode',
-      sectionTitle: 'Coding Tips',
+      sectionTitle: 'Code Tips',
+      cat: 'code',
+    })
+    .when('/code/css', {
+      templateUrl: 'templates/page-css.html',
+      controller: 'pageCode',
+      sectionTitle: 'Css Tips',
       cat: 'code',
     })
     .otherwise({
@@ -81,6 +81,9 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
     scope: true,
     link: function(scope, element, attributes) {
       scope.title = attributes.title;
+      if (attributes.example) {
+        scope.example = $sce.trustAsHtml(attributes.example);
+      }
       if (attributes.code) {
         scope.code = $sce.trustAsHtml(attributes.code);
       }

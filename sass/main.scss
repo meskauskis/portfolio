@@ -321,23 +321,21 @@ a {
     font-family: monospace;
     background-color: $mono1;
     color: $mono10;
-    padding: 1em;
-    margin-bottom: 1em;
+    padding: .5em .6em;
     overflow-x: auto;
     @include box-sizing(border-box);
+    @include border-radius(5px);
+  }
+  .code-caption {
+    color: $mono1;
+    margin-top: .3em;
+    margin-bottom: .8em;
+    font-size: .82em;
   }
   .code-block-text {
+    line-height: 1.3;
+    margin-top: 1.2em;
     word-wrap: break-word;
-    
-    .code-caption {
-      margin-top: .4em;
-      margin-bottom: .8em;
-      font-size: .82em;
-    }
-    .code-desc {
-      margin-top: 1em;
-      line-height: 1.4;
-    }
   }
 }
 .code-page-intro {
