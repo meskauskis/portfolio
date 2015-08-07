@@ -55,31 +55,32 @@
 </div>
 
 <section class="mod-wrap">
-  <div class="mod-full">
+  <article class="mod-full">
     <div class="mod-inner">
-      <h2 class="mod-title">
-        Sample Code
-      </h2>
-      <article class="mod-list-item">
-        <h4 class="code-links-title">
-          Handlebars Example
-        </h4>
-        <a href="codes/handlebars/" target="_blank">view</a> &bull; 
-        <a href="https://github.com/meskauskis/portfolio/tree/master/codes/handlebars" target="_blank" rel="nofollow">source code</a>
-      
-        <h4 class="code-links-title">
-          Angular Example
-        </h4>
-        this site &bull; 
-        <a href="https://github.com/meskauskis/portfolio" target="_blank" rel="nofollow">source code</a>
-      </article>
+    <h2 class="mod-title">
+      Sample Code
+    </h2>
+      <h4 class="code-links-title">
+        Handlebars Example
+      </h4>
+      <a href="codes/handlebars/" target="_blank">view</a> &bull; 
+      <a href="https://github.com/meskauskis/portfolio/tree/master/codes/handlebars" target="_blank" rel="nofollow">source code</a>
+    
+      <h4 class="code-links-title">
+        Angular Example
+      </h4>
+      this site &bull; 
+      <a href="https://github.com/meskauskis/portfolio" target="_blank" rel="nofollow">source code</a>
     </div>
-  </div>
+  </article>
 </section>
 
 <section class="mod-wrap">
-	<article class="mod-half">
+	<article class="mod-half" itemscope itemtype="http://schema.org/Person">
 		<div class="mod-inner">
+		  <div itemprop="name" style="display: none;">
+		    Neil Meskauskis
+		  </div>
 			<h2 class="mod-title">
 			  My Info
 			</h2>
@@ -87,7 +88,10 @@
 			<h5 class="details-title first">
 			  Employment
 			</h5>
-			Currently at <a href="http://www.meredith.com" target="_blank" rel="nofollow">Meredith</a> as a <i>Senior Web Developer</i>
+			Currently at <a href="http://www.meredith.com" target="_blank" rel="nofollow" itemprop="worksFor">Meredith</a> as a <i itemprop="jobTitle">Senior Web Developer</i>
+			<div itemprop="address">
+			  New York City
+			</div>
 			
 			<h5 class="details-title">
 			  Education
@@ -99,7 +103,7 @@
 			<h5 class="details-title">
 			  Email
 			</h5>  
-			meskauskis @ gmail . com<br/> 
+			<span itemprop="email">meskauskis @ gmail . com</span><br/> 
 			
 			<h5 class="details-title">
 			  Resume
