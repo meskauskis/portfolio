@@ -1,5 +1,5 @@
-<div class="section-title-wrap icons-below">
-  <h1 class="section-title">
+<div class="section-title-wrap icons-below" itemscope itemtype="http://schema.org/Photograph">
+  <h1 class="section-title" itemprop="about">
   	{{sectionTitle}}
   </h1>
 </div>
@@ -14,11 +14,11 @@
 	  <div class="thumbnail-pos">
   		<a href="{{item.fullsize}}" data-lightbox="thumbnail" data-title="{{item.title}}">
   			<div class="thumbnail-inner" style="background-image: url('{{item.thumbnail}}');">
-  				<!--<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}"/>-->
+  				<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}" itemprop="thumbnailUrl" style="display:none;"/>
   				<div class="thumbnail-overlay">
   				  <div class="thumbnail-table">
             <div class="thumbnail-cell">
-    					<h3 class="thumbnail-title" data-ng-if="item.title !== ''">
+    					<h3 class="thumbnail-title" data-ng-if="item.title !== ''" itemprop="text">
     						{{item.title}}
     					</h3>
     					<p class="thumbnail-specs" data-ng-if="item.specs !== undefined">
