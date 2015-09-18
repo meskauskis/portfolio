@@ -20,7 +20,6 @@ app
 		});
 
 	// Json examples data.
-	$scope.jsonExamplesItems = [];
 	$http.get('data/examples.json')
 		.success(function(data, status, headers, config) {
 			$scope.jsonExamplesItems = data[0];                
