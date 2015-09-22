@@ -92,27 +92,4 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
     templateUrl: 'templates/directive-code.html'
   };
 })
-/*
-.directive('flash', function() {
-  return {
-  	//restrict: 'AE',
-  	replace: true,
-		scope: false,
-		link: function(scope, element, attributes) {
-			var params = scope.$eval(attributes.param);
-
-			scope.path = params.path;
-			scope.width = params.width;
-			scope.height = params.height;
-		},
-		template:
-			'<object id="papervision model" type="application/x-shockwave-flash" data="{{path}}" width="{{width}}" height="{{height}}">' +
-				'<param name="allowScriptAccess" value="sameDomain" />' +
-				'<param name="movie" value="{{path}}"/>' +
-				'<param name="wmode" value="opaque">' +
-				'<param name="quality" value="high"/>' +
-			'</object>',
-  };
-})
-*/
 ;

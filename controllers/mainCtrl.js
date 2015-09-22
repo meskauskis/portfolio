@@ -1,7 +1,21 @@
 app
-.controller('appCtrl', function($scope, $http) {
+.controller('appCtrl', function($rootScope, $scope, $http) {
 	var $body = $('body');
 	//angular.element("#id").val()
+
+	// Cache json results.
+	$rootScope.jsonSectionItems = null;
+	$rootScope.jsonExamplesItems = null;
+
+  // Set page elements with the json data.
+  $scope.setPageElements = function($scope, data, section) {
+    var exampleTitle = data[section][0].name;
+    
+    $scope.section = section;
+    $scope.sectionTitle = exampleTitle;
+    $scope.sectionItems = data[section][0].groups ? data[section][0].groups : data[section][0].items;
+    $rootScope.browserTitle = $scope.setBrowserTitle(exampleTitle);
+  }
 
   // Change thumbnail shapes.
   $scope.thumbShape = 'circle';
@@ -9,24 +23,13 @@ app
     $scope.thumbShape = shape;
   };
 
-	// Json section data.
-	$scope.jsonSectionItems = [];
-	$http.get('data/sections.json')
-		.success(function(data, status, headers, config) {
-			$scope.jsonSectionItems = data[0];                
-		})
-		.error(function(data, status, headers, config) {
-			// Error log.
-		});
+	// Set the page title.
+	$scope.setBrowserTitle = function(section) {
+		var title = 'Neil Meskauskis Portfolio',
+				updatedTitle = section ? title + ' | ' + section : title;
 
-	// Json examples data.
-	$http.get('data/examples.json')
-		.success(function(data, status, headers, config) {
-			$scope.jsonExamplesItems = data[0];                
-		})
-		.error(function(data, status, headers, config) {
-			// Error log.
-		});
+		return updatedTitle;
+	};
 
 	// Toggle the nav expansion.
 	$scope.navToggle = function() {
@@ -37,38 +40,54 @@ app
 	$scope.bioShow = function() {
     $('.page-intro').addClass('show-bio');
 	};
-
-	// Set the page title.
-	$scope.setBrowserTitle = function(section) {
-		var title = 'Neil Meskauskis Portfolio',
-				updatedTitle = section ? title + ' | ' + section : title;
-
-		return updatedTitle;
-	};
 })
-.controller('pageSection', function($rootScope, $scope, $routeParams) {
+.controller('pageSection', function($rootScope, $scope, $routeParams, $http) {
   if (!$routeParams.hasOwnProperty('section')) {
 		$rootScope.browserTitle = $scope.setBrowserTitle(null);
   	return;
   }
-  var section = $routeParams.section,
-  		sectionTitle = $scope.jsonSectionItems[section][0].name;
+  var section = $routeParams.section;
 
-  $scope.sectionTitle = sectionTitle;
-  $scope.sectionItems = $scope.jsonSectionItems[section][0].items;
-	$rootScope.browserTitle = $scope.setBrowserTitle(sectionTitle);
+  // If the results have already been loaded.
+  if ($rootScope.jsonSectionItems) {
+    console.log('good1');
+    $scope.setPageElements($scope, $rootScope.jsonSectionItems, section);
+  }
+  else {
+    console.log('bad1');
+    $http.get('data/sections.json')
+    .success(function(data, status, headers, config) {
+      $rootScope.jsonSectionItems = data[0];
+      $scope.setPageElements($scope, $rootScope.jsonSectionItems, section);
+    })
+    .error(function(data, status, headers, config) {
+      // Error log.
+    });
+  }
 })
-.controller('pageExamples', function($rootScope, $scope, $routeParams) {
-  var section = $routeParams.section,
-  		exampleTitle = $scope.jsonExamplesItems[section][0].name;
+.controller('pageExamples', function($rootScope, $scope, $routeParams, $http) {
+  if (!$routeParams.hasOwnProperty('section')) {
+    $rootScope.browserTitle = $scope.setBrowserTitle(null);
+    return;
+  }
+  var section = $routeParams.section;
 
-  $scope.section = $routeParams.section;
-  $scope.sectionTitle = exampleTitle;
-  $scope.sectionItems = $scope.jsonExamplesItems[section][0].groups;
-	$rootScope.browserTitle = $scope.setBrowserTitle(exampleTitle);
-
-  // Flag which type of content to show on the template.
-  $scope[section] = true;
+  // If the results have already been loaded.
+  if ($rootScope.jsonExamplesItems) {
+    console.log('good2');
+    $scope.setPageElements($scope, $rootScope.jsonExamplesItems, section);
+  }
+  else {
+    console.log('bad2');
+    $http.get('data/examples.json')
+    .success(function(data, status, headers, config) {
+      $rootScope.jsonExamplesItems = data[0];
+      $scope.setPageElements($scope, $rootScope.jsonExamplesItems, section);
+    })
+    .error(function(data, status, headers, config) {
+      // Error log.
+    });
+  }
 })
 .controller('pageCode', function($rootScope, $route, $scope, $routeParams) {
 	var sectionTitle = $route.current.$$route.sectionTitle;
@@ -77,4 +96,3 @@ app
 	$rootScope.browserTitle = $scope.setBrowserTitle(sectionTitle);
 })
 ;
-

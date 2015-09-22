@@ -14,7 +14,7 @@
 	</p>
 
 	<ul class="clear-fix">
-		<li class="examples-item-video" data-ng-if="renderings !== undefined" data-ng-repeat="(key2, item) in group.items">
+		<li class="examples-item-video" data-ng-if="section == 'renderings'" data-ng-repeat="(key2, item) in group.items">
 			<video width="100%" controls>
 				<source data-ng-src="{{item.webm}}" type="video/webm">
 				<source data-ng-src="{{item.ogg}}" type="video/ogg">
@@ -26,11 +26,11 @@
 			</h3>
 		</li>
 			
-		<li class="examples-item-sprite" data-ng-if="sprites !== undefined" data-ng-repeat="(key2, item) in group.items">
+		<li class="examples-item-sprite" data-ng-if="section == 'sprites'" data-ng-repeat="(key2, item) in group.items">
 			<img data-ng-src="{{item.image}}" alt="{{item.image}}"/>
 		</li>
 
-		<li class="examples-item-flash" data-ng-if="flash !== undefined" data-ng-repeat="(key2, item) in group.items">
+		<li class="examples-item-flash" data-ng-if="section == 'flash'" data-ng-repeat="(key2, item) in group.items">
 			<object id="papervision model" type="application/x-shockwave-flash" data="{{item.file}}" width="{{item.width}}" height="{{item.height}}">
 				<param name="allowScriptAccess" value="sameDomain" />
 				<param name="movie" value="{{item.file}}"/>
