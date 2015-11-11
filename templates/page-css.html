@@ -10,6 +10,27 @@
 </p>
 
 <div data-code-block 
+  data-title="Selector Symbol Confusion"
+  data-example=""
+  data-text="
+    <div>
+      <b>X ~ Y (sibling)</b><br>
+      Matches if X and Y share the same parent and Y comes after X.
+    </div>
+    <br>
+    <div>
+      <b>X + Y (immediate sibling)</b><br>
+      Very similar to X ~ Y, but more strict. Matches if X and Y share the same parent and Y immediately comes after X.
+    </div>
+    <br>
+    <div>
+      <b>X > Y (direct child)</b><br>
+      Matches if Y is a direct child of X.
+    </div>
+  "
+></div>
+
+<div data-code-block 
   data-title="2 Even Height Columns"
   data-example="
     <div style='border: 1px solid #000; width: 60%; overflow: hidden;'>
