@@ -421,6 +421,18 @@
 		  {
 		  	"name": "Web Design / Dev",
 		  	"items": [
+          {
+            "title": "Super Bowl 50",
+            "link": "http://www.cbssports.com/superbowl",
+            "thumbnail": "images/thumbs/web27.jpg",
+            "fullsize": "images/fullsize/web27.jpg"
+          },
+          {
+            "title": "Super Bowl 50",
+            "link": "http://www.cbssports.com/superbowl",
+            "thumbnail": "images/thumbs/web26.jpg",
+            "fullsize": "images/fullsize/web26.jpg"
+          },
 				  {
 			      "title": "Trendalytics",
 			      "link": "http://www.trendalytics.co",
