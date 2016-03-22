@@ -1,0 +1,147 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-family: arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+ul,
+li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+p {
+	padding: 0;
+	margin: 0;
+}
+.page-top {
+	background-color: #849b87;
+	padding: 2em 2em 1em 2em;
+	text-align: center;
+}
+.page-title {
+	font-size: 3em;
+	color: #fff;
+}
+.section-title {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-bottom: .4em;
+}
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-height: 200px;
+	width: 250px;
+	max-width: 400px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	overflow-y: auto;
+}
+.ui-autocomplete li:first-child {
+	border-top: none;
+}
+.ui-autocomplete li {
+	padding: .6em .4em;
+	border-top: 1px solid #ddd;
+	color: #333;
+	cursor: pointer;
+}
+.ui-autocomplete li:hover {
+	background-color: #eee;
+}
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+.page-body {
+	padding: 1em;
+	box-sizing: border-box;
+}
+@media screen and (min-width: 500px) {
+	.page-body {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		padding: 2em;
+	}
+}
+@media screen and (min-width: 500px) {
+	.page-side {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+		text-align: center;
+		padding-right: 1em;
+		box-sizing: border-box;
+	}
+}
+@media screen and (min-width: 500px) {
+	.page-map {
+		display: table-cell;
+		vertical-align: top;
+		width: 50%;
+	}
+}
+.search-results {
+	visibility: hidden;
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+}
+@media screen and (min-width: 500px) {
+	.search-results {
+		margin-top: 2.5em;
+		margin-bottom: 0;
+	}
+}
+.search-results .locations {
+	margin-bottom: .6em;
+}
+.distance-show .search-results {
+	visibility: visible;
+}
+.page-section {
+	text-align: left;
+	margin-top: 1.5em;
+}
+.page-section:first-child {
+	margin-top: 0;
+}
+@media screen and (min-width: 900px) {
+	.page-section {
+		display: inline-block;
+		margin-top: 0;
+		margin-left: 1.5em;
+	}
+	.page-section:first-child {
+		margin-left: 0;
+	}
+}
+.map-container {
+	position: relative;
+	border: 1px solid #ccc;
+	padding-top: 50%;
+}
+.map-canvas {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  margin: 0;
+  padding: 0;
+}

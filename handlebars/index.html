@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Handlebars.js example</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/handlebars-v2.0.0.js" /></script>
+	<script type="text/javascript" src="js/data.js" /></script>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+  <div id="placeholder">This will get replaced by handlebars.js</div>
+  <script id="myTemplate" type="text/x-handlebars-template">
+    {{#each names}}
+      <li>Name: {{name}}</li>
+    {{/each}}
+    <hr/>
+    {{#if candy}}
+      {{#each candy}}
+        <li>Brand: {{brand}}</li>
+      {{/each}}
+    {{/if}}
+    <hr/>
+    {{Max 12 45}}
+  </script>
+  <hr/>
+  Additional text goes here.
+</body>
+</html>

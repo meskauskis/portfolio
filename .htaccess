@@ -3,3 +3,12 @@ AddType video/ogg .ogv
 AddType application/ogg .ogg 
 
 ErrorDocument 404 /404.php 
+
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^meskauskis.com [NC]
+# RewriteRule ^(.*)$ http://www.meskauskis.com/$1 [L,R=301,L]
+
+# Redirect to www
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
