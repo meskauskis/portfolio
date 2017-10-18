@@ -2,18 +2,24 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0" />
     <title>Our Wedding | April 21, 2018</title>
     
     <link href="https://fonts.googleapis.com/css?family=Lobster|Yellowtail|Parisienne" rel="stylesheet">
 
     <style>
         body {
+            color: #827a59;
             margin: 0;
             padding: 0;
         }
         a {
-            color: darkblue;
+            color: #000;
+            font-weight: bold;
             text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         img {
             max-width: 100%;
@@ -100,10 +106,8 @@
         }
         .page-intro {
             background-image: url('fabric.jpg');
-            border-bottom: 1px solid rgba(0,0,0,0.2);
             border-top: 30px solid #76966f;
             box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.3);
-            color: #827a59;
             font-family: 'Lobster', cursive;
             font-size: 18px;
             margin-bottom: 40px;
@@ -119,12 +123,15 @@
         }
         
         /* Body */
-       .image-round {
-           border: 4px solid #76966f;
-           border-radius: 50%;
-           margin-right: 20px;
-           overflow: hidden;
-       }
+        .image-outline {
+            border: 2px solid #76966f;
+            box-sizing: border-box;            padding: 4px;
+        }
+        .image-round {
+            border-radius: 50%;
+            margin-right: 20px;
+            overflow: hidden;
+        }
         @media (min-width: 600px) {
             .image-round {
                 width: 150px;
@@ -134,17 +141,14 @@
            box-sizing: border-box;
            font-family: Arial, Helvetica, sans-serif;
            font-size: 16px;
-           margin-bottom: 40px;
+           margin: 60px 0 40px;
            overflow: hidden;
            padding: 0 20px;
            width: 100%;
        }
        .image-trip {
-           float: left;
-           width: 50%;
-       }
-       .image-band {
-           margin-bottom: 40px;
+           display: block;
+           margin: 0 auto;
        }
        .heart-line {
            display: block;
@@ -167,27 +171,38 @@
         }
         .side1,
         .side2 {
+            box-sizing: border-box;
             display: table-cell;
             vertical-align: middle;
         }
         .side1 {
-            width: 90px;
-            padding-right: 20px;
+            width: 100px;
+            padding-right: 10px;
         }
         @media (min-width: 600px) {
             .side1 {
                 width: 150px;
+                padding-right: 20px;
             }
         }
         .caption {
-            margin-top: 15px;
+            margin: 8px 0 20px;
             text-align: center;
         }
         .cf {
             overflow: hidden;
             width: 100%;
         }
-       
+        .button {
+            background-color: #76966f;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .button:hover {
+            background-color: #333;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -204,60 +219,75 @@
         <h1>Saturday, April 21st, 2018</h1>
 
         Thank you for taking the time to check out our website. We are more than excited to see you all at our wedding and cannot thank you enough for joining us and sharing this special day.
-        This is the place where you will find every piece of information you will need regarding our wedding celebration.         
+        <br><br>
+        This is the place where you will find every piece of information you will need regarding our wedding celebration. 
     </div>
 
     <div class="page-band">
         <img class="heart-line" src="heart-line.png">
-        <h2>Meet The Bride &amp; Groom</h2>
+        <h2>The Story of Our Adventures</h2>
 
-        <div style="text-align: center">
-            Our proposal story
-            (tell your story neil)<br>
-            <br>
-            We met on a rainy Sunday afternoon in Jan 2015 and our adventures began!<br><br>
-        </div>
+        <p style="text-align:center;">
+            We met on a rainy Sunday afternoon in Jan 2015 and our adventures began!
+        </p>
 
+        <img class="image-trip image-outline" src="trip1.jpg">
+        <p class="caption">
+            Santorini
+        </p>
+
+        <img class="image-trip image-outline" src="trip5.jpg">
+        <p class="caption">
+            Athens
+        </p>
+
+        <img class="image-trip image-outline" src="trip2.jpg">
+        <p class="caption">
+            Barcelona
+        </p>
+        <img class="image-trip image-outline" src="trip3.jpg">
+        <p class="caption">
+            Hong Kong
+        </p>
+
+        <img class="image-trip image-outline" src="trip4.jpg">
+        <p class="caption">
+            Taiwan
+        </p>
+
+        <img class="image-trip image-outline" src="trip6.jpg">
+        <p class="caption">
+            White House
+        </p>
+
+        <!--
         <div class="side-by">
             <div class="side1">
-                <img class="image-round" src="glow.jpg">
+                <img class="image-round image-outline" src="glow.jpg">
             </div>
             <div class="side2">
                 <h3>Gloria Wu</h3>
-                Email: gglowu@gmail.com<br>
-                lksadf lkja sflj slkdjf askdfjdsf
             </div>
         </div>
 
         <div class="side-by">
             <div class="side1">
-                <img class="image-round" src="neil.jpg">
+                <img class="image-round image-outline" src="neil.jpg">
             </div>
             <div class="side2">
                 <h3>Neil Meskauskis</h3>
-                Email: meskauskis@gmail.com<br>
-                lksadf lkja sflj slkdjf askdfjdsf
             </div>
         </div>
+        -->
     </div>
-    
-    <img class="image-band" src="pic18.jpg">
 
     <div class="page-band">
         <img class="heart-line" src="heart-line.png">
-        <h2>Some Of Our Adventures</h2>
-
-        <div class="cf">
-            <img class="image-trip" src="trip1.jpg">
-            <img class="image-trip" src="trip2.jpg">
-            <img class="image-trip" src="trip3.jpg">
-            <img class="image-trip" src="trip4.jpg">
-        </div>
-
-        <div class="caption">
-            From top, left: Santorini, Barcelona, Hong Kong, Athens
-        </div>
+        <h2>Our Proposal Story</h2>
+        We got engaged while vacationing in Barcelona on a big bright sunny day in July 2017. Neil had bought the ring a month before and planned to pop the question on their Spain trip. Nervous about flying with a ring, he had it close to him the whole time fearing it would get lost or get pick pocketed. Eager to ask, he proposed on their third day in Barcelona- visiting the perfect place, the Magic Fountain. While Neil was on his knee taking photos, he took out the ring and the rest is history!
     </div>
+
+    <img class="image-band" src="pic18.jpg">
 
     <div class="page-band">
         <img class="heart-line" src="heart-line.png">
@@ -273,21 +303,22 @@
         <a href="http://www.theinnatfoxhollow.com/" target="_blank">Website</a>
 
         <p>
-            Our wedding ceremony and reception is at the hotel, so we are able to get a room block for those who choose to stay in this hotel.
+            Our wedding reception is in this hotel so we are able to get a room block for those who choose to stay in this hotel.
         </p>
 
         <ul>
             <li>
-                By Train:
-                asfdlkjsdf
+                By Train:<br>
+                Take the <a href="http://lirr42.mta.info/">LIRR</a>
             </li>
             <li>
-                By Plane:
-                asfdlkjsdf
+                By Plane:<br>
+                Fly into LGA (La Guardia) or JFK (John F Kennedy)<br>
+                Does not matter which one, they are both the same distance.
             </li>
             <li>
-                By Car:
-                asfdlkjsdf
+                By Car:<br>
+                There is a large parking lot with valet parking, so renting a car and driving is an option. However, it would probably be best to just get an Uber, because everything will be held at the same venue. There is no need to drive around.
             </li>
         </ul>
         <br>
@@ -295,12 +326,12 @@
         <h3>Alternate Hotels</h3>
         <ul>
             <li>
-                Best Western Woodbury Inn<br>
+                <i>Best Western Woodbury Inn</i><br>
                 7940 Jericho Turnpike<br>
                 Woodbury, NY 11797
             </li>
             <li>
-                Days Inn Woodbury<br>
+                <i>Days Inn Woodbury</i><br>
                 8030 Jericho Turnpike<br>
                 Woodbury, NY 11797
             </li>
@@ -313,24 +344,28 @@
         <img class="heart-line" src="heart-line.png">
         <h2>Registry</h2>
         
+        <p>
+            We're so lucky to be able to spend our wedding day with all of our friends and family; your presence is truly all the present we need. If you'd like to get us a gift to celebrate, we would kindly accept gifts.
+            <br><br>
+            We have our dishes and towels for two,<br>
+            Pots and pans and a toaster too,<br>
+            Knives and forks and spoons galore,<br>
+            There isn't much room for anything more...<br><br>
+            So if for our wedding you'd like to bring us a gift,<br>
+            An envelope gift would give us a lift. <br>
+            Perhaps you would help towards our honeymoon spends,<br> 
+            Or where our home is in need of mends. <br>
+            Please don't be offended at hits type of request,<br>
+            As our day will be complete with you as a guest. <br>
+        </p>
         
-        
-        We’re so lucky to be able to spend our wedding day with all of our friends and family; your presence is truly all the present we need. If you’d like to get us a gift to celebrate, we would kindly accept gifts. https://www.myregistry.com/wedding-registry/Gloria-Wu-Neil-Meskauskis-Fresh-Meadows-Ny/1439351
-         Or…
-        We have our dishes and towels for two,
-        Pots and pans and a toaster too
-        Knives and forks and spoons galore,
-        There isn’t much room for anything more!
-        So if for our wedding you’d like to bring us a gift,
-        An envelope gift would give us a lift. 
-        Perhaps you would help towards our honeymoon spends, 
-        Or where our home is in need of mends. 
-        Please don’t be offended at hits type of request,
-        As our day will be complete with you as a guest. 
-        (which i think may still be a little tacky and a bit rude so registry may still be the most polite thing)
+        <p style="font-size: 20px; text-decoration: italic; margin-bottom: 30px;">
+            So what we're trying to say is that we live in a small, one bedroom apartment and don't have much space for physical items. They nicest thing you could do would be help us in finding our dream home and plan for our honeymoon.
+        </p>
+
+        <p style="text-align: center;">
+            <a class="button" href="https://www.myregistry.com/wedding-registry/Gloria-Wu-Neil-Meskauskis-Fresh-Meadows-Ny/1439351">Our Registry</a>
+        </p>
     </div>
-
-    <img class="image-band" src="pic17.jpg">
-
 </body>
 </html>
