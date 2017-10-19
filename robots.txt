@@ -1,1 +1,2 @@
 Disallow: /safetextapp/
+Disallow: /wedding/
