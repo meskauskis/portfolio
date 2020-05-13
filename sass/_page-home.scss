@@ -39,7 +39,7 @@
       width: 50%;
       padding-right: 4em;
       margin-bottom: 0;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
     }
     &.show-bio {
       .bio-button {
@@ -108,7 +108,7 @@
     }
     .teaser-item {
       padding: .5em;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
   
       @include media-query($bp-mobile) {
         float: left;
@@ -163,7 +163,7 @@
       @include media-query($bp-tablet) {
         padding: 1em;
         margin-bottom: 0;
-        @include box-sizing(border-box);
+        box-sizing: border-box;
       }
     }
     .mod-half {
@@ -175,7 +175,7 @@
     .mod-inner {
       background-color: rgba(150,150,150,.2);
       padding: 1em;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
       @include clear-fix;
     }
   }
@@ -195,7 +195,7 @@
       padding-bottom: 0;
       margin-bottom: 2em;
       border-bottom: none;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
     }
     @include media-query($bp-desktop) {
       width: 50%;
