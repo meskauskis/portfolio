@@ -1,139 +1,129 @@
-/* Page Head */
-.page-head {
-  @include clear-fix;
-
-  @include media-query($bp-mobile) {
+.PageHead {
+    margin-top: 1rem;
     text-align: center;
-  }
-}
-.page-logo {
-  display: block;
-  float: left;
-  margin-left: 1em;
-  margin-top: .8em;
-  width: 90px;
-  height: 32px;
-  background: transparent url('../images/logo_nm.svg') center center no-repeat;
-  background-size: contain;
 
-  @include media-query($bp-mobile) {
-    float: none;
+    @include media-query($bp-tablet) {
+        margin-left: 1rem;
+        text-align: left;
+    }
+}
+.PageHead-toggle {
+    color: $mono3;
+    cursor: pointer;
+    font-family: 'icons';
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include media-query($bp-tablet) {
+        display: none;
+    }
+    &:before {
+        content: $icon-hamburger;
+    }
+    &--open {
+        &:before {
+            content: $icon-x;
+            font-size: 1.1rem;
+        }
+    }
+}
+.PageHead-logo {
+    background: transparent url('../images/logo_nm.svg') center center no-repeat;
+    background-size: contain;
     display: inline-block;
-    margin: 1.5em 0 0 0;
-  }
+    height: 28px;
+    width: 80px;
+
+    @include media-query($bp-tablet) {
+        display: block;
+    }
 }
 
-/* Page Footer */
-.page-footer {
-  background-color: $mono5;
-  text-align: center;
-  margin-top: 1em;
-  padding: 3em 0 1em 0;
-  border-top: 1px solid $mono4;
-  color: $mono2;
-  line-height: 1.5em;
-  @include clear-fix;
+.PageFooter {
+    @include clear-fix;
+    background-color: $mono5;
+    border-top: 6px solid $mono4;
+    color: $mono2;
+    padding: 3rem 2rem 1rem;
 
-  .icon-github:before {
-    content: "\e1ad"; 
-  }
-  .icon-facebook:before {
-    content: "\e1a0"; 
-  }
-  .icon-linkedin:before {
-    content: "\e1b2"; 
-  }
-  .icon-google-plus:before {
-    content: "\e19e"; 
-  }
-  .icon-tumblr:before {
-    content: "\e1b1"; 
-  }
-  .icon-myeyes:before {
-    content: "\e19b";
-  }
+    a {
+        color: $mono1;
+        font-weight: bold;
 
-  .button {
-    margin-bottom: 1.5em;
-  }
-  .col1,
-  .col2 {
+        &:hover {
+            color: darken($mono2, 30%);
+        }
+    }
+}
+.PageFooter-layout {
     @include media-query($bp-tablet) {
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
+        display: flex;
+        justify-content: center;
     }
-  }
-  .col1 {
+}
+.PageFooter-section {
+    border-top: 1px solid $mono4;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    
+    &:first-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
     @include media-query($bp-tablet) {
-      margin-right: 4em;
+        border-top: none;
+        margin-top: 0;
+        margin-right: 3rem;
+        padding-top: 0;
     }
-  }
-  .col2 {
-    margin-top: 2.5em;
-
-    @include media-query($bp-minimum) {
-      margin-top: 0;
-    }
-  }
-  .footer-title {
+}
+.PageFooter-title {
     @include title5;
     color: $mono2;
-    margin-bottom: 1em;
-  }
-  .social-icons-wrap {
-    margin-bottom: 1.5em;
+    margin: 2rem 0 1rem;
     
-    @include media-query($bp-tablet) {
-      display: inline-block;
+    &:first-child {
+        margin-top: 0;
     }
-    .social-icons {
-      text-align: center;
-      margin-left: 3.5em;
+}
+.PageFooter-social {
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    grid-template-rows: 3rem 2rem;
+    justify-items: flex-start;
 
-      @include media-query($bp-minimum) {
-        margin-left: 0;
-      }
+    @include media-query($bp-minimum) {
+        grid-template-columns: 7rem 7rem 7rem 7rem;
+        grid-template-rows: 2rem;
     }
-    ul {
-      text-align: left;
-  
-      @include media-query($bp-minimum) {
-        display: inline-block;
-        margin-right: 3em;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    li {
-      margin-bottom: 1.35em;
-    }
-    a {
-      color: $mono2;
-      
-      &:hover {
-        text-decoration: none;
-        color: darken($mono2, 30);
-      }
-    }
-    .social-title {
-      display: inline-block;
-      padding-bottom: .2em;
-      font-size: 1.15em;
-      vertical-align: bottom;
-  
-      @include media-query($bp-minimum) {
-        padding-bottom: .2em;
-      }
-    }
-    .icon {
-      font-size: 1.7em;
-      margin-right: .1em;
-    }
-  }
-  .copyright {
-    margin-top: 1.5em;
+}
+.PageFooter-socialItem {
+    font-size: 0.9rem;
+}
+.PageFooter-icon {
+    font-size: 1.7rem;
+    margin-right: 0.1rem;
+}
+.PageFooter-iconTitle {
+    display: inline-block;
+    font-size: 1.15rem;
+    padding-bottom: 0.2rem;
+    vertical-align: bottom;
+}
+.PageFooter-button {
+    margin-bottom: 1.5rem;
+}
+.PageFooter-copyright {
     color: $mono3;
-  }
+    font-size: 0.8rem;
+    margin-top: 3.5rem;
+    text-align: center;
 }

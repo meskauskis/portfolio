@@ -1,111 +1,25 @@
 @import "helpers";
+@import "reset";
+
 @import "icons";
 @import "lightbox";
 @import "nav";
 @import "header-footer";
 @import "page-home";
 
-html {
-	height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
+html,
 body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-size: 14px;
-	font-family: $font1;
-	color: $mono0;
-	background-color: $mono6;
+    &.is-locked {
+        overflow: hidden;
+    }
 }
-ul,
-ol,
-h1,
-h2,
-h3,
-h4,
-h5 {
-	padding: 0;
-	margin: 0;
-	font-weight: normal;
-	line-height: 1;
-	vertical-align: bottom;
+.PageContent {
+    margin: 1.4rem 0.8rem;
 
-}
-ul {
-	list-style: none;
-}
-ul,
-li {
-  padding: 0;
-  margin: 0;
-}
-p {
-	padding: 0;
-	margin: 0;
-}
-img {
-	border: none;
-	vertical-align: top;
-	max-width: 100%;
-}
-a {
-  color: $color1;
-  transition: color $trans-speed1;
-
-  &:link,
-  &:active,
-  &:visited {
-    text-decoration: none;
-  }
-  &:hover {
-    color: darken($color1, 40);
-    text-decoration: underline;
-  }
-}
-.icon {
-	font-family: 'icons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-.clear-fix {
-  @include clear-fix;
-}
-.hr {
-	height: 1px;
-	width: 50%;
-	margin: 1em auto;
-	background-color: $mono4;
-
-  &.space-below {
-    margin-bottom: 2em;
-  }
-}
-.button {
-  @include button;
-}
-
-/* General */
-.page-side {
-  @include clear-fix;
-}
-.page-content {
-  margin: .8em;
-
-  @include media-query($bp-mobile) {
-    margin: 2em 1.2em;
-  }
-  @include media-query($bp-tablet) {
-    margin-left: 3em;
-    margin-right: 3em;
-  }
+    @include media-query($bp-tablet) {
+        margin-left: 11rem;
+        margin-right: 2rem;
+    }
 }
 .page-main {
   @include media-query($bp-mobile) {

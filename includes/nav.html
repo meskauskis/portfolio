@@ -1,50 +1,17 @@
-<nav class="page-nav">
-	<!-- onclick is added for iOs -->
-	<ul>
-    <li class="nav-item nav-item-toggle" id="nav-toggle" data-ng-click="navToggle();">
-      <span class="icon icon-open icon-section"></span>
-    </li>
-		<li class="nav-item" id="nav-web" onclick="//">
-			<span class="icon icon-web icon-section"></span>
-			<h4 class="nav-item-text">Web</h4>
-			<p class="sub-nav">
-				<a href="#!/section/web/web-design">Websites</a>
-				<a href="#!/examples/web/flash">Flash</a>
-			</p>
-		</li>
-		<li class="nav-item" id="nav-2d" onclick="//">
-			<span class="icon icon-2d icon-section"></span>
-			<h4 class="nav-item-text">2D</h4>
-			<p class="sub-nav">
-				<a href="#!/section/2d/ui-ux">UI / UX</a>
-				<a href="#!/section/2d/vector">Vector</a>
-				<a href="#!/section/2d/print">Print</a>
-			</p>
-		</li>
-		<li class="nav-item" id="nav-3d" onclick="//">
-			<span class="icon icon-3d icon-section"></span>
-			<h4 class="nav-item-text">3D</h4>
-			<p class="sub-nav">
-				<a href="#!/section/3d/character-3d">Characters</a>
-				<a href="#!/section/3d/environment-3d">Environments</a>
-				<a href="#!/section/3d/misc-3d">Miscellaneous</a>
-			</p>
-		</li>
-		<li class="nav-item" id="nav-anim" onclick="//">
-			<span class="icon icon-animation icon-section"></span>
-			<h4 class="nav-item-text">Animation</h4>
-			<p class="sub-nav">
-				<a href="#!/examples/anim/sprites">2D / Pixel</a>
-				<a href="#!/examples/anim/renderings">3D</a>
-			</p>
-		</li>
-		<li class="nav-item" id="nav-code" onclick="//">
-			<span class="icon icon-code icon-section"></span>
-			<h4 class="nav-item-text">Code</h4>
-			<p class="sub-nav">
-				<a href="#!/code/tips">Tips</a>
-				<a href="#!/code/css">Css</a>
-			</p>
+<nav class="PageNav" id="PageNav">
+	<ul class="PageNav-box">
+		<li class="PageNav-item" ng-repeat="(key, item) in nav">
+		    <div class="PageNav-primary">
+    			<span class="PageNav-itemIcon icon PageNav-itemIcon--{{ item.key }}"></span>
+    			<span class="PageNav-itemText">{{ item.title }}</span>
+    			<span class="PageNav-itemArrow" data-ng-click="subNavToggle($event);"></span>
+			</div>
+
+			<ul class="PageNav-secondary">
+				<li class="PageNav-secondaryItem" ng-repeat="(key2, subItem) in item.items">
+    				<a href="{{ subItem.link }}" class="PageNav-secondaryItemLink">{{ subItem.title }}</a>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </nav>

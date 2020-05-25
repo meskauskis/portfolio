@@ -1,4 +1,6 @@
-var app = angular.module('app', ['ngRoute', 'ngSanitize'])
+var app = angular.module('app', 
+    ['ngRoute', 'ngSanitize']
+)
 .value('app', {
 	//basePath: '/portfolio3/',
 })
@@ -15,10 +17,14 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
         section = $routeParams.section,
     		bodyClass = ''
     		breakpointMobile = 500;
+    		
+    // Close nav when changing pages.
+    if (typeof previous !== 'undefined') {
+        $rootScope.navToggleMain();
+    }
 
     // Set selected nav item.
-    $('.nav-item').removeClass('selected');
-    $('#nav-' + cat).addClass('selected');
+    $('#nav-' + cat).addClass('PageNav--selected');
 
     // Set a body class for each page.
     if ($routeParams.section) {
@@ -34,11 +40,6 @@ var app = angular.module('app', ['ngRoute', 'ngSanitize'])
     	bodyClass = 'home';
     }
     $rootScope.bodyClass = 'site-' + bodyClass;
-    
-    // Collapse nav between changes, if it's mobile.
-    if (window.innerWidth <= breakpointMobile) {
-      $('body').addClass('nav-closed');
-    };
   });
 })
 .config(function($routeProvider, $locationProvider) {

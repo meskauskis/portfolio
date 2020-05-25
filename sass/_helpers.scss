@@ -9,20 +9,24 @@ $font2: 'times new roman', georgia, serif;
 $font3: 'Raleway', sans-serif;
 $font4: 'Montserrat', sans-serif;
 
+$icon-arrow: '\e108';
+$icon-hamburger: '\e116';
+$icon-x: '\e178';
+
 $color1: #0091c5;
 $color2: #01b5ae;
 
 $mono0: #111;
 $mono1: #333;
-$mono2: #666;
-$mono3: #939393;
+$mono2: #555;
+$mono3: #888;
 $mono4: #a6a6a6;
 $mono5: #ccc;
 $mono6: #eee;
 $mono10: #fff;
 
-$trans-speed1: .3s;
-$trans-speed2: .3s;
+$trans-speed1: 0.2s;
+$trans-speed2: 0.4s;
 
 @mixin media-query($width) {
   @media only screen and (min-width: $width + 0px) {

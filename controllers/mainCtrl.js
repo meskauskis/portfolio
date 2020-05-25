@@ -1,11 +1,81 @@
 app
 .controller('appCtrl', function($rootScope, $scope, $http) {
-	var $body = $('body');
-	//angular.element("#id").val()
+    var $body = $('body');
 
-	// Cache json results.
-	$rootScope.jsonSectionItems = null;
-	$rootScope.jsonExamplesItems = null;
+    // Cache json results.
+    $rootScope.jsonSectionItems = null;
+    $rootScope.jsonExamplesItems = null;
+    $rootScope.nav = [
+        {
+            'key': 'web',
+            'title': 'Web',
+            'items': [
+                {
+                    'title': 'Websites',
+                    'link': '#!/section/web/web-design',
+                },
+                {
+                    'title': 'Tricks',
+                    'link': '#!/code/tips',
+                },
+                {
+                    'title': 'Tips',
+                    'link': '#!/code/css',
+                }
+            ],
+        },
+        {
+            'key': '2d',
+            'title': '2d',
+            'items': [
+                {
+                    'title': 'UI / UX',
+                    'link': '#!/section/2d/ui-ux',
+                },
+                {
+                    'title': 'Vector',
+                    'link': '#!/section/2d/vector',
+                },
+                {
+                    'title': 'Print',
+                    'link': '#!/section/2d/print',
+                }
+            ],
+        },
+        {
+            'key': '3d',
+            'title': '3d',
+            'items': [
+                {
+                    'title': 'Characters',
+                    'link': '#!/section/3d/character-3d',
+                },
+                {
+                    'title': 'Environments',
+                    'link': '#!/section/3d/environment-3d',
+                },
+                {
+                    'title': 'Miscellaneous',
+                    'link': '#!/section/3d/misc-3d',
+                }
+            ],
+        },
+        {
+            'key': 'animation',
+            'title': 'Animation',
+            'items': [
+                {
+                    'title': 'Pixel',
+                    'link': '#!/examples/anim/sprites',
+                },
+                {
+                    'title': '3d',
+                    'link': '#!/examples/anim/renderings',
+                },
+            ],
+        },
+    ];
+
 
   // Set page elements with the json data.
   $scope.setPageElements = function($scope, data, section) {
@@ -17,28 +87,43 @@ app
     $rootScope.browserTitle = $scope.setBrowserTitle(exampleTitle);
   }
 
-  // Change thumbnail shapes.
-  $scope.thumbShape = 'circle';
-  $scope.changeThumbsShape = function(shape) {
-    $scope.thumbShape = shape;
-  };
+    // Change thumbnail shapes.
+    $scope.thumbShape = 'circle';
+    $scope.changeThumbsShape = function(shape) {
+        $scope.thumbShape = shape;
+    };
 
 	// Set the page title.
 	$scope.setBrowserTitle = function(section) {
-		var title = 'Neil Meskauskis Portfolio',
-				updatedTitle = section ? title + ' | ' + section : title;
+		var title = 'Neil Meskauskis Portfolio', updatedTitle = section ? title + ' | ' + section : title;
 
 		return updatedTitle;
 	};
 
 	// Toggle the nav expansion.
+	function navToggle() {
+        $('#PageHead-toggle').toggleClass('PageHead-toggle--open');
+        $('#PageNav').toggleClass('PageNav--open');
+        $('html, body').toggleClass('is-locked');
+	}
 	$scope.navToggle = function() {
-		$body.toggleClass('nav-closed');
+	    navToggle();
 	};
-	
-  // Show bio on homepage.
+    $rootScope.navToggleMain = function() {
+        navToggle();
+    }
+
+	// Expand the nav to show subnav.
+	$scope.subNavToggle = function($event) {
+        var $element = $(event.currentTarget).closest('.PageNav-item');
+
+        $element.siblings().removeClass('PageNav-item--open');
+        $element.toggleClass('PageNav-item--open');
+	}
+
+    // Show bio on homepage.
 	$scope.bioShow = function() {
-    $('.page-intro').addClass('show-bio');
+        $('.page-intro').addClass('show-bio');
 	};
 })
 .controller('pageSection', function($rootScope, $scope, $routeParams, $http) {
