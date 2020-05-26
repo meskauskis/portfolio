@@ -17,8 +17,7 @@ body {
     margin: 1.4rem 0.8rem;
 
     @include media-query($bp-tablet) {
-        margin-left: 11rem;
-        margin-right: 2rem;
+        margin: 1.8rem 2rem 2rem 11rem;
     }
 }
 .page-main {

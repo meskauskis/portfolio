@@ -40,6 +40,11 @@
 
     @include media-query($bp-tablet) {
         display: block;
+        height: 40px;
+        left: 0.9rem;
+        position: absolute;
+        top: 1.2rem;
+        width: 120px;
     }
 }
 

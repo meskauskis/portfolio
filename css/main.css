@@ -1360,6 +1360,11 @@ body:after {
 @media only screen and (min-width: 750px) {
   .PageHead-logo {
     display: block;
+    height: 40px;
+    left: 0.9rem;
+    position: absolute;
+    top: 1.2rem;
+    width: 120px;
   }
 }
 
@@ -1764,8 +1769,7 @@ body.is-locked {
 }
 @media only screen and (min-width: 750px) {
   .PageContent {
-    margin-left: 11rem;
-    margin-right: 2rem;
+    margin: 1.8rem 2rem 2rem 11rem;
   }
 }
 
