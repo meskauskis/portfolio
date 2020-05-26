@@ -95,28 +95,15 @@
     }
 }
 .PageFooter-social {
-    display: grid;
-    grid-template-columns: 10rem 10rem;
-    grid-template-rows: 3rem 2rem;
-    justify-items: flex-start;
-
-    @include media-query($bp-minimum) {
-        grid-template-columns: 7rem 7rem 7rem 7rem;
-        grid-template-rows: 2rem;
-    }
+    display: flex;
 }
 .PageFooter-socialItem {
     font-size: 0.9rem;
+    margin-right: 1rem;
 }
 .PageFooter-icon {
     font-size: 1.7rem;
     margin-right: 0.1rem;
-}
-.PageFooter-iconTitle {
-    display: inline-block;
-    font-size: 1.15rem;
-    padding-bottom: 0.2rem;
-    vertical-align: bottom;
 }
 .PageFooter-button {
     margin-bottom: 1.5rem;

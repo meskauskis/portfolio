@@ -20,7 +20,7 @@ var app = angular.module('app',
     		
     // Close nav when changing pages.
     if (typeof previous !== 'undefined') {
-        $rootScope.navToggleMain();
+        $rootScope.navToggleSwitch();
     }
 
     // Set selected nav item.
@@ -74,23 +74,5 @@ var app = angular.module('app',
     	redirectTo: '/',
     })
     ;
-})
-.directive('codeBlock', function($sce) {
-  return {
-    restrict: 'A',
-    replace: true,
-    scope: true,
-    link: function(scope, element, attributes) {
-      scope.title = attributes.title;
-      if (attributes.example) {
-        scope.example = $sce.trustAsHtml(attributes.example);
-      }
-      if (attributes.code) {
-        scope.code = $sce.trustAsHtml(attributes.code);
-      }
-      scope.text = $sce.trustAsHtml(attributes.text);
-    },
-    templateUrl: 'templates/directive-code.html'
-  };
 })
 ;

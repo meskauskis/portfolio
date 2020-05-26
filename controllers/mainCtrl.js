@@ -100,17 +100,18 @@ app
 		return updatedTitle;
 	};
 
-	// Toggle the nav expansion.
-	function navToggle() {
+	// Toggle the nav.
+	$scope.navToggle = function() {
         $('#PageHead-toggle').toggleClass('PageHead-toggle--open');
         $('#PageNav').toggleClass('PageNav--open');
         $('html, body').toggleClass('is-locked');
-	}
-	$scope.navToggle = function() {
-	    navToggle();
 	};
-    $rootScope.navToggleMain = function() {
-        navToggle();
+	
+	// Close the nav.
+    $rootScope.navToggleSwitch = function() {
+        $('#PageHead-toggle').removeClass('PageHead-toggle--open');
+        $('#PageNav').removeClass('PageNav--open');
+        $('html, body').removeClass('is-locked');
     }
 
 	// Expand the nav to show subnav.
