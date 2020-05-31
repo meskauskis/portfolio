@@ -1,6 +1,6 @@
 <nav class="PageNav" id="PageNav">
 	<ul class="PageNav-box">
-		<li class="PageNav-item" ng-repeat="(key, item) in nav">
+		<li class="PageNav-item" id="PageNav-item--{{ item.key }}" ng-repeat="(key, item) in nav">
 		    <div class="PageNav-primary">
     			<span class="PageNav-itemIcon icon PageNav-itemIcon--{{ item.key }}"></span>
     			<span class="PageNav-itemText">{{ item.title }}</span>

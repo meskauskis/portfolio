@@ -20,18 +20,10 @@ body {
         margin: 1.8rem 2rem 2rem 11rem;
     }
 }
-.page-main {
-  @include media-query($bp-mobile) {
-    padding-left: 10em;
-  }
-  .nav-closed & {
-    @include media-query($bp-mobile) {
-      padding-left: 3em;
-    }
-  }
-}
 
-/* Titles */
+/* 
+ * Titles 
+ */
 .section-title {
   @include title1;
 }

@@ -1147,13 +1147,14 @@ body:after {
 }
 @media only screen and (min-width: 750px) {
   .PageNav {
-    border: 1px solid #01b5ae;
+    border: none;
     border-radius: 0 6px 6px 0;
     bottom: auto;
-    box-shadow: 0px 0px 0px 6px rgba(17, 17, 17, 0.2);
+    box-shadow: 0px 0px 0px 6px rgba(17, 17, 17, 0.15);
+    left: 0;
     right: auto;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translate3d(-1px, -62%, 0);
     transition: none;
   }
 }
@@ -1188,19 +1189,25 @@ body:after {
   .PageNav-item {
     position: relative;
   }
-  .PageNav-item:last-child {
-    border: none;
-  }
   .PageNav-item:hover {
-    background: #0091c5;
+    background: #01b5ae;
     color: #fff;
   }
   .PageNav-item:hover .PageNav-secondary {
     display: block;
   }
-}
-.PageNav-item--selected {
-  background-color: #0091c5;
+  .PageNav-item:last-child {
+    border: none;
+  }
+  .PageNav-item--selected:before {
+    background-color: #0091c5;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8px;
+  }
 }
 .PageNav-item--open > .PageNav-secondary {
   display: block;
@@ -1217,7 +1224,7 @@ body:after {
 @media only screen and (min-width: 750px) {
   .PageNav-primary {
     justify-content: left;
-    padding: 0.5rem;
+    padding: 0.6rem 0.8rem 0.6rem 1rem;
   }
 }
 
@@ -1269,7 +1276,6 @@ body:after {
 
 .PageNav-secondary {
   background-color: #0091c5;
-  border-radius: 0 6px 6px 0;
   box-shadow: 0px 4px 4px -2px rgba(17, 17, 17, 0.2) inset;
   display: none;
   letter-spacing: 0.02rem;
@@ -1279,6 +1285,7 @@ body:after {
   .PageNav-secondary {
     background-color: #333;
     border: 1px solid rgba(17, 17, 17, 0.5);
+    border-radius: 0 6px 6px 0;
     box-shadow: none;
     color: #fff;
     left: 100%;
@@ -1773,18 +1780,9 @@ body.is-locked {
   }
 }
 
-@media only screen and (min-width: 500px) {
-  .page-main {
-    padding-left: 10em;
-  }
-}
-@media only screen and (min-width: 500px) {
-  .nav-closed .page-main {
-    padding-left: 3em;
-  }
-}
-
-/* Titles */
+/* 
+ * Titles 
+ */
 .section-title {
   display: inline-block;
   font-family: "Raleway", sans-serif;

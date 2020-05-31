@@ -5,6 +5,8 @@ app
     // Cache json results.
     $rootScope.jsonSectionItems = null;
     $rootScope.jsonExamplesItems = null;
+    
+    // Site navigation.
     $rootScope.nav = [
         {
             'key': 'web',
@@ -15,12 +17,12 @@ app
                     'link': '#!/section/web/web-design',
                 },
                 {
-                    'title': 'Tricks',
-                    'link': '#!/code/tips',
+                    'title': 'Tips',
+                    'link': '#!/section/web/tips',
                 },
                 {
-                    'title': 'Tips',
-                    'link': '#!/code/css',
+                    'title': 'Tricks',
+                    'link': '#!/section/web/tricks',
                 }
             ],
         },
@@ -66,61 +68,62 @@ app
             'items': [
                 {
                     'title': 'Pixel',
-                    'link': '#!/examples/anim/sprites',
+                    'link': '#!/examples/animation/sprites',
                 },
                 {
                     'title': '3d',
-                    'link': '#!/examples/anim/renderings',
+                    'link': '#!/examples/animation/renderings',
                 },
             ],
         },
     ];
 
-
-  // Set page elements with the json data.
-  $scope.setPageElements = function($scope, data, section) {
-    var exampleTitle = data[section][0].name;
-    
-    $scope.section = section;
-    $scope.sectionTitle = exampleTitle;
-    $scope.sectionItems = data[section][0].groups ? data[section][0].groups : data[section][0].items;
-    $rootScope.browserTitle = $scope.setBrowserTitle(exampleTitle);
-  }
+    // Set page elements with the json data.
+    $scope.setPageElements = ($scope, data, section) => {
+        const exampleTitle = data[section][0].name;
+        
+        $scope.section = section;
+        $scope.sectionTitle = exampleTitle;
+        $scope.sectionItems = data[section][0].groups ? data[section][0].groups : data[section][0].items;
+        $rootScope.browserTitle = $scope.setBrowserTitle(exampleTitle);
+    }
 
     // Change thumbnail shapes.
     $scope.thumbShape = 'circle';
-    $scope.changeThumbsShape = function(shape) {
+    $scope.changeThumbsShape = (shape) => {
         $scope.thumbShape = shape;
     };
 
-	// Set the page title.
-	$scope.setBrowserTitle = function(section) {
-		var title = 'Neil Meskauskis Portfolio', updatedTitle = section ? title + ' | ' + section : title;
+    // Set the page title.
+    $scope.setBrowserTitle = (section) => {
+        const title = 'Neil Meskauskis Portfolio';
+        const updatedTitle = section ? title + ' | ' + section : title;
 
-		return updatedTitle;
-	};
+        return updatedTitle;
+    };
 
-	// Toggle the nav.
-	$scope.navToggle = function() {
+	// Toggle the nav open/closed.
+	$scope.navToggle = () => {
         $('#PageHead-toggle').toggleClass('PageHead-toggle--open');
         $('#PageNav').toggleClass('PageNav--open');
         $('html, body').toggleClass('is-locked');
-	};
-	
+    };
+
 	// Close the nav.
-    $rootScope.navToggleSwitch = function() {
+    $rootScope.navClose = () => {
         $('#PageHead-toggle').removeClass('PageHead-toggle--open');
         $('#PageNav').removeClass('PageNav--open');
         $('html, body').removeClass('is-locked');
     }
 
-	// Expand the nav to show subnav.
-	$scope.subNavToggle = function($event) {
-        var $element = $(event.currentTarget).closest('.PageNav-item');
-
-        $element.siblings().removeClass('PageNav-item--open');
-        $element.toggleClass('PageNav-item--open');
-	}
+	// Toggle the sub nav open/closed.
+	$scope.subNavToggle = ($event) => {
+	    const className = 'PageNav-item--open';
+        const $element = $(event.currentTarget).closest('.PageNav-item');
+        
+        $element.siblings().removeClass(className);
+        $element.toggleClass(className);
+    }
 
     // Show bio on homepage.
 	$scope.bioShow = function() {

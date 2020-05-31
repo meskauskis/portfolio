@@ -1,77 +1,78 @@
-var app = angular.module('app', 
-    ['ngRoute', 'ngSanitize']
-)
+var app = angular.module('app', [
+    'ngRoute', 
+    'ngSanitize'
+])
 .value('app', {
-	//basePath: '/portfolio3/',
+    //basePath: '/portfolio/',
 })
 .filter('titleCase', function() {
-  return function(value) {
-    value = value || '';
-    return value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-  };
+    return function(value) {
+        value = value || '';
+
+        return value.replace(/\w\S*/g, (txt) => {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    };
 })
 .run(function($location, $route, $rootScope, $routeParams) {
-  $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-    var path = $location.path().substring(1),
-        cat = $route.current.cat !== undefined ? $route.current.cat : $routeParams.cat,
-        section = $routeParams.section,
-    		bodyClass = ''
-    		breakpointMobile = 500;
-    		
-    // Close nav when changing pages.
-    if (typeof previous !== 'undefined') {
-        $rootScope.navToggleSwitch();
-    }
+    $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+        const path = $location.path().substring(1);
+        const cat = $route.current.cat !== undefined ? $route.current.cat : $routeParams.cat;
+        const section = $routeParams.section;
 
-    // Set selected nav item.
-    $('#nav-' + cat).addClass('PageNav--selected');
-
-    // Set a body class for each page.
-    if ($routeParams.section) {
-    	bodyClass = section;
-    }
-    else if (section) {
-    	bodyClass = section;
-    }
-    else if (path) {
-    	bodyClass = path;
-    }
-    else {
-    	bodyClass = 'home';
-    }
-    $rootScope.bodyClass = 'site-' + bodyClass;
-  });
+        // Close nav when changing pages.
+        $rootScope.navClose();
+        
+        // Set selected nav item.
+        $('.PageNav-item').removeClass('PageNav-item--selected');
+        $('#PageNav-item--' + cat).addClass('PageNav-item--selected');
+        
+        // Set a body class for each page.
+        let bodyClass = '';
+        if ($routeParams.section) {
+            bodyClass = section;
+        }
+        else if (section) {
+            bodyClass = section;
+        }
+        else if (path) {
+            bodyClass = path;
+        }
+        else {
+            bodyClass = 'home';
+        }
+        $rootScope.bodyClass = 'site-' + bodyClass;
+    });
 })
 .config(function($routeProvider, $locationProvider) {
-  $locationProvider.html5Mode(false).hashPrefix('!');
-  $routeProvider
+    $locationProvider.html5Mode(false).hashPrefix('!');
+    $routeProvider
     .when('/', {
-      templateUrl: 'templates/page-home.html',
-      controller: 'pageSection',
-      //controllerAs: 'test'
+        controller: 'pageSection',
+        templateUrl: 'templates/page-home.html',
+    })
+    .when('/section/web/tips', {
+        cat: 'web',
+        controller: 'pageCode',
+        sectionTitle: 'Web Tips',
+        templateUrl: 'templates/page-tips.html',
+    })
+    .when('/section/web/tricks', {
+        cat: 'web',
+        controller: 'pageCode',
+        sectionTitle: 'Web Tricks',
+        templateUrl: 'templates/page-tricks.html',
     })
     .when('/section/:cat/:section', {
-      templateUrl: 'templates/page-section.html',
-      controller: 'pageSection',
+        controller: 'pageSection',
+        templateUrl: 'templates/page-section.html',
     })
     .when('/examples/:cat/:section', {
-      templateUrl: 'templates/page-examples.html',
-      controller: 'pageExamples',
-    })
-    .when('/code/tips', {
-      templateUrl: 'templates/page-tips.html',
-      controller: 'pageCode',
-      sectionTitle: 'Code Tips',
-      cat: 'code',
-    })
-    .when('/code/css', {
-      templateUrl: 'templates/page-css.html',
-      controller: 'pageCode',
-      sectionTitle: 'Css Tips',
-      cat: 'code',
+        controller: 'pageExamples',
+        templateUrl: 'templates/page-examples.html',
     })
     .otherwise({
-    	redirectTo: '/',
+        redirectTo: '/',
     })
     ;
 })
