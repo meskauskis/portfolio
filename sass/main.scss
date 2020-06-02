@@ -169,8 +169,8 @@ body {
     right: -0.2em;
 
     &:before {
+        @include icon;
         content: $icon-zoom;
-        font-family: 'icons';
     }
     &:hover {
         color: $mono2;

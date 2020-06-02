@@ -10,9 +10,9 @@
 }
 [class^="icon-"], 
 [class*=" icon-"] {
+	@include icon;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: 'icons';
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
