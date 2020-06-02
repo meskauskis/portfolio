@@ -1151,8 +1151,8 @@ body:after {
     border-radius: 0 6px 6px 0;
     bottom: auto;
     box-shadow: 0px 0px 0px 6px rgba(17, 17, 17, 0.25);
-    left: auto;
-    right: 0;
+    left: 0;
+    right: auto;
     top: 50%;
     transform: translate3d(-1px, -62%, 0);
     transition: none;
@@ -1231,7 +1231,15 @@ body:after {
   }
 }
 .PageNav-itemIcon:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
 }
 .PageNav-itemIcon--web:before {
   content: "";
@@ -1261,9 +1269,17 @@ body:after {
   }
 }
 .PageNav-itemArrow:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
   content: "";
   display: block;
-  font-family: "icons";
   font-size: 1rem;
   transition: transform 0.4s;
 }
@@ -1339,9 +1355,7 @@ body:after {
 .PageHead-toggle {
   color: #888;
   cursor: pointer;
-  font-family: "icons";
   font-size: 1.4rem;
-  line-height: 1;
   padding: 1rem;
   position: absolute;
   right: 0;
@@ -1353,6 +1367,15 @@ body:after {
   }
 }
 .PageHead-toggle:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
   content: "";
 }
 .PageHead-toggle--open:before {

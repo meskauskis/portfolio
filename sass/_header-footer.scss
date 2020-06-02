@@ -10,9 +10,7 @@
 .PageHead-toggle {
     color: $mono3;
     cursor: pointer;
-    font-family: 'icons';
     font-size: 1.4rem;
-    line-height: 1;
     padding: 1rem;
     position: absolute;
     right: 0;
@@ -22,6 +20,7 @@
         display: none;
     }
     &:before {
+        @include icon;
         content: $icon-hamburger;
     }
     &--open {
