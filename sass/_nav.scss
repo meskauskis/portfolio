@@ -112,7 +112,11 @@
 }
 .PageNav-itemText {
     font-size: 1.1rem;
-    margin-left: 0.6rem;
+    margin-left: 1.1rem;
+
+    @include media-query($bp-tablet) {
+        margin-left: 0.6rem;
+    }
 }
 .PageNav-itemArrow {
     cursor: pointer;
