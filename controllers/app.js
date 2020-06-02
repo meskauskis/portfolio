@@ -57,12 +57,6 @@ var app = angular.module('app', [
         sectionTitle: 'Web Tips',
         templateUrl: 'templates/page-tips.html',
     })
-    .when('/section/web/tricks', {
-        cat: 'web',
-        controller: 'pageCode',
-        sectionTitle: 'Web Tricks',
-        templateUrl: 'templates/page-tricks.html',
-    })
     .when('/section/:cat/:section', {
         controller: 'pageSection',
         templateUrl: 'templates/page-section.html',
@@ -74,6 +68,23 @@ var app = angular.module('app', [
     .otherwise({
         redirectTo: '/',
     })
-    ;
+})
+.directive('codeBlock', function($sce) {
+    return {
+        restrict: 'A',
+        replace: true,
+        scope: true,
+        link: function(scope, element, attributes) {
+            scope.title = attributes.title;
+            if (attributes.example) {
+                scope.example = $sce.trustAsHtml(attributes.example);
+            }
+            if (attributes.code) {
+                scope.code = $sce.trustAsHtml(attributes.code);
+            }
+            scope.text = $sce.trustAsHtml(attributes.text);
+        },
+        templateUrl: 'templates/directive-code-block.html'
+    };
 })
 ;

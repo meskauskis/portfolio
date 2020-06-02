@@ -1,13 +1,43 @@
-<div class="section-title-wrap">
-  <h1 class="section-title">
-    {{sectionTitle}}
-  </h1>
+<div class="SectionTitle-wrap">
+    <h1 class="SectionTitle">
+        {{ sectionTitle }}
+    </h1>
 </div>
 
-<p class="page-section-intro">
-  Here is a short list of things that are often asked by beginner developers.
-  Many of these topics are debatable and have multiple solutions, these are my preferred solutions.
+<p class="SectionIntro">
+    Here is a short list of things that frequently come up in developer conversations.
+    Many of these topics are debatable and have multiple solutions, these are my preferred solutions.
 </p>
+
+<div data-code-block 
+  data-title="Not Using ID Selectors"
+  data-text="
+    <div>
+      <a href='http://oli.jp/2011/ids/' rel='nofollow' target='_blank'>Don’t use IDs in CSS selectors?</a><br>
+      I am of the philosophy of never using IDs in Css. You should always use class selectors. IDs should be reserved for JS selecting. I would write about it, but this link explains it better than I could.
+    </div>
+  "
+></div>
+
+<div data-code-block 
+  data-title="Selector Symbol Confusion"
+  data-text="
+    <div>
+      <b>X ~ Y (sibling)</b><br>
+      Matches if X and Y share the same parent and Y comes after X.
+    </div>
+    <br>
+    <div>
+      <b>X + Y (immediate sibling)</b><br>
+      Very similar to X ~ Y, but more strict. Matches if X and Y share the same parent and Y immediately comes after X.
+    </div>
+    <br>
+    <div>
+      <b>X > Y (direct child)</b><br>
+      Matches if Y is a direct child of X.
+    </div>
+  "
+></div>
 
 <div data-code-block 
   data-title="iOS hover"

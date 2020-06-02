@@ -1,0 +1,13 @@
+<section class="SectionCode">
+    <h3 class="SectionTitle2">
+        {{ title }}
+    </h3>
+
+    <div class="SectionCode-block" data-ng-if="code !== undefined">
+        <pre data-ng-bind="code">
+        </pre>
+    </div>
+
+    <p class="SectionCode-text" data-ng-if="text !== undefined" data-ng-bind-html="text">
+    </p>
+</section>

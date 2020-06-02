@@ -19,10 +19,6 @@ app
                 {
                     'title': 'Tips',
                     'link': '#!/section/web/tips',
-                },
-                {
-                    'title': 'Tricks',
-                    'link': '#!/section/web/tricks',
                 }
             ],
         },
@@ -131,53 +127,55 @@ app
 	};
 })
 .controller('pageSection', function($rootScope, $scope, $routeParams, $http) {
-  if (!$routeParams.hasOwnProperty('section')) {
-		$rootScope.browserTitle = $scope.setBrowserTitle(null);
-  	return;
-  }
-  var section = $routeParams.section;
+    if (!$routeParams.hasOwnProperty('section')) {
+        $rootScope.browserTitle = $scope.setBrowserTitle(null);
 
-  // If the results have already been loaded.
-  if ($rootScope.jsonSectionItems) {
-    $scope.setPageElements($scope, $rootScope.jsonSectionItems, section);
-  }
-  else {
-    $http.get('data/sections.json')
-    .success(function(data, status, headers, config) {
-      $rootScope.jsonSectionItems = data[0];
-      $scope.setPageElements($scope, $rootScope.jsonSectionItems, section);
-    })
-    .error(function(data, status, headers, config) {
-      // Error log.
-    });
-  }
+        return;
+    }
+    const section = $routeParams.section;
+
+    // If the results have already been loaded.
+    if ($rootScope.jsonSectionItems) {
+        $scope.setPageElements($scope, $rootScope.jsonSectionItems, section);
+    }
+    else {
+        $http.get('data/sections.json')
+        .success(function(data, status, headers, config) {
+            $rootScope.jsonSectionItems = data[0];
+            $scope.setPageElements($scope, $rootScope.jsonSectionItems, section);
+        })
+        .error(function(data, status, headers, config) {
+            // Error log.
+        });
+    }
 })
 .controller('pageExamples', function($rootScope, $scope, $routeParams, $http) {
-  if (!$routeParams.hasOwnProperty('section')) {
-    $rootScope.browserTitle = $scope.setBrowserTitle(null);
-    return;
-  }
-  var section = $routeParams.section;
+    if (!$routeParams.hasOwnProperty('section')) {
+        $rootScope.browserTitle = $scope.setBrowserTitle(null);
 
-  // If the results have already been loaded.
-  if ($rootScope.jsonExamplesItems) {
-    $scope.setPageElements($scope, $rootScope.jsonExamplesItems, section);
-  }
-  else {
-    $http.get('data/examples.json')
-    .success(function(data, status, headers, config) {
-      $rootScope.jsonExamplesItems = data[0];
-      $scope.setPageElements($scope, $rootScope.jsonExamplesItems, section);
-    })
-    .error(function(data, status, headers, config) {
-      // Error log.
-    });
-  }
+        return;
+    }
+    const section = $routeParams.section;
+
+    // If the results have already been loaded.
+    if ($rootScope.jsonExamplesItems) {
+        $scope.setPageElements($scope, $rootScope.jsonExamplesItems, section);
+    }
+    else {
+        $http.get('data/examples.json')
+        .success(function(data, status, headers, config) {
+            $rootScope.jsonExamplesItems = data[0];
+            $scope.setPageElements($scope, $rootScope.jsonExamplesItems, section);
+        })
+        .error(function(data, status, headers, config) {
+            // Error log.
+        });
+    }
 })
 .controller('pageCode', function($rootScope, $route, $scope, $routeParams) {
-	var sectionTitle = $route.current.$$route.sectionTitle;
-	
-  $scope.sectionTitle = sectionTitle;
-	$rootScope.browserTitle = $scope.setBrowserTitle(sectionTitle);
+    const sectionTitle = $route.current.$$route.sectionTitle;
+
+    $scope.sectionTitle = sectionTitle;
+    $rootScope.browserTitle = $scope.setBrowserTitle(sectionTitle);
 })
 ;

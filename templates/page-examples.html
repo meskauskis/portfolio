@@ -1,36 +1,36 @@
-<div class="section-title-wrap">
-  <h1 class="section-title">
-    {{sectionTitle}}
-  </h1>
+<div class="SectionTitle-wrap">
+    <h1 class="SectionTitle">
+        {{sectionTitle}}
+    </h1>
 </div>
 
-<section class="examples-section" data-ng-repeat="(key, group) in sectionItems">
-	<h2 class="section-title2" data-ng-if="group.header !== ''">
+<section class="Examples-section" data-ng-repeat="(key, group) in sectionItems">
+	<h2 class="SectionTitle2" data-ng-if="group.header !== ''">
 		{{group.header}}
 	</h2>
 
-	<p class="examples-dek" data-ng-if="group.dek !== ''">
+	<p class="Examples-dek" data-ng-if="group.dek !== ''">
 		{{group.dek}}
 	</p>
 
-	<ul class="clear-fix">
-		<li class="examples-item-video" data-ng-if="section == 'renderings'" data-ng-repeat="(key2, item) in group.items">
+	<ul class="Examples-items clear-fix">
+		<li class="Examples-item--video" data-ng-if="section == 'renderings'" data-ng-repeat="(key2, item) in group.items">
 			<video width="100%" controls>
 				<source data-ng-src="{{item.webm}}" type="video/webm">
 				<source data-ng-src="{{item.ogg}}" type="video/ogg">
 				<source data-ng-src="{{item.mp4}}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
-      <h3 class="examples-item-title" data-ng-if="item.title !== ''">
-			 {{item.title}}
+            <h3 class="Examples-itemTitle" data-ng-if="item.title !== ''">
+                {{item.title}}
 			</h3>
 		</li>
-			
-		<li class="examples-item-sprite" data-ng-if="section == 'sprites'" data-ng-repeat="(key2, item) in group.items">
+
+		<li class="Examples-item--sprite" data-ng-if="section == 'sprites'" data-ng-repeat="(key2, item) in group.items">
 			<img data-ng-src="{{item.image}}" alt="{{item.image}}"/>
 		</li>
 
-		<li class="examples-item-flash" data-ng-if="section == 'flash'" data-ng-repeat="(key2, item) in group.items">
+		<li class="Examples-item--flash" data-ng-if="section == 'flash'" data-ng-repeat="(key2, item) in group.items">
 			<object id="papervision model" type="application/x-shockwave-flash" data="{{item.file}}" width="{{item.width}}" height="{{item.height}}">
 				<param name="allowScriptAccess" value="sameDomain" />
 				<param name="movie" value="{{item.file}}"/>

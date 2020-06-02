@@ -16,6 +16,7 @@ $icon-movie: '\e11e';
 $icon-pen: '\e11d';
 $icon-screen: '\e13a';
 $icon-x: '\e178';
+$icon-zoom: '\e037';
 
 $color1: #0091c5;
 $color2: #01b5ae;
@@ -33,101 +34,102 @@ $trans-speed1: 0.2s;
 $trans-speed2: 0.4s;
 
 @mixin media-query($width) {
-  @media only screen and (min-width: $width + 0px) {
-    @content;
-  }
+    @media only screen and (min-width: $width + 0px) {
+        @content;
+    }
 }
 @mixin clear-fix() {
-  &:after {
-    display: block;
-    content: "\00a0";
-    height: 0;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-  }
+    &:after {
+        clear: both;
+        content: "\00a0";
+        display: block;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
 }
 @mixin icon() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'icons';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  text-transform: none;
 }
 @mixin button() {
-  display: inline-block;
-  padding: .7em 1.2em;
-  font-size: 15px;
-  color: $mono10;
-  border: none;
   background-color: $color1;
+  border: none;
   border-radius: 4px;
-  transition: background-color .3s;
+  color: $mono10;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.2rem;
+  transition: background-color 0.3s;
 
   &:hover {
-    text-decoration: none;
-    color: #fff;
     background-color: darken($mono3, 30);
+    color: $mono10;
+    text-decoration: none;
   }
 }
 @mixin title1() {
+  border-bottom: 8px solid $color2;
+  color: $color2;
   display: inline-block;
   font-family: $font3;
   font-size: 1.6em;
-  color: $color2;
-  padding-bottom: .2em;
   letter-spacing: 1px;
   line-height: 1.2;
+  padding-bottom: 0.2em;
   text-transform: uppercase;
-  border-bottom: 8px solid $color2;
 
   @include media-query($bp-mobile) {
-    font-size: 2em;
-    padding: 0 1.2em .1em 1.2em;
+    font-size: 2rem;
+    padding: 0 0.4rem 0.1rem 0.4rem;
   }
 }
 @mixin title2() {
+  color: $mono1;
   font-family: $font3;
   font-size: 1.5em;
-  color: $mono1;
 }
 @mixin title3() {
+  background-color: $color1;
+  color: $mono10;
   display: inline-block;
   font-family: $font4;
-  font-size: 1.2em;
-  color: #fff;
-  background-color: $color2;
-  margin-bottom: .4em;
-  padding: .3em;
+  font-size: 1em;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6em;
+  padding: 0.3em 0.5em;
 
   @include media-query($bp-mobile) {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
   }
 }
 @mixin title4() {
-  font-size: 1.1em;
   color: $mono2;
+  font-size: 1.1em;
   font-style: italic;
   margin-top: 1.4em;
-  margin-bottom: .3em;
+  margin-bottom: 0.3em;
   
   &:first-child {
     margin-top: 0;
   }
 }
 @mixin title5() {
-  font-size: 1.2em;
   color: $mono0;
+  font-size: 1.2em;
   font-family: $font4;
-  margin-bottom: .4em;
+  margin-bottom: 0.4em;
 }
 @mixin title6() {
-  font-size: .9em;
   font-family: $font4;
-  text-transform: uppercase;
+  font-size: 0.9em;
   text-align: center;
 }

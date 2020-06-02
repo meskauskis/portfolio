@@ -1,40 +1,38 @@
-<div class="section-title-wrap icons-below" itemscope itemtype="http://schema.org/Photograph">
-  <h1 class="section-title" itemprop="about">
-  	{{sectionTitle}}
-  </h1>
-</div>
-<div class="section-thumb-icons">
-  <span data-ng-class="{'is-active':thumbShape == 'circle'}" class="shape-circle" data-ng-click="changeThumbsShape('circle');"></span>
-  <span data-ng-class="{'is-active':thumbShape == 'rounded'}" class="shape-rounded" data-ng-click="changeThumbsShape('rounded');"></span>
-  <span data-ng-class="{'is-active':thumbShape == 'square'}" class="shape-square" data-ng-click="changeThumbsShape('square');"></span>
+<div class="SectionTitle-wrap SectionTitle-wrap--icons" itemscope itemtype="http://schema.org/Photograph">
+    <h1 class="SectionTitle" itemprop="about">
+        {{ sectionTitle }}
+    </h1>
 </div>
 
-<ul class="thumbnails-container shape-{{thumbShape}}">
-	<li class="thumbnail-item" data-ng-repeat="(key, item) in sectionItems">
-	  <div class="thumbnail-pos">
-  		<a href="{{item.fullsize}}" data-lightbox="thumbnail" data-title="{{item.title}}">
-  			<div class="thumbnail-inner" style="background-image: url('{{item.thumbnail}}');">
-  				<img class="thumbnail" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}" itemprop="thumbnailUrl" style="display:none;"/>
-  				<div class="thumbnail-overlay">
-  				  <div class="thumbnail-table">
-            <div class="thumbnail-cell">
-    					<h3 class="thumbnail-title" data-ng-if="item.title !== ''" itemprop="text">
-    						{{item.title}}
-    					</h3>
-    					<p class="thumbnail-specs" data-ng-if="item.specs !== undefined">
-    					  {{item.specs}}
-    					</p>
-            </div>
-  					</div>
-  				</div>
-  			</div>
-  		</a>
-  		<a href="{{item.fullsize}}">
-  		  <span class="icon expand-button"></span>
-  		</a>
-		</div>
-		<p class="thumbnail-footer" data-ng-if="item.link !== undefined">
-		  <a data-ng-href="{{item.link}}" title="View site" rel="nofollow" target="_blank">View Site</a>
-		</p>
-	</li>
+<div class="ThumbIcons">
+    <span class="ThumbIcons-icon ThumbIcons-icon--circle"  data-ng-class="{'ThumbIcons-icon--active':thumbShape == 'circle'}" data-ng-click="changeThumbsShape('circle');"></span>
+    <span class="ThumbIcons-icon ThumbIcons-icon--rounded" data-ng-class="{'ThumbIcons-icon--active':thumbShape == 'rounded'}" data-ng-click="changeThumbsShape('rounded');"></span>
+    <span class="ThumbIcons-icon ThumbIcons-icon--square" data-ng-class="{'ThumbIcons-icon--active':thumbShape == 'square'}" data-ng-click="changeThumbsShape('square');"></span>
+</div>
+
+<ul class="Thumbnails-container Thumbnails-shape--{{thumbShape}}">
+    <li class="Thumbnails-item" data-ng-repeat="(key, item) in sectionItems">
+        <div class="Thumbnails-pos">
+            <a href="{{item.fullsize}}" data-lightbox="Thumbnails-img" data-title="{{item.title}}">
+                <div class="Thumbnails-inner" style="background-image: url('{{item.thumbnail}}');">
+                    <img class="Thumbnails-img" data-ng-src="{{item.thumbnail}}" alt="{{item.thumbnail}}" itemprop="thumbnailUrl" style="display:none;"/>
+                    <div class="Thumbnails-overlay">
+                        <h3 class="Thumbnails-title" data-ng-if="item.title !== ''" itemprop="text">
+                            {{item.title}}
+                        </h3>
+                        <p class="Thumbnails-specs" data-ng-if="item.specs !== undefined">
+                            {{item.specs}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="{{item.fullsize}}">
+                <span class="Expand-icon"></span>
+            </a>
+        </div>
+
+        <p class="Thumbnails-footer" data-ng-if="item.link !== undefined">
+            <a data-ng-href="{{item.link}}" title="View site" rel="nofollow" target="_blank">View Site</a>
+        </p>
+    </li>
 </ul>

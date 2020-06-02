@@ -51,7 +51,7 @@
 .PageFooter {
     @include clear-fix;
     background-color: $mono5;
-    border-top: 6px solid $mono4;
+    border-top: 6px solid rgba($mono0, 0.15);
     color: $mono2;
     padding: 3rem 2rem 1rem;
 
