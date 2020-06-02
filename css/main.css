@@ -1141,7 +1141,7 @@ body:after {
   position: fixed;
   right: 0;
   top: 4rem;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: transform 0.4s ease-out;
   z-index: 200;
 }
@@ -1151,8 +1151,8 @@ body:after {
     border-radius: 0 6px 6px 0;
     bottom: auto;
     box-shadow: 0px 0px 0px 6px rgba(17, 17, 17, 0.25);
-    left: 0;
-    right: auto;
+    left: auto;
+    right: 0;
     top: 50%;
     transform: translate3d(-1px, -62%, 0);
     transition: none;
@@ -1173,17 +1173,10 @@ body:after {
 }
 
 .PageNav-item {
-  border-bottom: 1px solid #a6a6a6;
+  border-bottom: 1px dotted #a6a6a6;
   cursor: default;
-  font-family: "Montserrat", sans-serif;
-}
-.PageNav-item:after {
-  clear: both;
-  content: " ";
   display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 @media only screen and (min-width: 750px) {
   .PageNav-item {
@@ -1298,12 +1291,16 @@ body:after {
 }
 
 .PageNav-secondaryItem {
-  border-bottom: 1px solid #a6a6a6;
+  border-bottom: 1px dotted #eee;
+  display: block;
 }
 .PageNav-secondaryItem:last-child {
   border: none;
 }
 @media only screen and (min-width: 750px) {
+  .PageNav-secondaryItem {
+    border-bottom-color: #a6a6a6;
+  }
   .PageNav-secondaryItem:hover {
     background-color: #555;
   }
@@ -1312,7 +1309,7 @@ body:after {
 .PageNav-secondaryItemLink {
   color: #fff;
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04rem;
   padding: 0.8rem;
   text-shadow: 1px 1px 4px rgba(17, 17, 17, 0.6);
@@ -1324,7 +1321,6 @@ body:after {
   .PageNav-secondaryItemLink {
     border-color: #a6a6a6;
     color: #555;
-    font-weight: bold;
     text-shadow: none;
   }
 }

@@ -7,7 +7,7 @@
     position: fixed;
     right: 0;
     top: 4rem;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: transform $trans-speed2 ease-out;
     z-index: 200;
 
@@ -16,8 +16,8 @@
         border-radius: 0 6px 6px 0;
         bottom: auto;
         box-shadow: 0px 0px 0px 6px rgba($mono0, 0.25);
-        left: 0;
-        right: auto;
+        left: auto;
+        right: 0;
         top: 50%;
         transform: translate3d(-1px, -62%, 0);
         transition: none;
@@ -35,9 +35,9 @@
     }
 }
 .PageNav-item {
-    @include clear-fix;
-    border-bottom: 1px solid $mono4;
+    border-bottom: 1px dotted $mono4;
     cursor: default;
+    display: block;
     font-family: $font4;
 
     @include media-query($bp-tablet) {
@@ -150,12 +150,15 @@
     }
 }
 .PageNav-secondaryItem {
-    border-bottom: 1px solid $mono4;
+    border-bottom: 1px dotted $mono6;
+    display: block;
 
     &:last-child {
         border: none;
     }
     @include media-query($bp-tablet) {
+        border-bottom-color: $mono4;
+
         &:hover {
             background-color: $mono2;
         }
@@ -164,7 +167,7 @@
 .PageNav-secondaryItemLink {
     color: $mono10;
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 0.04rem;
     padding: 0.8rem;
     text-shadow: 1px 1px 4px rgba($mono0, 0.6);
@@ -175,7 +178,6 @@
     @include media-query($bp-tablet) {
         border-color: $mono4;
         color: $mono2;
-        font-weight: bold;
         text-shadow: none;
     }
 }
