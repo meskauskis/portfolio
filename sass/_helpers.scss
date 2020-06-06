@@ -1,4 +1,5 @@
 $max-width: 1100;
+
 $bp-minimum: 400;
 $bp-mobile: 500;
 $bp-tablet: 750;
@@ -30,7 +31,7 @@ $mono5: #ccc;
 $mono6: #eee;
 $mono10: #fff;
 
-$trans-speed1: 0.2s;
+$trans-speed1: 0.25s;
 $trans-speed2: 0.4s;
 
 @mixin media-query($width) {
@@ -65,14 +66,19 @@ $trans-speed2: 0.4s;
   border-radius: 4px;
   color: $mono10;
   display: inline-block;
-  font-size: 1.2rem;
-  padding: 0.7rem 1.2rem;
-  transition: background-color 0.3s;
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  padding: 0.6rem 1rem;
+  transition: background-color $trans-speed2;
 
   &:hover {
-    background-color: darken($mono3, 30);
+    background-color: $color2;
     color: $mono10;
     text-decoration: none;
+  }
+  @include media-query($bp-tablet) {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
   }
 }
 @mixin title1() {
@@ -99,34 +105,24 @@ $trans-speed2: 0.4s;
 @mixin title3() {
   background-color: $color1;
   color: $mono10;
-  display: inline-block;
   font-family: $font4;
   font-size: 1em;
   letter-spacing: 0.04em;
-  margin-bottom: 0.6em;
   padding: 0.3em 0.5em;
 
   @include media-query($bp-mobile) {
     font-size: 1.2em;
-    margin-bottom: 0.8em;
   }
 }
 @mixin title4() {
   color: $mono2;
   font-size: 1.1em;
   font-style: italic;
-  margin-top: 1.4em;
-  margin-bottom: 0.3em;
-  
-  &:first-child {
-    margin-top: 0;
-  }
 }
 @mixin title5() {
   color: $mono0;
   font-size: 1.2em;
   font-family: $font4;
-  margin-bottom: 0.4em;
 }
 @mixin title6() {
   font-family: $font4;

@@ -28,6 +28,7 @@ var app = angular.module('app', [
         $('#PageNav-item--' + cat).addClass('PageNav-item--selected');
         
         // Set a body class for each page.
+        /*
         let bodyClass = '';
         if ($routeParams.section) {
             bodyClass = section;
@@ -42,6 +43,7 @@ var app = angular.module('app', [
             bodyClass = 'home';
         }
         $rootScope.bodyClass = 'site-' + bodyClass;
+        */
     });
 })
 .config(function($routeProvider, $locationProvider) {
@@ -70,21 +72,52 @@ var app = angular.module('app', [
     })
 })
 .directive('codeBlock', function($sce) {
+    /*
+    A : Specifies that Directive will be used as an attribute.
+    E : Specifies that Directive will be used as an Element.
+    C : Specifies that Directive can be used as class name in existing HTML elements.
+    M : Specifies that Directive can be used as HTML comments.
+    */
+    return {
+        restrict: 'A',
+        replace: true,
+        scope: true,
+        link: function(scope, element, attributes) {
+            scope.title = attributes.title ? attributes.title : null;
+            scope.text = attributes.text ? $sce.trustAsHtml(attributes.text) : null;
+            scope.example = attributes.example ? $sce.trustAsHtml(attributes.example) : null;
+            scope.code = attributes.code ? $sce.trustAsHtml(attributes.code) : null;
+        },
+        templateUrl: 'templates/directive-code-block.html'
+    };
+})
+.directive('cardBlock', function($sce) {
     return {
         restrict: 'A',
         replace: true,
         scope: true,
         link: function(scope, element, attributes) {
             scope.title = attributes.title;
-            if (attributes.example) {
-                scope.example = $sce.trustAsHtml(attributes.example);
-            }
-            if (attributes.code) {
-                scope.code = $sce.trustAsHtml(attributes.code);
-            }
-            scope.text = $sce.trustAsHtml(attributes.text);
+            scope.customclass = attributes.customclass ? attributes.customclass : null;
+            scope.customclass2 = attributes.customclass2 ? attributes.customclass2 : null;
+
+            scope.subtitle = attributes.subtitle;
+            scope.subtext = $sce.trustAsHtml(attributes.subtext);
+            scope.image = attributes.image ? $sce.trustAsHtml(attributes.image) : null;
+
+            scope.subtitle2 = attributes.subtitle2 ? attributes.subtitle2 : null;
+            scope.subtext2 = attributes.subtext2 ? $sce.trustAsHtml(attributes.subtext2) : null;
+            scope.image2 = attributes.image2 ? $sce.trustAsHtml(attributes.image2) : null;
+
+            scope.subtitle3 = attributes.subtitle3 ? attributes.subtitle3 : null;
+            scope.subtext3 = attributes.subtext3 ? $sce.trustAsHtml(attributes.subtext3) : null;
+            scope.image3 = attributes.image3 ? $sce.trustAsHtml(attributes.image3) : null;
+
+            scope.subtitle4 = attributes.subtitle4 ? attributes.subtitle4 : null;
+            scope.subtext4 = attributes.subtext4 ? $sce.trustAsHtml(attributes.subtext4) : null;
+            scope.image4 = attributes.image4 ? $sce.trustAsHtml(attributes.image4) : null;
         },
-        templateUrl: 'templates/directive-code-block.html'
+        templateUrl: 'templates/directive-card-block.html'
     };
 })
 ;

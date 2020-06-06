@@ -1,0 +1,64 @@
+<section class="PageIntroCard {{customclass ? 'PageIntroCard--' + customclass : ''}} 
+{{customclass2 ? 'PageIntroCard--' + customclass2 : ''}}">
+    <h2 class="PageIntroCard-title">
+        {{title}}
+    </h2>
+
+    <div class="PageIntroCard-items">
+        <article class="PageIntroCard-item">
+            <div class="PageIntroCard-thumb" data-ng-bind-html="image" data-ng-if="image">
+            </div>
+    
+            <div class="PageIntroCard-content">
+                <h4 class="PageIntroCard-subTitle">
+                    {{subtitle}}
+                </h4>
+        
+                <div data-ng-bind-html="subtext" data-ng-if="subtext">
+                </div>
+            </div>
+        </article>
+    
+        <article class="PageIntroCard-item" data-ng-if="subtitle2">
+            <div class="PageIntroCard-thumb" data-ng-bind-html="image2" data-ng-if="image2">
+            </div>
+    
+            <div class="PageIntroCard-content">
+                <h4 class="PageIntroCard-subTitle" data-ng-if="subtitle2">
+                    {{subtitle2}}
+                </h4>
+        
+                <div data-ng-bind-html="subtext2" data-ng-if="subtext2">
+                </div>
+            </div>
+        </article>
+    
+        <article class="PageIntroCard-item" data-ng-if="subtitle3">
+            <div class="PageIntroCard-thumb" data-ng-bind-html="image3" data-ng-if="image3">
+            </div>
+    
+            <div class="PageIntroCard-content">
+                <h4 class="PageIntroCard-subTitle" data-ng-if="subtitle3">
+                    {{subtitle3}}
+                </h4>
+        
+                <div data-ng-bind-html="subtext3" data-ng-if="subtext3">
+                </div>
+            </div>
+        </article>
+    
+        <article class="PageIntroCard-item" data-ng-if="subtitle4">
+            <div class="PageIntroCard-thumb" data-ng-bind-html="image4" data-ng-if="image4">
+            </div>
+    
+            <div class="PageIntroCard-content">
+                <h4 class="PageIntroCard-subTitle" data-ng-if="subtitle4">
+                    {{subtitle4}}
+                </h4>
+        
+                <div data-ng-bind-html="subtext4" data-ng-if="subtext4">
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

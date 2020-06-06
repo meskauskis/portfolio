@@ -62,7 +62,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1;
   padding: 0;
   margin: 0;
@@ -94,7 +94,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 hr {
   box-sizing: content-box;
@@ -165,9 +165,9 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 legend {
   border: 0;

@@ -1,232 +1,128 @@
-<div class="page-intro-wrap">
-  <div class="page-intro">
-    <p class="page-intro-text">
-      Welcome to my online portfolio, showcasing my digital work through the years.
-    </p>
-    <div class="bio-button" onclick="//" data-ng-click="bioShow();">
-      Read more
-    </div>
-    <p class="page-bio-text">
-      I have worked in a variety of areas in the digital industy. I started my career in print design, doing page layout. Then from there I went into gaming and animation. That lead me into the advertising industry creating interactive animations. Currently I am working in web design/development, using everything I have learned along the way. I usually code and layout everything myself, because it offers me the customization that optimization that plugins don't allow. At Martha Stewart we use Drupal and Git for version control.
-    </p>
-  </div>
+<div class="PageIntro-wrap">
+    <section class="PageIntro">
+        <p class="PageIntro-welcome">
+            Welcome to my online portfolio, showcasing my digital work through the years.
+        </p>
+        <div class="PageIntro-bioButton" id="PageIntro-bioButton" onclick="//" data-ng-click="bioShow();">
+            Read more
+        </div>
+        <article class="PageIntro-bio" id="PageIntro-bio">
+            I have worked in a variety of areas in the digital industy. I started my career in print design, doing page layout. Then from there I went into gaming and animation. That lead me into the advertising industry creating interactive animations. Currently I am working in web design/development, using everything I have learned along the way. I usually code and layout everything myself, because it offers me the customization that optimization that plugins don't allow.
+        </article>
+    </section>
 
-  <div class="page-teasers">
-    <h2 class="intro-title">
-      Recent Work
-    </h2>
-    <div class="teaser-item">
-    	<div class="teaser-item-inner">
-    		<a href="#!/section/web/web-design"><img src="images/carousel1.jpg" alt="Martha Stewart Videos"/>
-    		  <h3 class="teaser-item-title">
-    		    Martha Stewart Videos
-    		  </h3>
-    		</a>
-      </div>
-  	</div>
-  	<div class="teaser-item">
-      <div class="teaser-item-inner">
-    		<a href="#!/section/web/web-design"><img src="images/carousel2.jpg" alt="My Eyes Are Hungry Website"/>
-    		  <h3 class="teaser-item-title">
-    		    My Eyes Are Hungry Website
-    		  </h3>
-    		</a>
-      </div>
-  	</div>
-  	<div class="teaser-item">
-      <div class="teaser-item-inner">
-    		<a href="#!/section/3d/character-3d"><img src="images/carousel3.jpg" alt="Rendering of Boxer"/>
-    		  <h3 class="teaser-item-title">
-    		    3d Boxer
-    		  </h3>
-    		</a>
-      </div>
-  	</div>
-  	<div class="teaser-item">
-      <div class="teaser-item-inner">
-    		<a href="#!/section/2d/vector"><img src="images/carousel4.jpg" alt="Vector Art"/>
-    		  <h3 class="teaser-item-title">
-    		    Vector Art
-    		  </h3>
-    		</a>
-      </div>
-  	</div>
-  </div>
+    <section class="PageIntroTeasers">
+        <h2 class="PageIntroTeasers-title">
+            Recent Work
+        </h2>
+        <div class="PageIntroTeasers-items">
+            <figure class="PageIntroTeasers-item" ng-repeat="(key, item) in [
+                { 'title': 'Martha Stewart Videos', 'url': '#!/section/web/web-design', },
+                { 'title': 'My Eyes Are Hungry', 'url': '#!/section/web/web-design', },
+                { 'title': 'Boxer', 'url': '#!/section/3d/character-3d', },
+                { 'title': 'Vector Art', 'url': '#!/section/2d/vector', },
+            ]">
+                <a href="{{item.url}}">
+                    <img src="images/carousel{{key + 1}}.jpg" alt="{{item.title}}"/>
+                    <h3 class="PageIntroTeasers-itemTitle">
+                        {{item.title}}
+                    </h3>
+                </a>
+            </figure>
+        </div>
+    </section>
 </div>
 
-<section class="mod-wrap">
-  <article class="mod-full">
-    <div class="mod-inner">
-    <h2 class="mod-title">
-      Sample Code
-    </h2>
-      <h4 class="code-links-title">
-        Handlebars Example
-      </h4>
-      <a href="codes/handlebars/" target="_blank">view</a> &bull; 
-      <a href="https://github.com/meskauskis/portfolio/tree/master/codes/handlebars" target="_blank" rel="nofollow">source code</a>
+<div class="PageIntroCard-wrap">
+    <div data-card-block 
+        data-title="My Info"
+        data-subtitle="Employment"
+        data-subtext='
+            Currently at <a href="http://www.cbssports.com/" target="_blank" rel="nofollow">CBS Sports</a> as a <i>Senior Web Developer</i><br/>
+            Austin, TX
+        '
+        data-subtitle2="Email"
+        data-subtext2='
+            meskauskis at gmail dot com
+        '
+    ></div>
     
-      <h4 class="code-links-title">
-        Angular Example
-      </h4>
-      this site &bull; 
-      <a href="https://github.com/meskauskis/portfolio" target="_blank" rel="nofollow">source code</a>
-    </div>
-  </article>
-</section>
+    <div data-card-block 
+        data-title="Background"
+        data-subtitle="Education"
+        data-subtext='
+            Graduated from <a href="http://www.purdue.edu" target="_blank" rel="nofollow">Purdue</a><br/>
+            Bachelor of Science in <i>Computer Graphics</i><br/>
+            Minor in <i>Fine Arts</i> and <i>Computer Technology</i>
+        '
+        data-subtitle2="Resume"
+        data-subtext2='
+            <a class="Button" href="resume/resume_neil_meskauskis.pdf">Download PDF</a>
+        '
+    ></div>
+</div>
 
-<section class="mod-wrap">
-	<article class="mod-half" itemscope itemtype="http://schema.org/Person">
-		<div class="mod-inner">
-		  <div itemprop="name" style="display: none;">
-		    Neil Meskauskis
-		  </div>
-			<h2 class="mod-title">
-			  My Info
-			</h2>
-			
-			<h5 class="details-title first">
-			  Employment
-			</h5>
-			Currently at <a href="http://www.cbssports.com/fantasy" target="_blank" rel="nofollow" itemprop="worksFor">CBS Sports</a> as a <i itemprop="jobTitle">Senior Web Developer</i>
-			<div itemprop="address">
-			  Austin, TX
-			</div>
-			
-			<h5 class="details-title">
-			  Education
-			</h5>
-			Graduated from <a href="http://www.purdue.edu" target="_blank" rel="nofollow">Purdue</a><br/>
-			Bachelor of Science in <i>Computer Graphics</i><br/>
-			Minor in <i>Fine Arts</i> and <i>Computer Technology</i>
-			
-			<h5 class="details-title">
-			  Email
-			</h5>  
-			<span itemprop="email">meskauskis @ gmail . com</span><br/> 
-			
-			<h5 class="details-title">
-			  Resume
-			</h5>
-			<a class="button" href="resume/resume_neil_meskauskis.pdf">Download PDF</a>
-		</div>
-	</article>
-	
-	<article class="mod-half last">
-		<div class="mod-inner">
-			<h2 class="mod-title">
-			  My Favorite Sites
-			</h2>
-			
-			<h5 class="details-title first">
-			  Industry Info
-			</h5>
-			<a href="http://www.thebestdesigns.com" target="_blank" rel="nofollow">Best Designs</a><br />
-			<a href="http://www.thefwa.com" target="_blank" rel="nofollow">FWA</a><br />
-			<a href="http://www.mashable.com" target="_blank" rel="nofollow">Mashable</a><br />
-			<a href="http://www.wired.com" target="_blank" rel="nofollow">Wired</a><br />
-			
-			<h5 class="details-title">
-			  Technical
-			</h5>
-			<a href="http://www.color-hex.com" target="_blank" rel="nofollow">Color Hex</a><br />
-			<a href="http://caniuse.com" target="_blank" rel="nofollow">Can I Use?</a><br />
-			<a href="http://api.jquery.com" target="_blank" rel="nofollow">jQuery Doc</a><br />
-			<a href="http://php.net/manual/en" target="_blank" rel="nofollow">PHP Doc</a><br />
-			<a href="http://stackoverflow.com" target="_blank" rel="nofollow">Stack Overflow</a><br />
-			<a href="http://w3schools.com" target="_blank" rel="nofollow">W3 Schools</a><br />
-            <a href="https://css-tricks.com/" target="_blank" rel="nofollow">Css-Tricks</a><br />
-			<a href="http://textmechanic.com/Remove-Empty-Lines.html" target="_blank" rel="nofollow">Remove Empty Lines</a><br />
-            <a href="http://flexboxfroggy.com/" target="_blank" rel="nofollow">Flexbox Froggy</a><br />
-            <a href="https://blog.codinghorror.com/coding-without-comments/" target="_blank" rel="nofollow">How To Use Comments</a>
-		</div>
-	</article>
-</section>
+<div data-card-block 
+    data-title="Frequented Sites"
+    data-subtitle="Dev"
+    data-subtext='
+        <a href="http://www.thebestdesigns.com" target="_blank" rel="nofollow">Best Designs</a><br />
+        <a href="http://www.thefwa.com" target="_blank" rel="nofollow">FWA</a><br />
+        <a href="http://www.mashable.com" target="_blank" rel="nofollow">Mashable</a><br />
+        <a href="http://www.wired.com" target="_blank" rel="nofollow">Wired</a><br />
+    '
+    data-subtitle2="Technical"
+    data-subtext2='
+        <a href="http://www.color-hex.com" target="_blank" rel="nofollow">Color Hex</a><br />
+        <a href="http://caniuse.com" target="_blank" rel="nofollow">Can I Use?</a><br />
+        <a href="http://api.jquery.com" target="_blank" rel="nofollow">jQuery Doc</a><br />
+        <a href="http://php.net/manual/en" target="_blank" rel="nofollow">PHP Doc</a><br />
+        <a href="http://stackoverflow.com" target="_blank" rel="nofollow">Stack Overflow</a><br />
+        <a href="http://w3schools.com" target="_blank" rel="nofollow">W3 Schools</a><br />
+        <a href="https://css-tricks.com/" target="_blank" rel="nofollow">Css-Tricks</a><br />
+        <a href="http://textmechanic.com/Remove-Empty-Lines.html" target="_blank" rel="nofollow">Remove Empty Lines</a><br />
+        <a href="http://flexboxfroggy.com/" target="_blank" rel="nofollow">Flexbox Froggy</a><br />
+        <a href="https://blog.codinghorror.com/coding-without-comments/" target="_blank" rel="nofollow">How To Use Comments</a>
+    '
+></div>
 
-<section class="mod-wrap">
-	<div class="mod-full">
-		<div class="mod-inner">
-	    <h2 class="mod-title">
-	      Recognition
-	    </h2>
-			<article class="mod-list-item">
-	      <a href="http://winners.webbyawards.com/2013/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow"><img src="images/webby.png" class="mod-thumb" alt="webby"/></a>
-	      <h3 class="mod-list-item-title">
-	        Webby Award
-	      </h3>
-	      <p class="mod-text">
-	        While working at Martha Stewart, we won a Webby Award for best Lifestyle website of <a href="http://winners.webbyawards.com/2013/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow">2013</a> and <a href="http://winners.webbyawards.com/2014/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow">2014</a>!
-	      </p>
-		  </article>
-		  
-		  <article class="mod-list-item">
-		    <a href="http://www.iacquire.com/blog/video-seo-winners-losers/" target="_blank" rel="nofollow"><img src="images/iacquire.png" class="mod-thumb" alt="iacquire"/></a>
-		    <h3 class="mod-list-item-title">
-		      Video SEO
-		    </h3>
-		    <p class="mod-text">
-		      Recognized my contributions at Martha Stewart as a best-of sites in utilizing <a href="http://www.iacquire.com/blog/video-seo-winners-losers/" target="_blank" rel="nofollow">video SEO</a> best practice.
-		    </p>
-		  </article>
-		</div>
-	</div>
-</section>
+<div data-card-block 
+    data-customclass="tiles"
+    data-title="Recognition"
+    data-subtitle="Webby Award"
+    data-image='<a href="http://winners.webbyawards.com/2013/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow"><img src="images/webby.png" alt="webby"/></a>'
+    data-subtext='
+        While working at Martha Stewart, we won a Webby Award for best Lifestyle website of <a href="http://winners.webbyawards.com/2013/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow">2013</a> and <a href="http://winners.webbyawards.com/2014/web/general-website/lifestyle/martha-stewart-living" target="_blank" rel="nofollow">2014</a>!
+    '
+    data-subtitle2="Video SEO"
+    data-image2='<a href="http://www.iacquire.com/blog/video-seo-winners-losers/" target="_blank" rel="nofollow"><img src="images/iacquire.png" alt="iacquire"/></a>'
+    data-subtext2='
+        Recognized Martha Stewart as a best-of sites in utilizing <a href="http://www.iacquire.com/blog/video-seo-winners-losers/" target="_blank" rel="nofollow">video SEO</a> best practice.
+    '
+></div>
 
-<section class="mod-wrap">
-	<div class="mod-full">
-		<div class="mod-inner">
-	    <h2 class="mod-title">
-	      Games I've Worked On
-	    </h2>
-			<article class="mod-list-item">
-	      <img src="images/splash_abracadaball.png" class="mod-thumb game-thumb" alt="abracadaball"/>
-	      <h3 class="mod-list-item-title">
-	        Abracadaball
-	      </h3>
-	      <p class="mod-text">
-	        Put your wand skills to the test as you blast magic balls to make chains of 3 or more of the same color. I worked on UI and level design/graphics.
-	      </p>
-		  </article>
-
-		  <article class="mod-list-item">
-		    <img src="images/splash_reggie.png" class="mod-thumb game-thumb" alt="reggie bush"/>
-		    <h3 class="mod-list-item-title">
-		      Reggie Bush Pro Football
-		    </h3>
-		    <p class="mod-text">
-		      This is Gameloft's second installment in the Reggie Bush franchise. I worked on UI and character model/animation.
-		    </p>
-		  </article>
-
-		  <article class="mod-list-item">
-		    <img src="images/splash_jw.png" class="mod-thumb game-thumb" alt="johnny whatever"/>
-		    <h3 class="mod-list-item-title">
-		      Johnny Whatever
-		    </h3>
-		    <p class="mod-text">
-		      Johnny sets out to save his friends, and free the citizens, all in the name of Rock-N-Roll! I worked on UI and character model/animation.
-		    </p>
-		  </article>
-		  
-		  <article class="mod-list-item">
-		    <img src="images/splash_hm.png" class="mod-thumb game-thumb" alt="hit and myth"/>
-		    <h3 class="mod-list-item-title">
-		      Hit And Myth
-		    </h3>
-		    <p class="mod-text">
-		      Relive the days of SmashTV by taking out hordes of crazy enemies from elvis to orcs in a variety of wacky levels. I worked on UI and character model/animation.
-		    </p>
-		  </article>
-		  
-		  <article class="mod-list-item">
-		    <img src="images/splash_echoes.png" class="mod-thumb game-thumb" alt="echoes of glory"/>
-		    <h3 class="mod-list-item-title">
-		      Echoes of Glory
-		    </h3>
-		    <p class="mod-text">
-		      Tired of playing WW2 shooters? Echoes brings you back to the Civil Wars days. I worked on models for environments/weapons.
-		    </p>
-		  </article>
-		</div>
-	</div>
-</section>
+<div data-card-block 
+    data-customclass="games"
+    data-customclass2="tiles"
+    data-title="Games I've Worked On"
+    data-subtitle="Abracadaball"
+    data-image='<img src="images/splash_abracadaball.png" alt="abracadaball"/>'
+    data-subtext='
+        Put your wand skills to the test as you blast magic balls to make chains of 3 or more of the same color. I worked on UI and level design/graphics.
+    '
+    data-subtitle2="Reggie Bush Pro Football"
+    data-image2='<img src="images/splash_reggie.png" alt="reggie bush"/>'
+    data-subtext2='
+        This is Gamelofts second installment in the Reggie Bush franchise. I worked on UI and character model/animation.
+    '
+    data-subtitle3="Johnny Whatever"
+    data-image3='<img src="images/splash_jw.png" alt="johnny whatever"/>'
+    data-subtext3='
+        Johnny sets out to save his friends, and free the citizens, all in the name of Rock-N-Roll! I worked on UI and character model/animation.
+    '
+    data-subtitle4="Hit And Myth"
+    data-image4='<img src="images/splash_hm.png" alt="hit and myth"/>'
+    data-subtext4='
+        Relive the days of SmashTV by taking out hordes of crazy enemies from elvis to orcs in a variety of wacky levels. I worked on UI and character model/animation.
+    '
+></div>

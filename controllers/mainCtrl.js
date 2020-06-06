@@ -123,7 +123,8 @@ app
 
     // Show bio on homepage.
 	$scope.bioShow = function() {
-        $('.page-intro').addClass('show-bio');
+        $('#PageIntro-bio').addClass('PageIntro-bio--show');
+        $('#PageIntro-bioButton').addClass('PageIntro-bioButton--hidden');
 	};
 })
 .controller('pageSection', function($rootScope, $scope, $routeParams, $http) {

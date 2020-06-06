@@ -10,141 +10,126 @@
 </p>
 
 <div data-code-block 
-  data-title="Not Using ID Selectors"
-  data-text="
-    <div>
-      <a href='http://oli.jp/2011/ids/' rel='nofollow' target='_blank'>Don’t use IDs in CSS selectors?</a><br>
-      I am of the philosophy of never using IDs in Css. You should always use class selectors. IDs should be reserved for JS selecting. I would write about it, but this link explains it better than I could.
-    </div>
-  "
+    data-title="Not Using ID Selectors"
+    data-text='
+        <div>
+          <a href="http://oli.jp/2011/ids/" rel="nofollow" target="_blank">Don’t use IDs in CSS selectors?</a><br>
+          I am of the philosophy of never using IDs in Css. You should always use class selectors. IDs should be reserved for JS selecting. I would write about it, but this link explains it better than I could.
+        </div>
+    '
 ></div>
 
 <div data-code-block 
-  data-title="Selector Symbol Confusion"
-  data-text="
-    <div>
-      <b>X ~ Y (sibling)</b><br>
-      Matches if X and Y share the same parent and Y comes after X.
-    </div>
-    <br>
-    <div>
-      <b>X + Y (immediate sibling)</b><br>
-      Very similar to X ~ Y, but more strict. Matches if X and Y share the same parent and Y immediately comes after X.
-    </div>
-    <br>
-    <div>
-      <b>X > Y (direct child)</b><br>
-      Matches if Y is a direct child of X.
-    </div>
-  "
+    data-title="Selector Symbol Confusion"
+    data-text='
+        <div>
+          <b>X ~ Y (sibling)</b><br>
+          Matches if X and Y share the same parent and Y comes after X.
+        </div>
+        <br>
+        <div>
+          <b>X + Y (immediate sibling)</b><br>
+          Very similar to X ~ Y, but more strict. Matches if X and Y share the same parent and Y immediately comes after X.
+        </div>
+        <br>
+        <div>
+          <b>X > Y (direct child)</b><br>
+          Matches if Y is a direct child of X.
+        </div>
+    '
 ></div>
 
 <div data-code-block 
-  data-title="iOS hover"
-  data-code="
-&lt;li class='item' onclick='//'&gt;Text&lt;/li&gt;
-
-.item:hover {
-  color: red;
-}
-  "
-  data-text="
-    iOS does not support :hover on anything other than A tags. If you want it to recognize it on other elements, add an empty onclick event to it. This is so much easier than creating touch vs non-touch js events.
-  "
+    data-title="Query Selectors"
+    data-code='
+        document.querySelectorAll(".example")
+        document.querySelector("#blah");
+    '
+    data-text='
+        If you want to select DOM elements without using jQuery, you can use the easier to remember/type query selectors, instead of <i>document.getElementById(\"blah\")</i> or <i>document.getElementsByClassName(\"example\")</i>.
+    '
 ></div>
 
 <div data-code-block 
-  data-title="Query Selectors"
-  data-code="
-document.querySelectorAll('.example')
-
-document.querySelector('#blah');
-  "
-  data-text="
-    If you want to select DOM elements without using jQuery, you can use the easier to remember/type query selectors, instead of <i>document.getElementById(\'blah\')</i> or <i>document.getElementsByClassName(\'example\')</i>.
-  "
+    data-title="Truncate Text With CSS"
+    data-code='
+        p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    '
+    data-text='
+        If you want a CSS solution to truncating long blocks of text, use text-overflow. Just chopping the text off midway sentence with <i>hidden</i> can look ugly. Use ellipsis to tell the user that there is still more text to read. The only downside to this solution is that it needs to be a single line of text.
+    '
 ></div>
 
 <div data-code-block 
-  data-title="Truncate Text With CSS"
-  data-code="
-p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-  "
-  data-text="
-    If you want a CSS solution to truncating long blocks of text, use text-overflow. Just chopping the text off midway sentence with <i>hidden</i> can look ugly. Use ellipsis to tell the user that there is still more text to read. The only downside to this solution is that it needs to be a single line of text.
-  "
+    data-title="Content Space"
+    data-code='
+        p:before {
+          content: "\00a0";
+        }
+    '
+    data-text='
+        If you need to add a white space via css, this is your method. Empty quotes will not do the trick.
+    '
 ></div>
 
 <div data-code-block 
-  data-title="Content Space"
-  data-code="
-p:before {
-  content: '\00a0';
-}
-  "
-  data-text="
-    If you need to add a white space via css, this is your method. Empty quotes will not do the trick.
-  "
+    data-title="Click Events On New DOM Elements"
+    data-code='
+        $("parent-div").on("click", ".class-name", function() {
+          do something...
+        });
+    '
+    data-text='
+        If you"re using jQuery to create new page elements after the page has loaded, you will notice a problem with binding events to them. Since this element does not exist at page load time, then it does not know how to bind events to it correctly. The way around this is to use <i>on</i>.<br/>
+        In the example above, it will listen for any new element that has the class name <i>class-name</i> within the <i>parent</i>. This <i>parent</i> should be a DOM element that exists and remains unchanged during the duration of the user experience.
+    '
 ></div>
 
 <div data-code-block 
-  data-title="Click Events On New DOM Elements"
-  data-code="
-$('parent-div').on('click', '.class-name', function() {
-  do something...
-});
-  "
-  data-text="
-    If you're using jQuery to create new page elements after the page has loaded, you will notice a problem with binding events to them. Since this element does not exist at page load time, then it does not know how to bind events to it correctly. The way around this is to use <i>on</i>.<br/>
-    In the example above, it will listen for any new element that has the class name <i>class-name</i> within the <i>parent</i>. This <i>parent</i> should be a DOM element that exists and remains unchanged during the duration of the user experience.
-  "
+    data-title="Easy Clear Fix"
+    data-code='
+        .clear-fix:after {
+          display: block;
+          height: 0;
+          visibility: hidden;
+          line-height: 0;
+          clear: both;
+          content: "";
+        }
+    '
+    data-text='
+        <i>:before</i> and <i>:after</i> allow you to put content into your DOM through CSS. You can put icons or even divs anywhere on the page with this method. The best part is that it also has great browser support for as far back as I would even worry about.<br/>
+        This is an elegant solution without adding extra page markup.<br/><br/>
+        <b>NOTE:</b> you can also do only, "width:100%; overflow:hidden;", but sometimes setting an overflow will have undesired effects.
+    '
 ></div>
 
 <div data-code-block 
-  data-title="Easy Clear Fix"
-  data-code="
-.clear-fix:after {
-  display: block;
-  height: 0;
-  visibility: hidden;
-  line-height: 0;
-  clear: both;
-  content: '';
-}
-  "
-  data-text="
-    <i>:before</i> and <i>:after</i> allow you to put content into your DOM through CSS. You can put icons or even divs anywhere on the page with this method. The best part is that it also has great browser support for as far back as I would even worry about.<br/>
-    This is an elegant solution without adding extra page markup.<br/><br/>
-    <b>NOTE:</b> you can also do only, 'width:100%; overflow:hidden;', but sometimes setting an overflow will have undesired effects.
-  "
+    data-title="Self Executing Functions"
+    data-code='
+        (function() {
+          var blah;
+          do something...
+        })();
+    '
+    data-text='
+        I think it"s good practice to use self executing functions whenever possible. They"re nice because it will automatically execute upon page load and all the variables and functions can only be used within that function. Why is that good? You don"t have to worry about naming conflicts or variables overriding each other. You can have a function or variable with the same name elsewhere on your site or file and there won"t be any problems.
+    '
 ></div>
 
 <div data-code-block 
-  data-title="Self Executing Functions"
-  data-code="
-(function() {
-  var blah;
-  do something...
-})();
-  "
-  data-text="
-    I think it's good practice to use self executing functions whenever possible. They're nice because it will automatically execute upon page load and all the variables and functions can only be used within that function. Why is that good? You don't have to worry about naming conflicts or variables overriding each other. You can have a function or variable with the same name elsewhere on your site or file and there won't be any problems.
-  "
-></div>
-
-<div data-code-block 
-  data-title="Attr vs Prop"
-  data-code="
-&lt;div class='item' data-section='intro'&gt;&lt;/div&gt;
-
-$('.item').data('section');
-$('.item').attr('data-section');
-  "
-  data-text="
-    Before jQuery 1.6, the .attr() method sometimes took property values into account when retrieving some attributes, which could cause inconsistent behavior. As of jQuery 1.6, the .prop() method provides a way to explicitly retrieve property values, while .attr() retrieves attributes.
-  "
+    data-title="Attr vs Prop"
+    data-code='
+        &lt;div class="item" data-section="intro"&gt;&lt;/div&gt;
+        
+        $(".item").data("section");
+        $(".item").attr("data-section");
+    '
+    data-text='
+        Before jQuery 1.6, the .attr() method sometimes took property values into account when retrieving some attributes, which could cause inconsistent behavior. As of jQuery 1.6, the .prop() method provides a way to explicitly retrieve property values, while .attr() retrieves attributes.
+    '
 ></div>

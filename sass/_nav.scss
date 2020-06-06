@@ -1,6 +1,6 @@
 .PageNav {
     background-color: $mono10;
-    border-top: 1px solid $mono4;
+    border-top: 1px dotted $mono4;
     bottom: 0;
     color: $mono2;
     left: 0;
@@ -8,7 +8,7 @@
     right: 0;
     top: 4rem;
     transform: translateX(100%);
-    transition: transform $trans-speed2 ease-out;
+    transition: transform $trans-speed1 ease-out;
     z-index: 200;
 
     @include media-query($bp-tablet) {
@@ -43,6 +43,9 @@
     @include media-query($bp-tablet) {
         position: relative;
         
+        &:last-child {
+            border-bottom: none;
+        }
         &:hover {
             background-color: $color2;
             color: $mono10;
@@ -50,9 +53,6 @@
             .PageNav-secondary {
                 display: block;
             }
-        }
-        &:last-child {
-            border: none;
         }
         &--selected {
             &:before {
@@ -81,10 +81,23 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     @include media-query($bp-tablet) {
         justify-content: left;
         padding: 0.7rem 0.8rem 0.6rem 1rem;
+    }
+}
+.PageNav-itemClick {
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include media-query($bp-tablet) {
+        display: none;
     }
 }
 .PageNav-itemIcon {
@@ -119,8 +132,7 @@
     }
 }
 .PageNav-itemArrow {
-    cursor: pointer;
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 0.8rem;
 
     @include media-query($bp-tablet) {
         display: none;

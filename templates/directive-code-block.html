@@ -3,11 +3,12 @@
         {{ title }}
     </h3>
 
-    <div class="SectionCode-block" data-ng-if="code !== undefined">
-        <pre data-ng-bind="code">
+    <div class="SectionCode-block" data-ng-if="code">
+        <pre class="SectionCode-pre">
+            {{code}}
         </pre>
     </div>
 
-    <p class="SectionCode-text" data-ng-if="text !== undefined" data-ng-bind-html="text">
+    <p class="SectionCode-text" data-ng-if="text" data-ng-bind-html="text">
     </p>
 </section>

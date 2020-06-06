@@ -14,10 +14,10 @@ body {
     }
 }
 .PageContent {
-    margin: 1.4rem 0.8rem;
+    margin: 1.4rem 0.8rem 3rem;
 
     @include media-query($bp-tablet) {
-        margin: 1.8rem 2rem 2rem 12rem;
+        margin: 1.8rem 2rem 6rem 12rem;
     }
 }
 
@@ -29,6 +29,12 @@ body {
 }
 .SectionTitle2 {
     @include title3;
+    display: inline-block;
+    margin-bottom: 0.6em;
+
+    @include media-query($bp-mobile) {
+        margin-bottom: 0.8em;
+    }
 }
 .SectionTitle-wrap {
     border-bottom: 1px solid $color2;
@@ -226,10 +232,14 @@ body {
     background-color: $mono1;
     border-radius: 5px;
     box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 0.5rem 0.6rem;
+}
+.SectionCode-pre {
     color: $mono10;
     font-family: monospace;
-    overflow-x: auto;
-    padding: 0.5rem 0.6rem;
+    white-space: pre-line;
 }
 .SectionCode-text {
     line-height: 1.3;

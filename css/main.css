@@ -52,7 +52,7 @@ img {
 
 a {
   color: #0091c5;
-  transition: color 0.2s;
+  transition: color 0.25s;
 }
 a:link, a:active, a:visited {
   text-decoration: none;
@@ -81,20 +81,27 @@ a:hover {
   margin-bottom: 2em;
 }
 
-.button {
+.Button {
   background-color: #0091c5;
   border: none;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
-  font-size: 1.2rem;
-  padding: 0.7rem 1.2rem;
-  transition: background-color 0.3s;
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  padding: 0.6rem 1rem;
+  transition: background-color 0.4s;
 }
-.button:hover {
-  background-color: #3c3c3c;
+.Button:hover {
+  background-color: #01b5ae;
   color: #fff;
   text-decoration: none;
+}
+@media only screen and (min-width: 750px) {
+  .Button {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
 }
 
 @font-face {
@@ -1142,7 +1149,7 @@ body:after {
 
 .PageNav {
   background-color: #fff;
-  border-top: 1px solid #a6a6a6;
+  border-top: 1px dotted #a6a6a6;
   bottom: 0;
   color: #555;
   left: 0;
@@ -1150,7 +1157,7 @@ body:after {
   right: 0;
   top: 4rem;
   transform: translateX(100%);
-  transition: transform 0.4s ease-out;
+  transition: transform 0.25s ease-out;
   z-index: 200;
 }
 @media only screen and (min-width: 750px) {
@@ -1190,15 +1197,15 @@ body:after {
   .PageNav-item {
     position: relative;
   }
+  .PageNav-item:last-child {
+    border-bottom: none;
+  }
   .PageNav-item:hover {
     background-color: #01b5ae;
     color: #fff;
   }
   .PageNav-item:hover .PageNav-secondary {
     display: block;
-  }
-  .PageNav-item:last-child {
-    border: none;
   }
   .PageNav-item--selected:before {
     background-color: #0091c5;
@@ -1221,11 +1228,26 @@ body:after {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 @media only screen and (min-width: 750px) {
   .PageNav-primary {
     justify-content: left;
     padding: 0.7rem 0.8rem 0.6rem 1rem;
+  }
+}
+
+.PageNav-itemClick {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media only screen and (min-width: 750px) {
+  .PageNav-itemClick {
+    display: none;
   }
 }
 
@@ -1273,8 +1295,7 @@ body:after {
 }
 
 .PageNav-itemArrow {
-  cursor: pointer;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 0.8rem;
 }
 @media only screen and (min-width: 750px) {
   .PageNav-itemArrow {
@@ -1469,7 +1490,6 @@ body:after {
   color: #111;
   font-size: 1.2em;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 0.4em;
   color: #555;
   margin: 2rem 0 1rem;
 }
@@ -1502,307 +1522,239 @@ body:after {
   text-align: center;
 }
 
-/* Homepage */
-.site-home {
-  /* General */
-}
-@media only screen and (min-width: 500px) {
-  .site-home .page-head {
-    margin-bottom: 2em;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 500px) {
-  .site-home .page-logo {
-    height: 60px;
-    width: 165px;
-  }
-}
-.site-home .mod-title {
-  color: #333;
-  font-family: "Raleway", sans-serif;
-  font-size: 1.5em;
-  padding-bottom: 0.4em;
-  margin-bottom: 0.8em;
-  border-bottom: 1px dotted #888;
-}
-.site-home .details-title {
-  color: #111;
-  font-size: 1.2em;
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 0.4em;
-  margin-top: 1.3em;
-}
-.site-home .details-title.first {
-  margin-top: 0;
-}
-.site-home .page-intro-wrap {
+.PageIntro-wrap {
+  margin: 0 auto 2rem;
   max-width: 1100px;
-  margin: 0 auto 3em auto;
-}
-.site-home .page-intro-wrap:after {
-  clear: both;
-  content: " ";
-  display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
-}
-.site-home .page-intro {
-  margin-bottom: 2.5em;
 }
 @media only screen and (min-width: 750px) {
-  .site-home .page-intro {
-    float: left;
-    width: 50%;
-    padding-right: 4em;
-    margin-bottom: 0;
+  .PageIntro-wrap {
     box-sizing: border-box;
+    display: flex;
   }
 }
-.site-home .page-intro.show-bio .bio-button {
-  display: none;
-}
-.site-home .page-intro.show-bio .page-bio-text {
-  display: block;
-}
-.site-home .page-intro .bio-button {
-  display: block;
-  text-align: center;
-  margin-bottom: 0.5em;
-  color: #0091c5;
-  cursor: pointer;
+
+.PageIntro {
+  margin-bottom: 2.5rem;
 }
 @media only screen and (min-width: 750px) {
-  .site-home .page-intro .bio-button {
-    display: none;
+  .PageIntro {
+    margin-bottom: 0;
+    padding-right: 4em;
+    width: 50%;
   }
 }
-.site-home .page-intro .bio-button:hover {
-  color: black;
-  text-decoration: underline;
-}
-.site-home .page-intro-text {
-  font-family: "Raleway", sans-serif;
+
+.PageIntro-welcome {
   color: #555;
-  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
   line-height: 1.3;
-  font-size: 1.8em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 @media only screen and (min-width: 750px) {
-  .site-home .page-intro-text {
+  .PageIntro-welcome {
     text-align: left;
   }
 }
-.site-home .page-bio-text {
+
+.PageIntro-bioButton {
+  color: #0091c5;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+@media only screen and (min-width: 750px) {
+  .PageIntro-bioButton {
+    display: none;
+  }
+}
+.PageIntro-bioButton:hover {
+  color: black;
+  text-decoration: underline;
+}
+.PageIntro-bioButton--hidden {
+  display: none;
+}
+
+.PageIntro-bio {
   display: none;
   line-height: 1.4;
-  padding: 0.5em;
+  padding: 0.6rem;
 }
 @media only screen and (min-width: 500px) {
-  .site-home .page-bio-text {
+  .PageIntro-bio {
     padding: 0;
   }
 }
 @media only screen and (min-width: 750px) {
-  .site-home .page-bio-text {
+  .PageIntro-bio {
     display: block;
   }
 }
-.site-home .page-teasers:after {
-  clear: both;
-  content: " ";
+.PageIntro-bio--show {
   display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
 }
+
+/*
+ * Teasers.
+ */
 @media only screen and (min-width: 750px) {
-  .site-home .page-teasers {
-    float: right;
+  .PageIntroTeasers {
     width: 50%;
-    margin: 0;
   }
 }
-.site-home .page-teasers .intro-title {
+
+.PageIntroTeasers-title {
   color: #333;
   font-family: "Raleway", sans-serif;
   font-size: 1.5em;
+  margin-bottom: 0.8rem;
   text-align: center;
-  margin-bottom: 0.4em;
 }
 @media only screen and (min-width: 750px) {
-  .site-home .page-teasers .intro-title {
+  .PageIntroTeasers-title {
     text-align: left;
   }
 }
-.site-home .page-teasers .teaser-item {
-  padding: 0.5em;
-  box-sizing: border-box;
+
+.PageIntroTeasers-items {
+  display: grid;
+  grid-gap: 0.8rem;
 }
 @media only screen and (min-width: 500px) {
-  .site-home .page-teasers .teaser-item {
-    float: left;
-    width: 50%;
+  .PageIntroTeasers-items {
+    grid-template: 1fr 1fr/1fr 1fr;
   }
 }
 @media only screen and (min-width: 750px) {
-  .site-home .page-teasers .teaser-item {
-    float: none;
-    width: auto;
+  .PageIntroTeasers-items {
+    grid-template: none;
   }
 }
 @media only screen and (min-width: 950px) {
-  .site-home .page-teasers .teaser-item {
-    float: left;
-    width: 50%;
+  .PageIntroTeasers-items {
+    grid-template: 1fr 1fr/1fr 1fr;
   }
 }
-.site-home .page-teasers .teaser-item:hover .teaser-item-title {
-  background-color: #111;
-}
-.site-home .page-teasers .teaser-item-inner {
+
+.PageIntroTeasers-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.4rem;
   position: relative;
-  border: 1px solid #a6a6a6;
 }
-.site-home .page-teasers .teaser-item-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+.PageIntroTeasers-item:hover .PageIntroTeasers-itemTitle {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.PageIntroTeasers-itemTitle {
+  background-color: rgba(51, 51, 51, 0.4);
+  bottom: 0.4rem;
   color: #fff;
-  font-size: 0.8em;
-  padding: 0.5em 0.8em;
+  font-size: 0.8rem;
   font-weight: bold;
+  left: 0.4rem;
+  padding: 0.5rem 0.6rem;
+  position: absolute;
+  right: 0.4rem;
   text-shadow: 1px 1px 1px #111;
+  transition: background 0.4s;
 }
-.site-home .mod-wrap {
-  line-height: 1.4;
-  font-size: 1.2em;
-}
-.site-home .mod-wrap:after {
-  clear: both;
-  content: " ";
-  display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
-}
-@media only screen and (min-width: 500px) {
-  .site-home .mod-wrap {
-    line-height: 1.2;
-    font-size: 1em;
-  }
-}
-.site-home .mod-wrap .mod-half,
-.site-home .mod-wrap .mod-full {
-  margin-bottom: 1.5em;
-}
+
+/*
+ * Cards.
+ */
 @media only screen and (min-width: 750px) {
-  .site-home .mod-wrap .mod-half,
-.site-home .mod-wrap .mod-full {
-    padding: 1em;
-    margin-bottom: 0;
-    box-sizing: border-box;
+  .PageIntroCard-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .PageIntroCard-wrap .PageIntroCard {
+    width: 49%;
   }
 }
-@media only screen and (min-width: 750px) {
-  .site-home .mod-wrap .mod-half {
-    float: left;
-    width: 50%;
-  }
-}
-.site-home .mod-wrap .mod-inner {
-  background-color: rgba(150, 150, 150, 0.2);
-  padding: 1em;
+
+.PageIntroCard {
+  background-color: rgba(85, 85, 85, 0.1);
+  border-radius: 6px;
   box-sizing: border-box;
+  line-height: 1.4;
+  margin-bottom: 1.8rem;
+  padding: 1rem;
 }
-.site-home .mod-wrap .mod-inner:after {
-  clear: both;
-  content: " ";
-  display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
+.PageIntroCard--games .PageIntroCard-thumb img {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 0.2rem;
 }
-.site-home .mod-list-item {
-  padding-bottom: 1.2em;
-  margin-bottom: 1.2em;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-}
-.site-home .mod-list-item:after {
-  clear: both;
-  content: " ";
-  display: block;
-  height: 0;
-  line-height: 0;
-  visibility: hidden;
+.PageIntroCard--tiles {
+  background-color: transparent;
+  border: 1px solid #ccc;
 }
 @media only screen and (min-width: 500px) {
-  .site-home .mod-list-item {
-    text-align: left;
-  }
-}
-@media only screen and (min-width: 750px) {
-  .site-home .mod-list-item {
-    float: left;
-    padding-right: 2em;
-    padding-bottom: 0;
-    margin-bottom: 2em;
-    border-bottom: none;
-    box-sizing: border-box;
+  .PageIntroCard--tiles .PageIntroCard-item {
+    align-items: center;
+    display: flex;
   }
 }
 @media only screen and (min-width: 950px) {
-  .site-home .mod-list-item {
+  .PageIntroCard--tiles .PageIntroCard-item {
+    float: left;
     width: 50%;
   }
-}
-@media only screen and (min-width: 750px) {
-  .site-home .mod-list-item:nth-child(even) {
+  .PageIntroCard--tiles .PageIntroCard-item:nth-child(odd) {
     clear: left;
   }
 }
-.site-home .mod-list-item:last-child {
-  padding: 0;
-  margin: 0;
-  border-bottom: none;
-}
-.site-home .mod-list-item img {
-  margin-bottom: 1em;
-}
 @media only screen and (min-width: 500px) {
-  .site-home .mod-list-item img {
-    float: left;
-    margin-right: 1em;
-    margin-bottom: 0;
+  .PageIntroCard--tiles .PageIntroCard-thumb {
+    flex: 1 0 140px;
   }
 }
-.site-home .mod-list-item .game-thumb {
-  border: 1px solid #a6a6a6;
-  padding: 0.2em;
+@media only screen and (min-width: 500px) {
+  .PageIntroCard--tiles .PageIntroCard-content {
+    margin: 0 1.2rem 0 0.8rem;
+  }
 }
-.site-home .mod-list-item .mod-list-item-title {
-  color: #111;
-  font-size: 1.2em;
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 0.4em;
+
+.PageIntroCard-title {
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5em;
+  border-bottom: 1px dotted #888;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
 }
-.site-home .code-links {
-  margin-bottom: 3em;
+
+.PageIntroCard-items:after {
+  clear: both;
+  content: " ";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
 }
-.site-home .code-links-title {
-  color: #111;
-  font-size: 1.2em;
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 0.4em;
-  margin-top: 1em;
+
+.PageIntroCard-item {
+  margin-bottom: 1.8em;
 }
-.site-home .code-links-title:first-child {
-  margin-top: 0;
+.PageIntroCard-item:last-child {
+  margin-bottom: 0;
+}
+
+.PageIntroCard-thumb {
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.PageIntroCard-subTitle {
+  color: #555;
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: 0.4rem;
 }
 
 html.is-locked,
@@ -1811,11 +1763,11 @@ body.is-locked {
 }
 
 .PageContent {
-  margin: 1.4rem 0.8rem;
+  margin: 1.4rem 0.8rem 3rem;
 }
 @media only screen and (min-width: 750px) {
   .PageContent {
-    margin: 1.8rem 2rem 2rem 12rem;
+    margin: 1.8rem 2rem 6rem 12rem;
   }
 }
 
@@ -1843,16 +1795,20 @@ body.is-locked {
 .SectionTitle2 {
   background-color: #0091c5;
   color: #fff;
-  display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   letter-spacing: 0.04em;
-  margin-bottom: 0.6em;
   padding: 0.3em 0.5em;
+  display: inline-block;
+  margin-bottom: 0.6em;
 }
 @media only screen and (min-width: 500px) {
   .SectionTitle2 {
     font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .SectionTitle2 {
     margin-bottom: 0.8em;
   }
 }
@@ -2083,10 +2039,15 @@ body.is-locked {
   background-color: #333;
   border-radius: 5px;
   box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 0.5rem 0.6rem;
+}
+
+.SectionCode-pre {
   color: #fff;
   font-family: monospace;
-  overflow-x: auto;
-  padding: 0.5rem 0.6rem;
+  white-space: pre-line;
 }
 
 .SectionCode-text {
