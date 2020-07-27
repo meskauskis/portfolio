@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% set pageTitle = 'Index test' %}
+
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+
+{% block pageContent %}
+    Welcome on my awesome homepage 22.
+
+    <div id="root"></div>
+{% endblock pageContent %}
+
+{% block pageJs %}
+    {{ parent() }}
+    <script src="./dist/main.js"></script>
+{% endblock pageJs %}
