@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\DefaultController' => $baseDir . '/src/Controller/DefaultController.php',
+    'App\\Controller\\LuckyController' => $baseDir . '/src/Controller/LuckyController.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'Collator' => $vendorDir . '/symfony/intl/Resources/stubs/Collator.php',
     'Doctrine\\Bundle\\DoctrineBundle\\Command\\CreateDatabaseDoctrineCommand' => $vendorDir . '/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php',
