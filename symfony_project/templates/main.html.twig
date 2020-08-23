@@ -9,5 +9,5 @@
 
 {% block pageJs %}
     {{ parent() }}
-    <script src="./js/main.js"></script>
+    {{ encore_entry_script_tags('app') }}
 {% endblock pageJs %}
