@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import App from './item';
+
+import NameTeller from './item';
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
+    <NameTeller/>,
+    document.getElementById('root')
 );

@@ -2,10 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block pageTitle %}Welcome!{% endblock %}</title>
 
     {% block pageCss %}
-        {{ encore_entry_link_tags('app2') }}
+        {{ encore_entry_link_tags('boilerplate') }}
+        {{ encore_entry_link_tags('main') }}
+        {{ encore_entry_link_tags('main2') }}
     {% endblock pageCss %}
 </head>
 
@@ -14,10 +16,10 @@
         {% include './components/nav.html.twig' with {} %}
     {% endblock pageNav %}
 
-    base!
-
-    {% block body %}
-    {% endblock %}
+    <div class="PageContent">
+        {% block pageContent %}
+        {% endblock pageContent %}
+    </div>
 
     {% block pageJs %}
     {% endblock pageJs %}

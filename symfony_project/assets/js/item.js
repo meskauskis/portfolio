@@ -1,34 +1,35 @@
 import React, { useState } from 'react';
 
-const App = () => {
-    const [greeting, setGreeting] = useState(
-        'Hello Component:'
-    );
-
-    const handleChange = event => setGreeting(event.target.value);
-
+const Headline = ({ name }) => {
+    if (!name) {
+        return null
+    }
     return (
-        <>
-            <Headline headline={greeting} />
-     
-            <Input value={greeting} onChangeInput={handleChange}>
-                Set The Greeting:
-            </Input>
-        </>
-    );
-};
-
-const Headline = ({ headline }) => {
-    return(
-        <h4>{headline}</h4>
+        <h4>Hello, {name}</h4>
     )
 };
 
 const Input = ({ value, onChangeInput, children }) => (
     <label>
         {children}
-        <input type="text" value={value} onChange={onChangeInput} />
+        <input type="text" value={value} onChange={onChangeInput} placeholder="Enter Your Name"/>
     </label>
 );
 
-export default App;
+const NameTeller = () => {
+    const [greeting, setGreeting] = useState('');
+
+    const handleChange = (event) => setGreeting(event.target.value);
+
+    return (
+        <>
+            <Input value={greeting} onChangeInput={handleChange}>
+                What is your name?
+            </Input>
+
+            <Headline name={greeting} />     
+        </>
+    );
+};
+
+export default NameTeller;

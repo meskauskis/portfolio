@@ -1,11 +1,14 @@
 {% extends "./base.html.twig" %}
 
-{% block body %}
-    <h1>Your lucky number is {{ number }}</h1>
-    
-    react goes here: 
-    <div id="root"></div>
-{% endblock body %}
+{% block pageContent %}
+    <h1 class="temp">
+        Random number is {{ number }}
+    </h1>
+
+    <div id="root">
+        React goes here
+    </div>
+{% endblock pageContent %}
 
 {% block pageJs %}
     {{ parent() }}

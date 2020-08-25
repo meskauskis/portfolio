@@ -1,0 +1,21 @@
+@import './partials/theme';
+
+a {
+  &:link,
+  &:active,
+  &:visited {
+    color: black;
+    font-weight: bold;
+  }
+}
+.PageContent {
+  color: $color2;
+  padding: 20px;
+}
+
+.temp {
+  margin-bottom: 20px;
+}
+input {
+  margin-left: 10px;
+}
