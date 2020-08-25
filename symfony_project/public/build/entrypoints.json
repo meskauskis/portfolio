@@ -1,0 +1,35 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.d94b3b43.js",
+        "/build/0.4d429881.js",
+        "/build/app.0fc18e29.js"
+      ]
+    },
+    "boilerplate": {
+      "js": [
+        "/build/runtime.d94b3b43.js"
+      ],
+      "css": [
+        "/build/boilerplate.3642831c.css"
+      ]
+    },
+    "main": {
+      "js": [
+        "/build/runtime.d94b3b43.js"
+      ],
+      "css": [
+        "/build/main.738bab70.css"
+      ]
+    },
+    "main2": {
+      "js": [
+        "/build/runtime.d94b3b43.js"
+      ],
+      "css": [
+        "/build/main2.3b89208a.css"
+      ]
+    }
+  }
+}
