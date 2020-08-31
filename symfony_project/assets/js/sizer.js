@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import NameTeller from './item';
+import Graph from './graph';
 
 ReactDOM.render(
-    <NameTeller/>,
+    <Graph/>,
     document.getElementById('root')
 );

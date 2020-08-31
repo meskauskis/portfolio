@@ -1,16 +1,71 @@
 {% extends "./base.html.twig" %}
 
 {% block pageContent %}
-    <h1 class="temp">
-        Random number is {{ number }}
-    </h1>
 
-    <div id="root">
-        React goes here
+<div id="root">
+    React goes here
+</div>
+
+{#
+<hr>
+
+<div class="button button-add">add</div>
+
+<div class="container">
+    <div class="col">
+        <img src="{{ asset('images/man.svg') }}" data-height="100" class="icon icon-man">
     </div>
+</div>
+
+<script>
+    function resize(base) {
+        $('.icon').each(function() {
+            var height = $(this).attr('data-height');
+            var size = (height / base) * 100
+
+            if (height != base) {
+                $(this).css('height', size + '%');
+            }
+        });
+    }
+
+    function button(count) {
+        console.log(count);
+        if (count == 2) {
+            $('.container').append('<div class="col"><img src="images/cat.svg" data-height="20" class="icon icon-cat"></div>');
+            resize(100);
+        } else if (count == 3) {
+            $('.container').append('<div class="col"><img src="images/paris.svg" data-height="1200" class="icon icon-paris"></div>');
+            resize(1200);
+        } else if (count == 4) {
+            $('.container').append('<div class="col"><img src="images/godzilla.svg" data-height="1500" class="icon icon-godzilla"></div>');
+            resize(1500);
+        } else if (count == 5) {
+            $('.container').append('<div class="col"><img src="images/paris.svg" data-height="1200" class="icon icon-paris"></div>');
+            resize(1500);
+        } else if (count >= 6) {
+            $('.container').append('<div class="col"><img src="images/cat.svg" data-height="20" class="icon icon-cat"></div>');
+            resize(1500);
+        }
+    }
+
+    var count = 1;
+    $('.button-add').on('click', function() {
+        count++;
+        button(count);
+    });
+
+    $('.button-remove').on('click', function() {
+        count--;
+        button(count);
+    });
+
+</script>
+#}
+
 {% endblock pageContent %}
 
 {% block pageJs %}
     {{ parent() }}
-    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('sizer') }}
 {% endblock pageJs %}
