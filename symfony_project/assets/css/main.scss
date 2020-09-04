@@ -44,6 +44,9 @@ input {
   height: 100%;
   display: flex;
   align-items: flex-end;
+  padding: 0 5px;
+  position: relative;
+  min-width: 15px;
 }
 .button {
   position: fixed;
@@ -68,4 +71,14 @@ input {
      display: inline-block;
      margin-right: 8px;
    }
+}
+.remove {
+  cursor: pointer;
+  position: absolute;
+  bottom: -15px;
+  background: black;
+  color: white;
+  padding: 4px;
+  border-radius: 50%;
+  left: 50%;
 }

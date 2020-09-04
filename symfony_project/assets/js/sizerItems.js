@@ -1,33 +1,46 @@
 import React, { useState } from 'react';
 
-const SizerItems = ({ sizerList }) => {
-    console.log(sizerList);
-    const listItems = sizerList.map((item, index) => {
-        const itemName = item.name;
-        const itemHeight = item.height;
-        
-        const itemSize = (itemHeight / 1000) * 100;
+import SizerItem from './sizerItem';
 
-/*
-            var height = $(this).attr('data-height');
-            var size = (height / base) * 100
+const ListItems = ({ sizerList, updateFunction }) => {
+    const heightsArray = sizerList.map(({ height }) => height);
+    const tallestHeight = Math.max(...heightsArray);
 
-            if (height != base) {
-                $(this).css('height', size + '%');
-            }
-*/
+    const clickHandler = (itemId) => {
+        const reducedList = sizerList.filter(function(obj) {
+            return obj.id !== itemId;
+        });
 
-        return (
-            <div className="col" key={index + itemName}>
-                <img src={`images/${itemName}.svg`} className={`icon icon-${itemName}`} style={{ 'height': itemSize + '%' }}/>
-            </div>
-        );
-    });
+        updateFunction(sizerList => reducedList);
+    }
 
     return (
         <>
-            {listItems}
+            {sizerList.map((item, index) => {
+                const itemId = item.id;
+                const itemHeight = item.height;
+
+                const itemSize = (itemHeight / tallestHeight) * 100;
+
+                return (
+                    <div className="col" key={index + itemId}>
+                        {index != 0 
+                            ? <div className="remove" onClick={() => clickHandler(itemId)}>X</div>
+                            : ''
+                        }
+                        <SizerItem itemId={itemId} itemSize={itemSize}/>
+                    </div>
+                );
+            })} 
         </>
+    );
+}
+
+const SizerItems = ({ sizerList, updateFunction }) => {
+    return (
+        <div className="container">
+            <ListItems sizerList={sizerList} updateFunction={updateFunction}/>
+        </div>
     );
 }
 

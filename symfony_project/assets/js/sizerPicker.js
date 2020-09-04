@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 
-const Button = ({ text, clickHandler, data }) => {
-    return (
-        <button className="ButtonAdd" onClick={() => clickHandler(data)}>
-            {text}
-        </button>
-    )
-};
-
-const SizerPicker = ({ sizerList, updateFunction }) => {
+const Button = ({ text, updateFunction, data }) => {
     const clickHandler = (data) => {
-        console.log(name);
         updateFunction(sizerList => [...sizerList, data]);
     }
 
     return (
+        <button className="ButtonAdd" onClick={() => clickHandler(data)}>
+            {text}
+        </button>
+    );
+};
+
+const SizerPicker = ({ sizerList, updateFunction }) => {
+    return (
         <>
             <div className="picker">
-                <Button text="Tower" clickHandler={clickHandler} data={ {'name': 'paris', 'height': 1000} }/>
-                <Button text="Cat" clickHandler={clickHandler} data={ {'name': 'cat', 'height': 20} }/>
-                <Button text="Godzilla" clickHandler={clickHandler} data={ {'name': 'godzilla', 'height': 1300} }/>
+                <Button text="Eiffel Tower" updateFunction={updateFunction} data={ {'id': 'paris', 'height': 324} }/>
+                <Button text="Empire State Building" updateFunction={updateFunction} data={ {'id': 'empire', 'height': 443} }/>
+                <Button text="Cat" updateFunction={updateFunction} data={ {'id': 'cat', 'height': 0.26} }/>
+                <Button text="Godzilla" updateFunction={updateFunction} data={ {'id': 'godzilla', 'height': 122} }/>
             </div>
         </>
     );

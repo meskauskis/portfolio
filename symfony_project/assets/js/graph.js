@@ -5,8 +5,9 @@ import SizerPicker from './sizerPicker';
 import SizerItems from './sizerItems';
 
 const firstItem = {
+    'id': 'man',
     'name': 'man',
-    'height': 100,
+    'height': 1.7,
 };
 
 const Graph = () => {
@@ -15,9 +16,7 @@ const Graph = () => {
     return (
         <>
             <SizerPicker updateFunction={updateSizerList} sizerList={sizerList}/>
-            <div className="container">
-                <SizerItems sizerList={sizerList}/>
-            </div>
+            <SizerItems updateFunction={updateSizerList} sizerList={sizerList}/>
         </>
     );
 };
