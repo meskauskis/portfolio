@@ -23,12 +23,15 @@ const ListItems = ({ sizerList, updateFunction }) => {
                 const itemSize = (itemHeight / tallestHeight) * 100;
 
                 return (
-                    <div className="col" key={index + itemId}>
-                        {index != 0 
-                            ? <div className="remove" onClick={() => clickHandler(itemId)}>X</div>
-                            : ''
-                        }
-                        <SizerItem itemId={itemId} itemSize={itemSize}/>
+                    <div className="colBig">
+                        <div className="col" key={index + itemId}>
+                            <SizerItem itemId={itemId} itemSize={itemSize}/>
+                            {index != 0 
+                                ? <div className="remove" onClick={() => clickHandler(itemId)}>X</div>
+                                : ''
+                            }
+                        </div>
+                        <div className="line" style={{ 'top': (100 - itemSize) + '%' }}></div>
                     </div>
                 );
             })} 
