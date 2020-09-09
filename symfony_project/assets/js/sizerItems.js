@@ -6,14 +6,6 @@ const ListItems = ({ sizerList, updateFunction }) => {
     const heightsArray = sizerList.map(({ height }) => height);
     const tallestHeight = Math.max(...heightsArray);
 
-    const clickHandler = (itemId) => {
-        const reducedList = sizerList.filter(function(obj) {
-            return obj.id !== itemId;
-        });
-
-        updateFunction(sizerList => reducedList);
-    }
-
     return (
         <>
             {sizerList.map((item, index) => {
@@ -23,15 +15,15 @@ const ListItems = ({ sizerList, updateFunction }) => {
                 const itemSize = (itemHeight / tallestHeight) * 100;
 
                 return (
-                    <div className="colBig">
-                        <div className="col" key={index + itemId}>
-                            <SizerItem itemId={itemId} itemSize={itemSize}/>
-                            {index != 0 
-                                ? <div className="remove" onClick={() => clickHandler(itemId)}>X</div>
-                                : ''
-                            }
+                    <div className="colBig" key={itemId}>
+                        <div className="col">
+                            <SizerItem itemId={itemId} itemSize={itemSize} index={index} sizerList={sizerList} 
+                            updateFunction={updateFunction}/>
                         </div>
-                        <div className="line" style={{ 'top': (100 - itemSize) + '%' }}></div>
+                        {itemSize != 100
+                            ? <div className="line" style={{ 'top': (100 - itemSize) + '%' }}></div>
+                            : ''
+                        }
                     </div>
                 );
             })} 

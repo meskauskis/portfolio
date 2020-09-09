@@ -45,6 +45,14 @@ input {
 .colBig {
   height: 100%;
 }
+@keyframes pulseIcon {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
 .col {
   box-sizing: border-box;
   height: 100%;
@@ -56,6 +64,9 @@ input {
   //padding-bottom: 35px;
   
   &:hover {
+    .icon {
+      animation: pulseIcon 0.6s alternate infinite;
+    }
     + .line {
       display: block;
     }
