@@ -1,50 +1,8 @@
 @import './partials/theme';
 
-a {
-  &:link,
-  &:active,
-  &:visited {
-    color: black;
-    font-weight: bold;
-  }
-}
-.PageContent {
-  color: $color2;
-  //padding: 60px 60px 90px;
-  box-sizing: border-box;
-  //overflow: hidden;
-  background: yellow;
-}
+$buttonSize: 35px;
+$buttonSpace: $buttonSize + 15px;
 
-.temp {
-  margin-bottom: 20px;
-}
-input {
-  margin-left: 10px;
-}
-
-.icon-cat {
-}
-.icon-man {
-}
-.icon-building {
-}
-.icon {
-  vertical-align: bottom;
-  width: auto;
-  height: 100%;
-  transition: height 0.8s;
-}
-.container {
-  display: flex; 
-  align-items: flex-end;
-  height: calc(100vh - 105px);
-  position: relative;
-  margin: 60px 60px 90px;
-}
-.colBig {
-  height: 100%;
-}
 @keyframes pulseIcon {
   0% {
     opacity: 1;
@@ -53,25 +11,113 @@ input {
     opacity: 0.6;
   }
 }
+a {
+  &:link,
+  &:active,
+  &:visited {
+    color: black;
+    font-weight: bold;
+  }
+}
+input {
+  margin-left: 10px;
+}
+
+.PageContent {
+  color: $color2;
+  padding-top: 60px;
+  box-sizing: border-box;
+  //overflow: hidden;
+  background: yellow;
+}
+.container2 {
+  overflow-x: auto;
+}
+.container {
+  display: inline-flex; 
+  align-items: flex-end;
+  position: relative;
+  min-width: 100%;
+  height: calc(100vh - 130px);
+}
 .col {
+  min-width: $buttonSize * 2;
+  padding: 0 15px;
   box-sizing: border-box;
   height: 100%;
   display: flex;
-  align-items: flex-end;
-  margin-right: 5px;
-  position: relative;
-  min-width: 15px;
-  //padding-bottom: 35px;
+  align-items: center;
+  //position: relative;
+  justify-content: flex-end;
+  flex-direction: column;
   
   &:hover {
     .icon {
       animation: pulseIcon 0.6s alternate infinite;
     }
-    + .line {
-      display: block;
+    .liner {
+      &:before {
+        content: '';
+      }
     }
   }
 }
+.Col-button {
+  //bottom: -$buttonSpace;
+  cursor: pointer;
+  height: $buttonSize;
+  //left: 50%;
+  //position: absolute;
+  //transform: translateX(-50%);
+  width: $buttonSize;
+}
+.Col-button--info {
+
+}
+.Col-button--remove {
+  
+}
+.liner {
+  &:before {
+    left: 0;
+    content: none;
+    width: 100%;
+    position: absolute;
+    border-top: 2px dashed red;
+  }  
+}
+.icon {
+  vertical-align: bottom;
+  width: auto;
+  height: 100%;
+  transition: height 0.8s;
+  //padding-bottom: $buttonSpace;
+  //box-sizing: border-box;
+}
+.line {
+  display: none;
+  //height: 2px;
+  border-top: 2px dashed red;
+  //background-color: red;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  //margin-top: -$buttonSpace;
+}
+.infoBox {
+  background-color: white;
+  padding: 8px;
+  text-align: center;
+  min-width: 150px;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid gray;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+
+
 .button {
   position: fixed;
   top: 40px;
@@ -79,12 +125,6 @@ input {
   background: darkblue;
   color: white;
   display: inline-block;
-}
-.button-add {
-  right: 40px;
-}
-.button-remove {
-  right: 100px;
 }
 .picker {
   position: fixed;
@@ -96,26 +136,4 @@ input {
      margin-right: 8px;
    }
 }
-.line {
-  display: none;
-  //height: 2px;
-  border-top: 2px dashed red;
-  //background-color: red;
-  width: 100%;
-  position: absolute;
-  left: 0;
-}
-.remove {
-  //display: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: -35px;
-  background: black;
-  color: white;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-}
+

@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 
 const Button = ({ text, sizerList, updateFunction, data }) => {
     const sizerListIds = sizerList.map(({ ...item }) => item.id);
-    const isItemUsed = sizerListIds.includes(data.id);
+    const isItemUsed = false; //sizerListIds.includes(data.id);
 
     const clickHandler = (data) => {
         updateFunction(sizerList => [...sizerList, data]);
     }
 
     return (
-        <button className={`ButtonAdd ${isItemUsed ? 'disabled' : ''}`} disabled={isItemUsed ? 'disabled' : undefined} 
+        <button className={`ButtonAdd ${isItemUsed ? 'disabled' : ''}`} 
+        disabled={isItemUsed ? 'disabled' : undefined} 
         onClick={() => clickHandler(data)}>
             {text}
         </button>

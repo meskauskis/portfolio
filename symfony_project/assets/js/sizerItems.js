@@ -6,6 +6,8 @@ const ListItems = ({ sizerList, updateFunction }) => {
     const heightsArray = sizerList.map(({ height }) => height);
     const tallestHeight = Math.max(...heightsArray);
 
+const [infoBoxId, setinfoBoxId] = useState(null);
+
     return (
         <>
             {sizerList.map((item, index) => {
@@ -15,15 +17,9 @@ const ListItems = ({ sizerList, updateFunction }) => {
                 const itemSize = (itemHeight / tallestHeight) * 100;
 
                 return (
-                    <div className="colBig" key={itemId}>
-                        <div className="col">
-                            <SizerItem itemId={itemId} itemSize={itemSize} index={index} sizerList={sizerList} 
-                            updateFunction={updateFunction}/>
-                        </div>
-                        {itemSize != 100
-                            ? <div className="line" style={{ 'top': (100 - itemSize) + '%' }}></div>
-                            : ''
-                        }
+                    <div className="col" key={itemId}>
+                        <div className="liner"></div>
+                        <SizerItem sizerList={sizerList} item={item} itemSize={itemSize} updateFunction={updateFunction} infoBoxId={infoBoxId} setinfoBoxId={setinfoBoxId}/>
                     </div>
                 );
             })} 
@@ -33,8 +29,10 @@ const ListItems = ({ sizerList, updateFunction }) => {
 
 const SizerItems = ({ sizerList, updateFunction }) => {
     return (
-        <div className="container">
-            <ListItems sizerList={sizerList} updateFunction={updateFunction}/>
+        <div className="container2">
+            <div className="container">
+                <ListItems sizerList={sizerList} updateFunction={updateFunction}/>
+            </div>
         </div>
     );
 }
