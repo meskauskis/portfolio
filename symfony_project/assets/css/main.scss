@@ -1,7 +1,8 @@
 @import './partials/theme';
 
-$buttonSize: 35px;
+$buttonSize: 38px;
 $buttonSpace: $buttonSize + 15px;
+$sizerNavWidth: 150px;
 
 @keyframes pulseIcon {
   0% {
@@ -30,6 +31,36 @@ input {
   //overflow: hidden;
   background: yellow;
 }
+.picker {
+  position: fixed;
+  right: 15px;
+  z-index: 2;
+  width: $sizerNavWidth;
+  background-color: white;
+  margin: 0;
+}
+.picker-category {
+}
+.picker-title {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 6px;
+}
+.picker-list {
+  padding: 6px;
+}
+.picker-listItem {
+  cursor: pointer;
+  margin-bottom: 8px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &--disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
 .container2 {
   overflow-x: auto;
 }
@@ -39,6 +70,8 @@ input {
   position: relative;
   min-width: 100%;
   height: calc(100vh - 130px);
+  padding-right: $sizerNavWidth + 50px;
+  box-sizing: border-box;
 }
 .col {
   min-width: $buttonSize * 2;
@@ -60,6 +93,9 @@ input {
         content: '';
       }
     }
+    .Col-button {
+      opacity: 1;
+    }
   }
 }
 .Col-button {
@@ -70,12 +106,8 @@ input {
   //position: absolute;
   //transform: translateX(-50%);
   width: $buttonSize;
-}
-.Col-button--info {
-
-}
-.Col-button--remove {
-  
+  margin-top: 15px;
+  opacity: 0.4;
 }
 .liner {
   &:before {
@@ -94,46 +126,21 @@ input {
   //padding-bottom: $buttonSpace;
   //box-sizing: border-box;
 }
-.line {
-  display: none;
-  //height: 2px;
-  border-top: 2px dashed red;
-  //background-color: red;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  //margin-top: -$buttonSpace;
-}
 .infoBox {
   background-color: white;
   padding: 8px;
   text-align: center;
   min-width: 150px;
   position: absolute;
-  bottom: 0;
+  bottom: $buttonSize;
   border: 1px solid gray;
   border-radius: 6px;
   z-index: 1;
+  margin-bottom: 5px;
 }
-
-
-
-.button {
-  position: fixed;
-  top: 40px;
-  padding: 10px;
-  background: darkblue;
-  color: white;
-  display: inline-block;
+.closeButton {
+  width: 30px;
+  display: block;
+  margin: 10px auto 0;
+  color: red;
 }
-.picker {
-  position: fixed;
-  right: 0;
-  z-index: 2;
-
-   * {
-     display: inline-block;
-     margin-right: 8px;
-   }
-}
-

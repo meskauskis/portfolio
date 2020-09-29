@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 
-import SizerPicker from './sizerPicker';
+import SizerNav from './sizerNav';
 import SizerItems from './sizerItems';
 
 const Graph = ({ sizerData }) => {
     const defaultItem = sizerData.find((item) => item.default);
 
     const [sizerList, updateSizerList] = useState([defaultItem]);
+    const [infoBoxId, updateInfoBoxId] = useState(null);
 
     return (
         <>
-            <SizerPicker updateFunction={updateSizerList} sizerList={sizerList} sizerData={sizerData}/>
-            <SizerItems updateFunction={updateSizerList} sizerList={sizerList}/>
+            <SizerNav sizerData={sizerData} sizerList={sizerList} updateSizerList={updateSizerList}
+            updateInfoBoxId={updateInfoBoxId}/>
+            <SizerItems sizerList={sizerList} updateSizerList={updateSizerList} updateInfoBoxId={updateInfoBoxId} 
+            infoBoxId={infoBoxId}/>
         </>
     );
 };
