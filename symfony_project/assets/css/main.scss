@@ -70,8 +70,9 @@ input {
   position: relative;
   min-width: 100%;
   height: calc(100vh - 130px);
-  padding-right: $sizerNavWidth + 50px;
+  padding: 65px ($sizerNavWidth + 50px) ($buttonSize + 10px) 0;
   box-sizing: border-box;
+  vertical-align: top;
 }
 .col {
   min-width: $buttonSize * 2;
@@ -96,20 +97,38 @@ input {
     .Col-button {
       opacity: 1;
     }
+    .infoBox {
+      visibility: visible;
+    }
+  }
+}
+.Col-buttonWrap {
+  //width: 100%;
+  &:hover {
+    .Col-button {
+      //opacity: 1;
+    }
   }
 }
 .Col-button {
-  //bottom: -$buttonSpace;
+  bottom: 0;
   cursor: pointer;
   height: $buttonSize;
   //left: 50%;
-  //position: absolute;
+  position: absolute;
   //transform: translateX(-50%);
   width: $buttonSize;
-  margin-top: 15px;
-  opacity: 0.4;
+  opacity: 0;
+  padding-top: 10px;
+}
+.Col-button--close {  
+  &.is-default {
+    visibility: hidden;
+  }
 }
 .liner {
+  //box-sizing: border-box;
+  //padding-top: 50px;
   &:before {
     left: 0;
     content: none;
@@ -124,23 +143,34 @@ input {
   height: 100%;
   transition: height 0.8s;
   //padding-bottom: $buttonSpace;
-  //box-sizing: border-box;
+  
 }
 .infoBox {
   background-color: white;
+  box-sizing: border-box;
   padding: 8px;
   text-align: center;
   min-width: 150px;
   position: absolute;
-  bottom: $buttonSize;
-  border: 1px solid gray;
+  //bottom: $buttonSize;
+  //border: 1px solid gray;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
   border-radius: 6px;
   z-index: 1;
-  margin-bottom: 5px;
-}
-.closeButton {
-  width: 30px;
-  display: block;
-  margin: 10px auto 0;
-  color: red;
+  visibility: hidden;
+  transform: translate(-50%, -115%);
+  
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
 }

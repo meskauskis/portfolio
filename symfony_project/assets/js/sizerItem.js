@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 
-const SizerItem = ({ sizerList, item, itemSize, updateSizerList, updateInfoBoxId, infoBoxId }) => {
+const SizerItem = ({ sizerList, item, itemSize, updateSizerList }) => {
     const itemDefault = typeof item.default !== 'undefined' && item.default ? true : false;
     const itemId = item.id;
 
-    const clickHandlerInfo = (itemId) => {
-        // Close if it's already open.
-        updateInfoBoxId(infoBoxId == itemId ? null : itemId);
-    }
+    const clickHandlerClose = (itemDefault, itemId) => {
+        if (itemDefault) {
+            return false;
+        }
 
-    const clickHandlerClose = (itemId) => {
         const reducedList = sizerList.filter(function(obj) {
             return obj.id !== itemId;
         });
@@ -21,22 +20,12 @@ const SizerItem = ({ sizerList, item, itemSize, updateSizerList, updateInfoBoxId
 
     return (
         <>
-            <img src={`images/${itemId}.svg`} className={`icon icon-${itemId}`} style={{ 'height': itemSize + '%' }}/>
-            <img src={`images/button-info.svg`} className="Col-button Col-button--info" onClick={() => clickHandlerInfo(itemId)}/>
+            <img src={`images/${itemId}.svg`} className={`icon icon-${itemId}`} style={{ 
+                'height': itemSize + '%', 
+            }}/>
 
-            {itemId == infoBoxId
-                ? 
-                    <div className="infoBox">
-                        {item.name}<br/>
-                        {item.height}m
-
-                        {!itemDefault
-                            ? <img src={`images/button-info.svg`} className="closeButton" onClick={() => clickHandlerClose(itemId)}/>
-                            : ''
-                        }
-                    </div>
-                : '' 
-            }
+            <img src={`images/button-remove.svg`} className={`Col-button Col-button--close ${itemDefault ? 'is-default' : ''}`} 
+            onClick={() => clickHandlerClose(itemDefault, itemId)}/>
         </>
     );
 }

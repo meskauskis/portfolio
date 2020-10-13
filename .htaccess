@@ -9,6 +9,9 @@ ErrorDocument 404 /404.php
 # Always use https for secure connections
 # Replace 'www.example.com' with your domain name
 # (as it appears on your SSL certificate)
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.meskauskis.com/$1 [R=301,L]
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php72” package as the default “PHP” programming language.

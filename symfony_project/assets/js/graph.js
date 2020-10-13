@@ -13,8 +13,7 @@ const Graph = ({ sizerData }) => {
         <>
             <SizerNav sizerData={sizerData} sizerList={sizerList} updateSizerList={updateSizerList}
             updateInfoBoxId={updateInfoBoxId}/>
-            <SizerItems sizerList={sizerList} updateSizerList={updateSizerList} updateInfoBoxId={updateInfoBoxId} 
-            infoBoxId={infoBoxId}/>
+            <SizerItems sizerList={sizerList} updateSizerList={updateSizerList}/>
         </>
     );
 };
