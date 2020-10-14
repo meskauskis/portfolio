@@ -4,6 +4,8 @@ const SizerItem = ({ sizerList, item, itemSize, updateSizerList }) => {
     const itemDefault = typeof item.default !== 'undefined' && item.default ? true : false;
     const itemId = item.id;
 
+    const currentItem = sizerList.map(({ ...item }) => itemId);
+
     const clickHandlerClose = (itemDefault, itemId) => {
         if (itemDefault) {
             return false;
@@ -15,8 +17,6 @@ const SizerItem = ({ sizerList, item, itemSize, updateSizerList }) => {
     
         updateSizerList(sizerList => reducedList);
     }
-
-    const currentItem = sizerList.map(({ ...item }) => itemId);
 
     return (
         <>

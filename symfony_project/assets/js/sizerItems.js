@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import SizerItem from './sizerItem';
 
-const SizerItems = ({ sizerList, updateSizerList }) => {
+const SizerItems = ({ sizerList, updateSizerList, unit }) => {
     const heightsArray = sizerList.map(({ height }) => height);
     const tallestHeight = Math.max(...heightsArray);
 
@@ -16,14 +16,14 @@ const SizerItems = ({ sizerList, updateSizerList }) => {
                     const itemName = item.name;
 
                     const itemSize = (itemHeight / tallestHeight) * 100;
+                    const itemHeightConverted = unit == 'm' ? itemHeight : Math.round(itemHeight * 3.281 * 10) / 10;
 
                     return (
                         <div key={itemId} className="col">
-
                             <div className="liner">
                                 <div className="infoBox">
                                     {itemName}<br/>
-                                    {itemHeight}m
+                                    {itemHeightConverted} {unit}
                                 </div>
                             </div>
 

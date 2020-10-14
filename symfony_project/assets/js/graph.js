@@ -7,13 +7,14 @@ const Graph = ({ sizerData }) => {
     const defaultItem = sizerData.find((item) => item.default);
 
     const [sizerList, updateSizerList] = useState([defaultItem]);
-    const [infoBoxId, updateInfoBoxId] = useState(null);
+    const [unit, updateUnit] = useState('m');
 
     return (
         <>
             <SizerNav sizerData={sizerData} sizerList={sizerList} updateSizerList={updateSizerList}
-            updateInfoBoxId={updateInfoBoxId}/>
-            <SizerItems sizerList={sizerList} updateSizerList={updateSizerList}/>
+            unit={unit} updateUnit={updateUnit}/>
+
+            <SizerItems sizerList={sizerList} updateSizerList={updateSizerList} unit={unit}/>
         </>
     );
 };
