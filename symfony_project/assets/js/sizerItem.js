@@ -6,7 +6,7 @@ const SizerItem = ({ sizerList, item, itemSize, updateSizerList }) => {
 
     const currentItem = sizerList.map(({ ...item }) => itemId);
 
-    const clickHandlerClose = (itemDefault, itemId) => {
+    const closeItem = (itemDefault, itemId) => {
         if (itemDefault) {
             return false;
         }
@@ -25,7 +25,7 @@ const SizerItem = ({ sizerList, item, itemSize, updateSizerList }) => {
             }}/>
 
             <img src={`images/button-remove.svg`} className={`Col-button Col-button--close ${itemDefault ? 'is-default' : ''}`} 
-            onClick={() => clickHandlerClose(itemDefault, itemId)}/>
+            onClick={() => closeItem(itemDefault, itemId)}/>
         </>
     );
 }

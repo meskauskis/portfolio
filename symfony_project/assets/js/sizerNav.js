@@ -5,7 +5,8 @@ const SizerNav = ({ sizerData, sizerList, updateSizerList, unit, updateUnit }) =
 
     const categoryArray = sizerData
         .map((item) => item.category)
-        .filter((item, index, array) => item ? array.indexOf(item) === index : false);
+        .filter((item, index, array) => item ? array.indexOf(item) === index : false)
+        .sort();
 
     const [navCategory, updateNavCategory] = useState(categoryArray[0]);
 
@@ -17,7 +18,7 @@ const SizerNav = ({ sizerData, sizerList, updateSizerList, unit, updateUnit }) =
         updateUnit(unit);
     }
 
-    const clickHandler = (item, isItemUsed) => {
+    const toggleItem = (item, isItemUsed) => {
         if (isItemUsed) {
             const itemId = item.id;
             const reducedList = sizerList.filter(function(obj) {
@@ -45,7 +46,9 @@ const SizerNav = ({ sizerData, sizerList, updateSizerList, unit, updateUnit }) =
                                 {category}
                             </h5>
                             <ul className="picker-list">
-                                {sizerData.map((item) => {
+                                {sizerData
+                                    .sort((a, b) => a.name > b.name ? 1 : -1)
+                                    .map((item) => {
                                     const itemCategory = item.category;
                                     const itemId = item.id;
                                     const itemName = item.name;
@@ -55,7 +58,7 @@ const SizerNav = ({ sizerData, sizerList, updateSizerList, unit, updateUnit }) =
                                     if (category === itemCategory) {
                                         return (
                                             <li key={itemId} className={`picker-listItem ${isItemUsed ? 'picker-listItem--disabled' : ''}`} 
-                                            onClick={() => clickHandler(item, isItemUsed)}>
+                                            onClick={() => toggleItem(item, isItemUsed)}>
                                                 {itemName}
                                             </li>
                                         );

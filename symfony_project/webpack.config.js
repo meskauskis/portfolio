@@ -29,7 +29,7 @@ Encore
 
     .addStyleEntry('boilerplate', './assets/css/boilerplate.scss')
     .addStyleEntry('main', './assets/css/main.scss')
-    .addStyleEntry('main2', './assets/css/main2.scss')
+    .addStyleEntry('header', './assets/css/header.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()

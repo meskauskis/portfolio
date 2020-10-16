@@ -2,33 +2,33 @@
   "entrypoints": {
     "sizer": {
       "js": [
-        "/build/runtime.js",
-        "/build/vendors~sizer.js",
-        "/build/sizer.js"
+        "/build/runtime.d94b3b43.js",
+        "/build/0.7c496346.js",
+        "/build/sizer.97b1e494.js"
       ]
     },
     "boilerplate": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.d94b3b43.js"
       ],
       "css": [
-        "/build/boilerplate.css"
+        "/build/boilerplate.8ef9008b.css"
       ]
     },
     "main": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.d94b3b43.js"
       ],
       "css": [
-        "/build/main.css"
+        "/build/main.df25a9d8.css"
       ]
     },
-    "main2": {
+    "header": {
       "js": [
-        "/build/runtime.js"
+        "/build/runtime.d94b3b43.js"
       ],
       "css": [
-        "/build/main2.css"
+        "/build/header.d6ad11a6.css"
       ]
     }
   }

@@ -8,6 +8,8 @@ const SizerItems = ({ sizerList, updateSizerList, unit }) => {
 
     return (
         <div className="container2">
+            <div className="ground"></div>
+
             <div className="container">
                 {sizerList.map((item, index) => {
                     const itemDefault = item.default;
