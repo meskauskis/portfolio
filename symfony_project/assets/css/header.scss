@@ -1,10 +1,19 @@
 @import './partials/theme';
 
 .PageHeader {
-  border-bottom: 1px solid rgba($color1, 0.5);
-  padding: 8px;
+  left: 0;
+  padding: 10px;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+}
+.PageHeader-title {
+  background-color: rgba($color-white, 0.3);
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  padding: 4px;
 }

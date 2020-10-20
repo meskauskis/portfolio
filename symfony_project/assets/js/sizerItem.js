@@ -20,11 +20,11 @@ const SizerItem = ({ sizerList, item, itemSize, updateSizerList }) => {
 
     return (
         <>
-            <img src={`images/${itemId}.svg`} className={`icon icon-${itemId}`} style={{ 
+            <img src={`images/${itemId}.svg`} className={`SizerContainer-item SizerContainer-item--${itemId}`} style={{ 
                 'height': itemSize + '%', 
             }}/>
 
-            <img src={`images/button-remove.svg`} className={`Col-button Col-button--close ${itemDefault ? 'is-default' : ''}`} 
+            <img src={`images/button-remove.svg`} className={`Button--close ${itemDefault ? 'is-default' : ''}`} 
             onClick={() => closeItem(itemDefault, itemId)}/>
         </>
     );

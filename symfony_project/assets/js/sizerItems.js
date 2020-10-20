@@ -7,10 +7,10 @@ const SizerItems = ({ sizerList, updateSizerList, unit }) => {
     const tallestHeight = Math.max(...heightsArray);
 
     return (
-        <div className="container2">
-            <div className="ground"></div>
+        <div className="SizerContainerWrap">
+            <div className="SizerGround"></div>
 
-            <div className="container">
+            <div className="SizerContainer">
                 {sizerList.map((item, index) => {
                     const itemDefault = item.default;
                     const itemHeight = item.height;
@@ -21,11 +21,15 @@ const SizerItems = ({ sizerList, updateSizerList, unit }) => {
                     const itemHeightConverted = unit == 'm' ? itemHeight : Math.round(itemHeight * 3.281 * 10) / 10;
 
                     return (
-                        <div key={itemId} className="col">
-                            <div className="liner">
-                                <div className="infoBox">
-                                    {itemName}<br/>
-                                    {itemHeightConverted} {unit}
+                        <div key={itemId} className="SizerContainer-col">
+                            <div className="SizerContainer-line">
+                                <div className="SizerContainer-info">
+                                    <div className="SizerContainer-infoName">
+                                        {itemName}
+                                    </div>
+                                    <div className="SizerContainer-infoUnit">
+                                        {itemHeightConverted} {unit}
+                                    </div>
                                 </div>
                             </div>
 

@@ -1,64 +1,72 @@
 @import 'theme';
 
-.units {
-  background-color: #fff;
-  border: 1px solid gray;
+.SizerNavContainer {
+  position: fixed;
+  right: 15px;
+  width: $navWidth;
+  z-index: 2;
+}
+
+.SizerNavUnits {
+  background-color: $color-white;
+  border: 1px solid $color-gray1;
   border-radius: 6px;
   display: flex;
   font-size: 14px;
   margin-bottom: 10px;
 }
-.unit {
+.SizerNavUnits-unit {
   cursor: pointer;
   padding: 4px;
-  width: 50%;
   text-align: center;
+  width: 50%;
 
   &--selected {
-    background-color: rgba(0,0,0, 0.12);
+    background-color: rgba($color-gray1, 0.3);
   }
 }
 
-.picker {
-  background-color: #fff;
-  margin: 0;
-  border: 1px solid gray;
+.SizerNav {
+  background-color: $color-white;
+  border: 1px solid $color-gray1;
   border-radius: 6px;
+  margin: 0;
 }
-.picker-category {
-  border-top: 1px solid gray;
+.SizerNav-category {
+  border-top: 1px solid $color-gray2;
+
   &:first-child {
     border-top: none;
   }
   &--selected {
-    .picker-title {      
+    .SizerNav-title {      
       &:hover {
-        cursor: default;
         color: inherit;
+        cursor: default;
       }
     }
-    .picker-list {
+    .SizerNav-list {
       display: block;
     }
   }
 }
-.picker-title {
+.SizerNav-title {
   padding: 6px;
   text-transform: capitalize;
   font-size: 16px;
 
   &:hover {
+    color: $color-black;
     cursor: pointer;
-    color: black;
   }
 }
-.picker-list {
+.SizerNav-list {
   display: none;
-  padding: 0 6px 6px 12px;
   max-height: 200px;
   overflow: auto;
+  padding: 0 6px 6px 12px;
 }
-.picker-listItem {
+.SizerNav-listItem {
   cursor: pointer;
   padding: 4px 0;
   
@@ -66,7 +74,7 @@
     margin-bottom: 0;
   }
   &:hover:not(&--disabled) {
-    color: #000;
+    color: $color-black;
   }
   &--disabled {
     opacity: 0.5;

@@ -32,20 +32,20 @@ const SizerNav = ({ sizerData, sizerList, updateSizerList, unit, updateUnit }) =
     }
 
     return (
-        <aside className="sidebar">
-            <div className="units">
-                <span onClick={() => changeUnit('ft')} className={`unit ${unit == 'ft' ? 'unit--selected' : ''}`}>Feet</span>
-                <span onClick={() => changeUnit('m')} className={`unit ${unit == 'm' ? 'unit--selected' : ''}`}>Meters</span>
+        <aside className="SizerNavContainer">
+            <div className="SizerNavUnits">
+                <span onClick={() => changeUnit('ft')} className={`SizerNavUnits-unit ${unit == 'ft' ? 'SizerNavUnits-unit--selected' : ''}`}>Feet</span>
+                <span onClick={() => changeUnit('m')} className={`SizerNavUnits-unit ${unit == 'm' ? 'SizerNavUnits-unit--selected' : ''}`}>Meters</span>
             </div>
     
-            <nav className="picker">
+            <nav className="SizerNav">
                 {categoryArray.map((category) => {
                     return (
-                        <div key={category} className={`picker-category ${navCategory == category ? 'picker-category--selected' : ''}`}>
-                            <h5 className="picker-title" onClick={() => changeCategory(category)}>
+                        <div key={category} className={`SizerNav-category ${navCategory == category ? 'SizerNav-category--selected' : ''}`}>
+                            <h5 className="SizerNav-title" onClick={() => changeCategory(category)}>
                                 {category}
                             </h5>
-                            <ul className="picker-list">
+                            <ul className="SizerNav-list">
                                 {sizerData
                                     .sort((a, b) => a.name > b.name ? 1 : -1)
                                     .map((item) => {
@@ -57,7 +57,7 @@ const SizerNav = ({ sizerData, sizerList, updateSizerList, unit, updateUnit }) =
     
                                     if (category === itemCategory) {
                                         return (
-                                            <li key={itemId} className={`picker-listItem ${isItemUsed ? 'picker-listItem--disabled' : ''}`} 
+                                            <li key={itemId} className={`SizerNav-listItem ${isItemUsed ? 'SizerNav-listItem--disabled' : ''}`} 
                                             onClick={() => toggleItem(item, isItemUsed)}>
                                                 {itemName}
                                             </li>

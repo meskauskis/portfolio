@@ -1,8 +1,8 @@
 {
-  "build/0.7c496346.js": "/build/0.7c496346.js",
-  "build/boilerplate.css": "/build/boilerplate.8ef9008b.css",
-  "build/header.css": "/build/header.d6ad11a6.css",
-  "build/main.css": "/build/main.df25a9d8.css",
-  "build/runtime.js": "/build/runtime.d94b3b43.js",
-  "build/sizer.js": "/build/sizer.97b1e494.js"
+  "build/boilerplate.css": "/build/boilerplate.css",
+  "build/header.css": "/build/header.css",
+  "build/main.css": "/build/main.css",
+  "build/runtime.js": "/build/runtime.js",
+  "build/sizer.js": "/build/sizer.js",
+  "build/vendors~sizer.js": "/build/vendors~sizer.js"
 }
