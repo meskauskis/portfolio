@@ -11,8 +11,10 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "dev-server": "encore dev-server",
+        "clear": "php bin/console cache:clear",
+        "dev-server-old": "encore dev-server",
         "dev": "encore dev",
+        "server": "php bin/console server:run",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
     },
