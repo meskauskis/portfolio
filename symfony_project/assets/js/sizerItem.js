@@ -20,7 +20,7 @@ const SizerItem = ({ sizerList, item, itemSize, updateSizerList }) => {
 
     return (
         <>
-            <img src={`images/${itemId}.svg`} className={`SizerContainer-item SizerContainer-item--${itemId}`} style={{ 
+            <img src={`images/items/${itemId}.svg`} className={`SizerContainer-item SizerContainer-item--${itemId}`} style={{ 
                 'height': itemSize + '%', 
             }}/>
 

@@ -18,7 +18,9 @@ const SizerItems = ({ sizerList, updateSizerList, unit }) => {
                     const itemName = item.name;
 
                     const itemSize = (itemHeight / tallestHeight) * 100;
-                    const itemHeightConverted = unit == 'm' ? itemHeight : Math.round(itemHeight * 3.281 * 10) / 10;
+                    const itemSizeInFeet = itemHeight * 3.281;
+                    const itemHeightConverted = unit == 'm' ? itemHeight : 
+                        itemSizeInFeet < 10 ? Math.round(itemSizeInFeet * 10) / 10 : Math.round(itemSizeInFeet);
 
                     return (
                         <div key={itemId} className="SizerContainer-col">
