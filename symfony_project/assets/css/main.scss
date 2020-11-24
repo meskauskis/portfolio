@@ -30,6 +30,7 @@ a {
 .SizerContainerWrap {
   align-items: center;
   display: inline-flex;
+  min-width: 100%;
   overflow-x: auto;
 }
 .SizerContainer {
