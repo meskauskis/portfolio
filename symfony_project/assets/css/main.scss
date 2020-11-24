@@ -25,23 +25,26 @@ a {
 .PageContent {
   box-sizing: border-box;
   color: $color-gray1;
-  padding-top: $headerSpacing;
+  //padding-top: $headerSpacing;
 }
 .SizerContainerWrap {
+  align-items: center;
+  display: inline-flex;
   overflow-x: auto;
 }
 .SizerContainer {
   align-items: flex-end;
   box-sizing: border-box;
-  display: inline-flex; 
-  height: calc(100vh - 90px);
+  display: inline-flex;
+  height: 80%;
   min-width: 100%;
   padding: $infoHeight ($navWidth + 50px) ($buttonSize + 10px) 30px;
   position: relative;
-  vertical-align: top;
+  vertical-align: bottom; // Fix inline spacing bug.
 }
 .SizerGround {
   background: linear-gradient(0deg, rgba($color-black, 0) 0%, rgba($color-black, 0.2) 100%);
+  display: none;
   bottom: 70px;
   height: 40px;
   position: absolute;

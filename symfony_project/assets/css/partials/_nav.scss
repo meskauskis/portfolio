@@ -3,6 +3,8 @@
 .SizerNavContainer {
   position: fixed;
   right: 15px;
+  top: 40%;
+  transform: translateY(-50%);
   width: $navWidth;
   z-index: 2;
 }
