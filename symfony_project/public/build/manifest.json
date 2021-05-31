@@ -1,8 +1,0 @@
-{
-  "build/boilerplate.css": "/build/boilerplate.css",
-  "build/header.css": "/build/header.css",
-  "build/main.css": "/build/main.css",
-  "build/runtime.js": "/build/runtime.js",
-  "build/sizer.js": "/build/sizer.js",
-  "build/vendors~sizer.js": "/build/vendors~sizer.js"
-}
