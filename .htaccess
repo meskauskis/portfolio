@@ -10,8 +10,3 @@ ErrorDocument 404 /404.php
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://www.meskauskis.com/$1 [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^meskauskis\.net$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.meskauskis\.net$
-RewriteRule ^/?$ "https\:\/\/www\.meskauskis\.com\/" [R=301,L]
-
